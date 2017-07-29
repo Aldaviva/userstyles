@@ -1,6 +1,11 @@
 # userstyles
 User style sheets for the Stylish browser extension.
 
+Websites should
+- have few visual elements on the screen
+- only show you the tools and information you use
+- make efficient use of your screen space
+
 ## How to Use
 1. Download [`userstyles.json`](userstyles.json).
 1. Fire up your [Blink-based web browser](https://en.wikipedia.org/wiki/List_of_web_browsers#Blink-based) (Chrome, Chromium, Opera 15+, Vivaldi, etc.).
