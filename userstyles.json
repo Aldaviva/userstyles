@@ -1,0 +1,137 @@
+[
+  {
+    "method": "saveStyle",
+    "name": "YouTube",
+    "enabled": true,
+    "sections": [
+      {
+        "urls": [
+          
+        ],
+        "urlPrefixes": [
+          
+        ],
+        "domains": [
+          "www.youtube.com"
+        ],
+        "regexps": [
+          
+        ],
+        "code": ".watch-main-col {\n\tdisplay: none;\n}"
+      }
+    ],
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "id": 1
+  },
+  {
+    "method": "saveStyle",
+    "name": "Twitter",
+    "enabled": true,
+    "sections": [
+      {
+        "urls": [
+          
+        ],
+        "urlPrefixes": [
+          
+        ],
+        "domains": [
+          "twitter.com"
+        ],
+        "regexps": [
+          
+        ],
+        "code": ".Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *= \"ActivityTweet\"] {\n\tdisplay: none !important;\n}\n.Footer > .flex-module {\n\tborder-radius: 5px !important;\n}\n\/*\nbody.three-col .wrapper {\n    width: 890px !important;\n}\n\nbody.three-col .wrapper-narrow,body.three-col .wrapper-permalink {\n    width: 890px !important;\n}\n\n@media(min-width: 1236px) {\n    body.three-col .content-main {\n        float: right !important;\n        margin: 0 !important;\n    }\n}\n\n@media(min-width: 1236px) {\n    body.three-col.win10-wrapper .content-main {\n        float: right !important;\n        margin: 0 !important;\n    }\n}\n*\/"
+      }
+    ],
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "id": 2
+  },
+  {
+    "method": "saveStyle",
+    "name": "Wikipedia",
+    "enabled": true,
+    "sections": [
+      {
+        "urls": [
+          
+        ],
+        "urlPrefixes": [
+          
+        ],
+        "domains": [
+          "wikipedia.org"
+        ],
+        "regexps": [
+          
+        ],
+        "code": ".ambox,\n#mw-head,\n#mw-head-base,\n#mw-page-base,\n#mw-panel,\n.articleFeedback,\n#catlinks,\n#footer,\n#localNotice,\n.stub,\n#siteSub,\n.editsection,\n.articleFeedbackv5-bottomrighttab {\n\tdisplay: none !important;\n}\n\n#content {\n\tmargin-left: 0 !important;\n}\n\nbody, #content {\n\tbackground: white !important;\n}"
+      }
+    ],
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "id": 3
+  },
+  {
+    "method": "saveStyle",
+    "name": "Stack Overflow",
+    "enabled": true,
+    "sections": [
+      {
+        "urls": [
+          
+        ],
+        "urlPrefixes": [
+          
+        ],
+        "domains": [
+          "stackoverflow.com"
+        ],
+        "regexps": [
+          
+        ],
+        "code": "#sidebar,\n#footer,\n.bottom-notice,\n#header,\nheader,\n.topbar,\n.question-status,\n.fw,\n.comments-link,\n#tabs,\n.post-taglist,\n.comment-date,\n.bounty-notification,\n#post-form,\n#feed-link,\n.aside-cta,\n.js-link-separator {\n\tdisplay: none !important;\n}\n\n#mainbar {\n\tfloat: none !important;\n\twidth: auto !important;\n}\n\n#question-header {\n\twidth: auto !important;\n}\n\n#content {\n\twidth: 728px !important;\n\tpadding-top: 17px !important;\n}\n\n.comment-user {\n\tcolor: #ccc !important;\n\tbackground-color: transparent !important;\n\tpadding: 0 !important;\n}\n\n.so-header~.container {\n        padding-top: 0 !important;\n}"
+      }
+    ],
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "id": 4
+  },
+  {
+    "method": "saveStyle",
+    "name": "Slack",
+    "enabled": true,
+    "sections": [
+      {
+        "urls": [
+          
+        ],
+        "urlPrefixes": [
+          
+        ],
+        "domains": [
+          
+        ],
+        "regexps": [
+          "https:\\\/\\\/.*\\.slack\\.com\\\/messages.*"
+        ],
+        "code": "\/* Make emoji (and their image replacements) four times as large *\/\n.message_body .emoji-sizer {\n    font-size: 2.75rem !important;\n    line-height: 2.25rem !important;\n}\n.emoji-only.emoji-sizer {\n    font-size: 4rem !important;\n    line-height: 4rem !important;\n}"
+      }
+    ],
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "id": 5
+  }
+]
