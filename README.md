@@ -1,9 +1,9 @@
 # userstyles
 User style sheets for the Stylish browser extension.
 
-Websites should
+Good user interfaces should
 - have few visual elements on the screen
-- only show you the tools and information you use
+- only show you the tools and information that you use
 - make efficient use of your screen space
 
 ## How to Use
@@ -19,6 +19,7 @@ Websites should
 |---|---|
 |Slack|Enlarged emoticons.|
 |Stack Overflow|Removed clutter.|
-|Twitter|Removed clutter, ads, and unwanted tweets. Block keywords with [Larry Filter for Twitter](https://chrome.google.com/webstore/detail/larry-filter-for-twitter/ifgdeokhnfkbgdocafpokgdnnfbnbbok?utm_source=chrome-app-launcher-info-dialog).|
+|The Old Reader|Compressed top navigation, removed social buttons.|
+|Twitter|Removed clutter, ads, and unwanted tweets.<br>You can block keywords with [Larry Filter for Twitter](https://chrome.google.com/webstore/detail/larry-filter-for-twitter/ifgdeokhnfkbgdocafpokgdnnfbnbbok?utm_source=chrome-app-launcher-info-dialog).|
 |Wikipedia|Removed clutter.|
 |YouTube|Removed clutter. Works best with [Magic Actions for YouTube](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?utm_source=chrome-app-launcher-info-dialog).|

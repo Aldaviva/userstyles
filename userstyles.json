@@ -133,5 +133,32 @@
     "url": null,
     "originalMd5": null,
     "id": 5
+  },
+  {
+    "method": "saveStyle",
+    "name": "The Old Reader",
+    "enabled": true,
+    "sections": [
+      {
+        "urls": [
+          
+        ],
+        "urlPrefixes": [
+          
+        ],
+        "domains": [
+          "theoldreader.com"
+        ],
+        "regexps": [
+          
+        ],
+        "code": "nav {\n    visibility: collapse;\n}\n\n.nav .dropdown {\n    visibility: visible;\n}\n\n.main-container {\n    padding-top: 11px;\n}\n\n.content-cell {\n    top: 25px !important;\n}\n\n#sidebar-shared,\n#sidebar-bookmarked,\n#sidebar-trending,\n.btn-group,\n.btn-share {\n    display: none;\n}\n\n.floating {\n    position: fixed;\n    right: 66px;\n    top: 9px;\n}\n\n.content-cell .slide {\n    top: 33px !important;\n}"
+      }
+    ],
+    "updateUrl": null,
+    "md5Url": null,
+    "url": null,
+    "originalMd5": null,
+    "id": 6
   }
 ]
