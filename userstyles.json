@@ -44,7 +44,7 @@
         "regexps": [
           
         ],
-        "code": ".Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *= \"ActivityTweet\"],\nli[data-component-context = \"generic_activity\"] {\n\tdisplay: none !important;\n}\n.Footer > .flex-module {\n\tborder-radius: 5px !important;\n}\n\n.avatar,\n.DashboardProfileCard-avatarImage,\n.avatar--circular,\n.DMAvatar,\n#user-dropdown-toggle,\n#user-dropdown-toggle .Avatar {\n\tborder-radius: 3px;\n}\n\n.DashboardProfileCard-avatarLink {\n\tbackground-color: transparent;\n}\n\n.ProfileAvatar-image {\n\tborder-radius: 7px;\n}\n.ProfileAvatar {\n\tborder-radius: 12px;\n}"
+        "code": ".Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *= \"ActivityTweet\"],\nli[data-component-context = \"generic_activity\"] {\n\tdisplay: none !important;\n}\n.Footer > .flex-module {\n\tborder-radius: 5px !important;\n}\n\n.avatar,\n.DashboardProfileCard-avatarImage,\n.avatar--circular,\n.DMAvatar,\n#user-dropdown-toggle,\n#user-dropdown-toggle .Avatar,\n.ProfileCard-avatarImage {\n\tborder-radius: 3px;\n\timage-rendering: -webkit-optimize-contrast;\n}\n\n.ProfileCard-avatarLink {\n\tborder-radius: 6px;\n}\n\n.DashboardProfileCard-avatarLink {\n\tbackground-color: transparent;\n}\n\n.ProfileAvatar-image {\n\tborder-radius: 7px;\n}\n.ProfileAvatar {\n\tborder-radius: 12px;\n}"
       }
     ],
     "updateUrl": null,
