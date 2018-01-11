@@ -19,7 +19,7 @@ Good user interfaces should
 |---|---|
 |Slack|Enlarged emoticons.|
 |Stack Overflow|Removed clutter.|
-|The Old Reader|Compressed top navigation, removed social buttons.|
-|Twitter|Removed clutter, ads, and unwanted tweets.<br>You can block keywords with [Larry Filter for Twitter](https://chrome.google.com/webstore/detail/larry-filter-for-twitter/ifgdeokhnfkbgdocafpokgdnnfbnbbok?utm_source=chrome-app-launcher-info-dialog).|
+|The Old Reader|Compressed top navigation, removed social buttons, and fixed several rendering issues.|
+|Twitter|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.<br>You can block keywords with [Larry Filter for Twitter](https://chrome.google.com/webstore/detail/larry-filter-for-twitter/ifgdeokhnfkbgdocafpokgdnnfbnbbok?utm_source=chrome-app-launcher-info-dialog).|
 |Wikipedia|Removed clutter.|
 |YouTube|Removed clutter. Works best with [Magic Actions for YouTube](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?utm_source=chrome-app-launcher-info-dialog).|
