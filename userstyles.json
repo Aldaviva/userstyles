@@ -1,164 +1,180 @@
 [
-  {
-    "method": "saveStyle",
-    "name": "YouTube",
-    "enabled": true,
-    "sections": [
-      {
-        "urls": [
-          
-        ],
-        "urlPrefixes": [
-          
-        ],
-        "domains": [
-          "www.youtube.com"
-        ],
-        "regexps": [
-          
-        ],
-        "code": ".watch-main-col,\nytd-video-primary-info-renderer > div:first-of-type \/* Magic Actions extension toolbar *\/ {\n\tdisplay: none;\n}"
-      }
-    ],
-    "updateUrl": null,
-    "md5Url": null,
-    "url": null,
-    "originalMd5": null,
-    "id": 1
-  },
-  {
-    "method": "saveStyle",
-    "name": "Twitter",
-    "enabled": true,
-    "sections": [
-      {
-        "urls": [
-          
-        ],
-        "urlPrefixes": [
-          
-        ],
-        "domains": [
-          "twitter.com"
-        ],
-        "regexps": [
-          
-        ],
-        "code": ".Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *= \"ActivityTweet\"],\nli[data-component-context = \"generic_activity\"] {\n\tdisplay: none !important;\n}\n.Footer > .flex-module {\n\tborder-radius: 5px !important;\n}\n\n.avatar,\n.avatar--circular,\n.DMAvatar,\n#user-dropdown-toggle,\n#user-dropdown-toggle .Avatar {\n\tborder-radius: 3px;\n\timage-rendering: optimizeQuality;\n\timage-rendering: -webkit-optimize-contrast;\n}\n\n.DashboardProfileCard-avatarImage,\n.ProfileCard-avatarImage {\n\tborder-radius: 5px;\n}\n\n.ProfileCard-avatarLink {\n\tborder-radius: 6px;\n}\n\n.DashboardProfileCard-avatarLink {\n\tbackground-color: transparent;\n}\n\n.ProfileAvatar-image {\n\tborder-radius: 7px;\n}\n.ProfileAvatar {\n\tborder-radius: 12px;\n}"
-      }
-    ],
-    "updateUrl": null,
-    "md5Url": null,
-    "url": null,
-    "originalMd5": null,
-    "id": 2
-  },
-  {
-    "method": "saveStyle",
-    "name": "Wikipedia",
-    "enabled": true,
-    "sections": [
-      {
-        "urls": [
-          
-        ],
-        "urlPrefixes": [
-          
-        ],
-        "domains": [
-          "wikipedia.org"
-        ],
-        "regexps": [
-          
-        ],
-        "code": ".ambox,\n#mw-head,\n#mw-head-base,\n#mw-page-base,\n#mw-panel,\n.articleFeedback,\n#catlinks,\n#footer,\n#localNotice,\n.stub,\n#siteSub,\n.editsection,\n.articleFeedbackv5-bottomrighttab {\n\tdisplay: none !important;\n}\n\n#content {\n\tmargin-left: 0 !important;\n}\n\nbody, #content {\n\tbackground: white !important;\n}"
-      }
-    ],
-    "updateUrl": null,
-    "md5Url": null,
-    "url": null,
-    "originalMd5": null,
-    "id": 3
-  },
-  {
-    "method": "saveStyle",
-    "name": "Stack Overflow",
-    "enabled": true,
-    "sections": [
-      {
-        "urls": [
-          
-        ],
-        "urlPrefixes": [
-          
-        ],
-        "domains": [
-          "stackoverflow.com"
-        ],
-        "regexps": [
-          
-        ],
-        "code": "body.question-page #sidebar,\nbody.question-page #footer,\nbody.question-page .bottom-notice,\nbody.question-page #header,\nbody.question-page header,\nbody.question-page .topbar,\nbody.question-page .question-status,\nbody.question-page .fw,\nbody.question-page .comments-link,\nbody.question-page #tabs,\nbody.question-page .post-taglist,\nbody.question-page .comment-date,\nbody.question-page .comment-user,\nbody.question-page .bounty-notification,\nbody.question-page #post-form,\nbody.question-page #feed-link,\nbody.question-page .aside-cta,\nbody.question-page .js-link-separator {\n    display: none !important;\n}\n\nbody.question-page #mainbar {\n    float: none !important;\n    width: auto !important;\n}\n\nbody.question-page #question-header {\n    width: auto !important;\n}\n\nbody.question-page #content {\n    width: 728px !important;\n    padding-top: 17px !important;\n}\n\nbody.question-page .comment-body {\n    visibility: collapse !important;\n}\n\nbody.question-page .comment-copy {\n    visibility: visible !important;\n}\n\nbody.question-page .so-header ~ .container {\n    padding-top: 0 !important;\n}\n\nbody.question-page .top-bar~.container {\n    margin-top: 0 !important;\n}"
-      }
-    ],
-    "updateUrl": null,
-    "md5Url": null,
-    "url": null,
-    "originalMd5": null,
-    "id": 4
-  },
-  {
-    "method": "saveStyle",
-    "name": "Slack",
-    "enabled": true,
-    "sections": [
-      {
-        "urls": [
-          
-        ],
-        "urlPrefixes": [
-          
-        ],
-        "domains": [
-          
-        ],
-        "regexps": [
-          "https:\\\/\\\/.*\\.slack\\.com\\\/messages.*"
-        ],
-        "code": "\/* Make emoji (and their image replacements) four times as large *\/\n.message_body .emoji-sizer {\n    font-size: 2.75rem !important;\n    line-height: 2.25rem !important;\n}\n.emoji-only.emoji-sizer {\n    font-size: 4rem !important;\n    line-height: 4rem !important;\n}"
-      }
-    ],
-    "updateUrl": null,
-    "md5Url": null,
-    "url": null,
-    "originalMd5": null,
-    "id": 5
-  },
-  {
-    "method": "saveStyle",
-    "name": "The Old Reader",
-    "enabled": true,
-    "sections": [
-      {
-        "urls": [
-          
-        ],
-        "urlPrefixes": [
-          
-        ],
-        "domains": [
-          "theoldreader.com"
-        ],
-        "regexps": [
-          
-        ],
-        "code": "html {\n\toverflow-y: hidden;\n}\n\nnav {\n    visibility: collapse;\n}\n\n.nav .dropdown {\n    visibility: visible;\n}\n\n.main-container {\n    padding-top: 11px;\n}\n\n.content-cell {\n    top: 25px !important;\n}\n\n#sidebar-shared,\n#sidebar-bookmarked,\n#sidebar-trending,\n.btns .btn-group,\n.btn-share,\n.add-icon,\n.btns .likes {\n    display: none !important;\n}\n\n.floating {\n    position: fixed;\n    right: 66px;\n    top: 9px;\n}\n\n.content-cell .slide {\n    top: 33px !important;\n}\n\n.post {\n\tpadding: 0;\n}\n\n.post.unread {\n\tpadding-left: 0;\n}\n\n.post .header .name {\n    margin-top: 1px !important;\n}\n\n.post .header .list-header {\n \twidth: auto !important;\n    float: none !important;\n    margin-left: 0 !important;\n    margin-right: 0 !important;\n    position: absolute !important;\n    left: 139px !important;\n    right: 164px !important;\n    direction: ltr !important;\n}\n\n.static .pull-right {\n\tmargin-left: 4px;\n}\n\n.post .header .label.pull-right {\n    max-width: none !important;\n}\n\n.label {\n    text-align: left !important;\n}\n\n.list-post * {\n    direction: ltr !important;\n}\n\ndiv[data-list-toggle] {\n    padding: 5px 10px 0 5px;\n    box-sizing: content-box;\n    cursor: pointer;\n}\n\ndiv.list-post {\n    padding: 0 5px 5px;\n}\n\n.btn-like, #sidebar-liked {\n\tdisplay: none;\n}\n\n#sidebar-home {\n\tdisplay: none;\n}"
-      }
-    ],
-    "updateUrl": null,
-    "md5Url": null,
-    "url": null,
-    "originalMd5": null,
-    "id": 6
-  }
+	{
+		"installDate": 1534329178584,
+		"name": "YouTube",
+		"enabled": true,
+		"sections": [
+			{
+				"code": ".watch-main-col,\n#related, /* Related videos sidebar. If you try to hide this using Magic Actions, the video element is rendered too small and has a white border to the right and bottom. */\nytd-video-primary-info-renderer > div, /* Magic Actions extension toolbar */\nytd-video-primary-info-renderer > span { /* Magic Actions extension toolbar again */\n\tdisplay: none;\n}\n\nytd-video-primary-info-renderer > .ytd-video-primary-info-renderer {\n\tdisplay: block;\n}\n\n/* hide recommended videos after the main video ends */\n.ytp-endscreen-content {\n\tdisplay: none;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"www.youtube.com"
+				],
+				"regexps": []
+			}
+		],
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"id": 1
+	},
+	{
+		"installDate": 1534329178586,
+		"name": "Twitter",
+		"enabled": true,
+		"sections": [
+			{
+				"code": "/* Hide shit */\n\n.Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *= \"ActivityTweet\"],\nli[data-component-context = \"generic_activity\"],\nli.people .count,\n.Footer {\n\tdisplay: none !important;\n}\n\n/* Rounded rectangle profile pictures */\n\n.avatar,\n.avatar--circular,\n.DMAvatar,\n#user-dropdown-toggle,\n#user-dropdown-toggle .Avatar {\n\tborder-radius: 3px;\n\timage-rendering: optimizeQuality;\n\timage-rendering: -webkit-optimize-contrast;\n}\n\n.DashboardProfileCard-avatarImage,\n.ProfileCard-avatarImage {\n\tborder-radius: 5px;\n}\n\n.ProfileCard-avatarLink {\n\tborder-radius: 6px;\n}\n\n.DashboardProfileCard-avatarLink {\n\tbackground-color: transparent;\n}\n\n.ProfileAvatar-image {\n\tborder-radius: 7px;\n}\n.ProfileAvatar {\n\tborder-radius: 12px;\n}\n\n/* Profile box is missing top border for some reason */\n\n.DashboardProfileCard-bg {\n    margin-top: 0px;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"twitter.com"
+				],
+				"regexps": []
+			}
+		],
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"id": 2
+	},
+	{
+		"installDate": 1534329178590,
+		"name": "Wikipedia",
+		"enabled": true,
+		"sections": [
+			{
+				"code": ".ambox,\n#mw-head,\n#mw-head-base,\n#mw-page-base,\n#mw-panel,\n.articleFeedback,\n#catlinks,\n#footer,\n#localNotice,\n.stub,\n#siteSub,\n.editsection,\n.articleFeedbackv5-bottomrighttab {\n\tdisplay: none !important;\n}\n\n#content {\n\tmargin-left: 0 !important;\n}\n\nbody, #content {\n\tbackground: white !important;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"wikipedia.org"
+				],
+				"regexps": []
+			}
+		],
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"id": 3
+	},
+	{
+		"installDate": 1534329178591,
+		"name": "Stack Overflow",
+		"enabled": true,
+		"sections": [
+			{
+				"code": "body.question-page #sidebar,\nbody.question-page #footer,\nbody.question-page .bottom-notice,\nbody.question-page #header,\nbody.question-page header,\nbody.question-page .topbar,\nbody.question-page .question-status,\nbody.question-page .fw,\nbody.question-page .comments-link,\nbody.question-page #tabs,\nbody.question-page .post-taglist,\nbody.question-page .comment-date,\nbody.question-page .comment-user,\nbody.question-page .bounty-notification,\nbody.question-page #post-form,\nbody.question-page #feed-link,\nbody.question-page .aside-cta,\nbody.question-page .js-link-separator,\nbody.question-page #left-sidebar {\n    display: none !important;\n}\n\nbody.question-page #mainbar {\n    float: none !important;\n    width: auto !important;\n}\n\nbody.question-page #question-header {\n    width: auto !important;\n}\n\nbody.question-page #content {\n    width: 728px !important;\n    padding-top: 17px !important;\n}\n\nbody.question-page .comment-body {\n    visibility: collapse !important;\n}\n\nbody.question-page .comment-copy {\n    visibility: visible !important;\n}\n\nbody.question-page .so-header ~ .container {\n    padding-top: 0 !important;\n}\n\nbody.question-page .top-bar~.container {\n    margin-top: 0 !important;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"stackoverflow.com"
+				],
+				"regexps": []
+			}
+		],
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"id": 4
+	},
+	{
+		"installDate": 1534329178593,
+		"name": "Slack",
+		"enabled": true,
+		"sections": [
+			{
+				"code": "/* Make emoji (and their image replacements) four times as large */\n.message_body .emoji-sizer {\n    font-size: 2.75rem !important;\n    line-height: 2.25rem !important;\n}\n.emoji-only.emoji-sizer {\n    font-size: 4rem !important;\n    line-height: 4rem !important;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [],
+				"regexps": [
+					"https:\\/\\/.*\\.slack\\.com\\/messages.*"
+				]
+			}
+		],
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"id": 5
+	},
+	{
+		"installDate": 1534329178597,
+		"name": "Inoreader",
+		"enabled": true,
+		"sections": [
+			{
+				"code": "#below_tree {\n\tdisplay: none;\n}\n\n.article_sub_title .icon-service_globe-16x16,\n.article_sub_title .icon-coffee_empty {\n\tdisplay: none;\n}\n\n.article_footer_buttons.smallradius[title*='Send article to external services'],\n.article_footer_buttons.smallradius[title*='Share by email']{\n    display: none;\n}\n\n#sb_rp_section_options {\n    display: none;\n}\n\n#sb_rp_notifications {\n    display: none;\n}\n#sb_rp_tools {\n    right: 40px;\n}\n\n#sb_rp_prev_article,\n#sb_rp_next_article,\n.inno_toolbar_spacer {\n    display: none;\n}\n\n#sb_rp_gear {\n    right: 0;\n}\n\n.article_content video {\n    border: 4px inset #999;\n}\n\n.ar[data-tags *= '\"Play\"'] .column_view_thumbnail {\n    opacity: 0;\n}\n.ar[data-tags *= '\"Play\"']:hover .column_view_thumbnail {\n    opacity: 1;  \n}",
+				"domains": [
+					"www.inoreader.com"
+				]
+			}
+		],
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"id": 7
+	},
+	{
+		"installDate": 1534329178599,
+		"name": "Solid underlines",
+		"enabled": true,
+		"sections": [
+			{
+				"code": "a:-webkit-any-link {\n\ttext-decoration-skip-ink: none;\n}",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [],
+				"regexps": []
+			}
+		],
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"id": 8
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1536061892580,
+		"name": "JSON Editor Online",
+		"sections": [
+			{
+				"code": "/* Make two-column layout scale to viewport width correctly */\n#ad {\n    display: none;\n}",
+				"domains": [
+					"jsoneditoronline.org"
+				]
+			}
+		],
+		"id": 9
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1543033073696,
+		"name": "Twitch",
+		"sections": [
+			{
+				"code": "/* Allow HTML5 video context menu, useful for Video Popout */\n.ima-ads-container {\n    display: none;\n}",
+				"domains": [
+					"twitch.tv"
+				]
+			}
+		],
+		"id": 10
+	}
 ]
