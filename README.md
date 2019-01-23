@@ -16,6 +16,7 @@ Good user interfaces should
 
 ## Targeted websites
 On all sites, underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.
+
 |Site|Changes|
 |---|---|
 |Inoreader|Removed clutter. Made videos more obvious, since Inoreader automatically strips `controls` and `autoplay` from videos, making them look like images. Made certain thumbnails appear only on hover.|
@@ -26,6 +27,3 @@ On all sites, underlines will intersect with text, instead of leaving a gap arou
 |Twitter|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.<br>You can block keywords with [Larry Filter for Twitter](https://chrome.google.com/webstore/detail/larry-filter-for-twitter/ifgdeokhnfkbgdocafpokgdnnfbnbbok?utm_source=chrome-app-launcher-info-dialog).|
 |Wikipedia|Removed clutter.|
 |YouTube|Removed clutter. Works best with [Magic Actions for YouTube](https://chrome.google.com/webstore/detail/stylish-custom-themes-for/fjnbnpbmkenffdnngjfgmeleoegfcffe?utm_source=chrome-app-launcher-info-dialog).|
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4ODUwNTYxXX0=
--->
