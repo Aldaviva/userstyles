@@ -5,13 +5,10 @@
 		"enabled": true,
 		"sections": [
 			{
-				"code": ".watch-main-col,\n#related, /* Related videos sidebar. If you try to hide this using Magic Actions, the video element is rendered too small and has a white border to the right and bottom. */\nytd-video-primary-info-renderer > div, /* Magic Actions extension toolbar */\nytd-video-primary-info-renderer > span { /* Magic Actions extension toolbar again */\n\tdisplay: none;\n}\n\nytd-video-primary-info-renderer > .ytd-video-primary-info-renderer {\n\tdisplay: block;\n}\n\n/* hide recommended videos after the main video ends */\n.ytp-endscreen-content {\n\tdisplay: none;\n}",
-				"urls": [],
-				"urlPrefixes": [],
-				"domains": [
-					"www.youtube.com"
-				],
-				"regexps": []
+				"code": ".watch-main-col,\n#related, /* Related videos sidebar */\n#logo, /* Site logo */\n#search, /* Search box */\n#end, /* Account buttons in the top right */\n.ytp-endscreen-content, /* Recommended videos after the main video ends */\n#comments, /* Comments section below the video */\n#info, /* View count, ratings, share, and save buttons */\n#subscribe-button /* Subscribe and notify buttons */\n/* #more */ /* Progressive disclosure button for description, which is always expanded */\n{\n\tdisplay: none !important;\n}\n\nytd-video-secondary-info-renderer {\n    border-bottom: none;\n}\n\nytd-expander[collapsed] > #content.ytd-expander {\n/*     overflow: visible; */\n}",
+				"regexps": [
+					"https?\\:\\/\\/www\\.youtube\\.com\\/watch\\?.*"
+				]
 			}
 		],
 		"updateUrl": null,
@@ -26,13 +23,10 @@
 		"enabled": true,
 		"sections": [
 			{
-				"code": "/* Hide shit */\n\n.Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *= \"ActivityTweet\"],\nli[data-component-context = \"generic_activity\"],\nli.people .count,\n.Footer {\n\tdisplay: none !important;\n}\n\n/* Rounded rectangle profile pictures */\n\n.avatar,\n.avatar--circular,\n.DMAvatar,\n#user-dropdown-toggle,\n#user-dropdown-toggle .Avatar {\n\tborder-radius: 3px;\n\timage-rendering: optimizeQuality;\n\timage-rendering: -webkit-optimize-contrast;\n}\n\n.DashboardProfileCard-avatarImage,\n.ProfileCard-avatarImage {\n\tborder-radius: 5px;\n}\n\n.ProfileCard-avatarLink {\n\tborder-radius: 6px;\n}\n\n.DashboardProfileCard-avatarLink {\n\tbackground-color: transparent;\n}\n\n.ProfileAvatar-image {\n\tborder-radius: 7px;\n}\n.ProfileAvatar {\n\tborder-radius: 12px;\n}\n\n/* Profile box is missing top border for some reason */\n\n.DashboardProfileCard-bg {\n    margin-top: 0px;\n}",
-				"urls": [],
-				"urlPrefixes": [],
+				"code": "/* Hide shit */\n.Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *=\"ActivityTweet\"],\nli[data-component-context=\"generic_activity\"],\nli.people .count,\n.Footer {\n    display: none !important;\n}\n\n/* Rounded rectangle profile pictures */\n.avatar,\n.avatar--circular,\n.DMAvatar,\n#user-dropdown-toggle,\n#user-dropdown-toggle .Avatar {\n    border-radius: 3px;\n    image-rendering: optimizeQuality;\n    image-rendering: -webkit-optimize-contrast;\n}\n\n.DashboardProfileCard-avatarImage,\n.ProfileCard-avatarImage {\n    border-radius: 5px;\n}\n\n.ProfileCard-avatarLink {\n    border-radius: 6px;\n}\n\n.DashboardProfileCard-avatarLink {\n    background-color: transparent;\n}\n\n.ProfileAvatar-image {\n    border-radius: 7px;\n}\n.ProfileAvatar {\n    border-radius: 12px;\n}\n\n/* Profile box is missing top border for some reason */\n.DashboardProfileCard-bg {\n    margin-top: 0px;\n}",
 				"domains": [
 					"twitter.com"
-				],
-				"regexps": []
+				]
 			}
 		],
 		"updateUrl": null,
@@ -110,7 +104,7 @@
 		"enabled": true,
 		"sections": [
 			{
-				"code": "#below_tree {\n\tdisplay: none;\n}\n\n.article_sub_title .icon-service_globe-16x16,\n.article_sub_title .icon-coffee_empty {\n\tdisplay: none;\n}\n\n.article_footer_buttons.smallradius[title*='Send article to external services'],\n.article_footer_buttons.smallradius[title*='Share by email']{\n    display: none;\n}\n\n#sb_rp_section_options {\n    display: none;\n}\n\n#sb_rp_notifications {\n    display: none;\n}\n#sb_rp_tools {\n    right: 40px;\n}\n\n#sb_rp_prev_article,\n#sb_rp_next_article,\n.inno_toolbar_spacer {\n    display: none;\n}\n\n#sb_rp_gear {\n    right: 0;\n}\n\n.article_content video {\n    border: 4px inset #999;\n}\n\n.ar[data-tags *= '\"Play\"'] .column_view_thumbnail {\n    opacity: 0;\n}\n.ar[data-tags *= '\"Play\"']:hover .column_view_thumbnail {\n    opacity: 1;  \n}",
+				"code": "#below_tree {\n\tdisplay: none;\n}\n\n.article_sub_title .icon-service_globe-16x16,\n.article_sub_title .icon-coffee_empty {\n\tdisplay: none;\n}\n\n.article_footer_buttons.smallradius[title*='Send article to external services'],\n.article_footer_buttons.smallradius[title*='Share by email']{\n    display: none;\n}\n\n#sb_rp_section_options {\n    display: none;\n}\n\n#sb_rp_notifications {\n    display: none;\n}\n#sb_rp_tools {\n    right: 40px;\n}\n\n#sb_rp_prev_article,\n#sb_rp_next_article,\n.inno_toolbar_spacer {\n    display: none;\n}\n\n#sb_rp_gear {\n    right: 0;\n}\n\n.article_content {\n    max-width: unset;\n}\n\n.article_content video {\n    max-width: 100%;\n    height: auto;\n}\n\n.ar[data-tags *= '\"Play\"'] .column_view_thumbnail {\n    opacity: 0;\n}\n.ar[data-tags *= '\"Play\"']:hover .column_view_thumbnail {\n    opacity: 1;  \n}",
 				"domains": [
 					"www.inoreader.com"
 				]
@@ -169,7 +163,7 @@
 		"name": "Twitch",
 		"sections": [
 			{
-				"code": "/* Allow HTML5 video context menu, useful for Video Popout */\n.ima-ads-container {\n    display: none;\n}",
+				"code": "/* Allow HTML5 video context menu, useful for Video Popout */\n.ima-ads-container,\n.player-overlay,\n.extension-container {\n    display: none;\n}",
 				"domains": [
 					"twitch.tv"
 				]
