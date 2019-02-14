@@ -5,9 +5,9 @@
 		"enabled": true,
 		"sections": [
 			{
-				"code": ".watch-main-col,\n#related, /* Related videos sidebar */\n#logo, /* Site logo */\n#search, /* Search box */\n#end, /* Account buttons in the top right */\n.ytp-endscreen-content, /* Recommended videos after the main video ends */\n#comments, /* Comments section below the video */\n#info, /* View count, ratings, share, and save buttons */\n#subscribe-button /* Subscribe and notify buttons */\n/* #more */ /* Progressive disclosure button for description, which is always expanded */\n{\n\tdisplay: none !important;\n}\n\nytd-video-secondary-info-renderer {\n    border-bottom: none;\n}\n\nytd-expander[collapsed] > #content.ytd-expander {\n/*     overflow: visible; */\n}",
+				"code": ".watch-main-col,\n#related, /* Related videos sidebar */\n#logo, /* Site logo */\n#search, /* Search box */\n#end, /* Account buttons in the top right */\n.ytp-endscreen-content, /* Recommended videos after the main video ends */\n#comments, /* Comments section below the video */\n#info, /* View count, ratings, share, and save buttons */\n#subscribe-button, /* Subscribe and notify buttons */\n.ytp-pause-overlay /* More Videos bar that appears when you pause */\n/* #more */ /* Progressive disclosure button for description, which is always expanded */\n{\n\tdisplay: none !important;\n}\n\nytd-video-secondary-info-renderer {\n    border-bottom: none;\n}\n\nytd-expander[collapsed] > #content.ytd-expander {\n/*     overflow: visible; */\n}",
 				"regexps": [
-					"https?\\:\\/\\/www\\.youtube\\.com\\/watch\\?.*"
+					"https?\\:\\/\\/www\\.youtube\\.com\\/(watch|embed).*"
 				]
 			}
 		],
