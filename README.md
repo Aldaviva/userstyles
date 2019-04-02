@@ -5,6 +5,7 @@ Good user interfaces should
 - have few visual elements on the screen
 - only show you the tools and information that you use
 - make efficient use of your screen space
+- not be annoying
 
 ## How to Use
 1. Download [`userstyles.json`](userstyles.json) from this repository.
@@ -19,7 +20,7 @@ On all sites, underlines will intersect with text, instead of leaving a gap arou
 
 |Site|Changes|
 |---|---|
-|Inoreader|Removed clutter. Make videos muted, loop, and autoplay. Made certain thumbnails appear only on hover.|
+|Inoreader|Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.|
 |JSON Editor Online|Fixed layout calculation when ads are blocked.|
 |Slack|Enlarged emoticons.|
 |Stack Overflow|Removed clutter on question pages.|
