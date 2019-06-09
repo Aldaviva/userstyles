@@ -5,9 +5,9 @@
 		"enabled": true,
 		"sections": [
 			{
-				"code": ".watch-main-col,\n#related, /* Related videos sidebar */\n#logo, /* Site logo */\n#search, /* Search box */\n#end, /* Account buttons in the top right */\n.ytp-endscreen-content, /* Recommended videos after the main video ends */\n#comments, /* Comments section below the video */\n#info, /* View count, ratings, share, and save buttons */\n#subscribe-button, /* Subscribe and notify buttons */\n.ytp-pause-overlay /* More Videos bar that appears when you pause */\n/* #more */ /* Progressive disclosure button for description, which is always expanded */\n{\n\tdisplay: none !important;\n}\n\nytd-video-secondary-info-renderer {\n    border-bottom: none;\n}\n\nytd-expander[collapsed] > #content.ytd-expander {\n/*     overflow: visible; */\n}",
+				"code": ".watch-main-col,\n#related, /* Related videos sidebar */\n#logo, /* Site logo */\n#search, /* Search box */\n#end, /* Account buttons in the top right */\n.ytp-endscreen-content, /* Recommended videos after the main video ends */\n#comments, /* Comments section below the video */\n#info, /* View count, ratings, share, and save buttons */\n#subscribe-button /* Subscribe and notify buttons */\n/* #more */ /* Progressive disclosure button for description, which is always expanded */\n{\n\tdisplay: none !important;\n}\n\nytd-video-secondary-info-renderer {\n    border-bottom: none;\n}\n\nytd-expander[collapsed] > #content.ytd-expander {\n/*     overflow: visible; */\n}",
 				"regexps": [
-					"https?\\:\\/\\/www\\.youtube\\.com\\/(watch|embed).*"
+					"https?\\:\\/\\/www\\.youtube\\.com\\/watch\\?.*"
 				]
 			}
 		],
@@ -23,7 +23,7 @@
 		"enabled": true,
 		"sections": [
 			{
-				"code": "/* Hide shit */\n.Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *=\"ActivityTweet\"],\nli[data-component-context=\"generic_activity\"],\nli.people .count,\n.Footer,\nli[data-tweet-hidden-parent='1'],\n.self-thread-head,\nh1.Icon {\n    display: none !important;\n}\n\n/* Rounded rectangle profile pictures */\n.avatar,\n.avatar--circular,\n.DMAvatar,\n#user-dropdown-toggle,\n#user-dropdown-toggle .Avatar {\n    border-radius: 3px;\n    image-rendering: optimizeQuality;\n    image-rendering: -webkit-optimize-contrast;\n}\n\n.DashboardProfileCard-avatarImage,\n.ProfileCard-avatarImage {\n    border-radius: 5px;\n}\n\n.ProfileCard-avatarLink {\n    border-radius: 6px;\n}\n\n.DashboardProfileCard-avatarLink {\n    background-color: transparent;\n}\n\n.ProfileAvatar-image {\n    border-radius: 7px;\n}\n.ProfileAvatar {\n    border-radius: 12px;\n}\n\n/* Profile box is missing top border for some reason */\n.DashboardProfileCard-bg {\n    margin-top: 0px;\n}\n\n.content-main {\n    border-radius: 3px;\n}\n.DashboardProfileCard {\n    border-radius: 3px;\n}\n\n/* Show absolute timestamps */\n.tweet-timestamp::after {\n    content: attr(title) attr(data-original-title);\n}\n.tweet-timestamp ._timestamp {\n    display: none;\n}\n\n/* Hide reply, retweet, like, and direct message buttons below tweets that aren't mine */\n.tweet.js-stream-tweet:not(.my-tweet) .ProfileTweet-actionList {\n    display: none;\n}\n.stream-item .content {\n    min-height: 49px;\n}",
+				"code": "/* Hide shit */\n.Trends.module,\n.wtf-module,\n.DismissableModule,\n.DismissibleModule,\nli.moments,\n.ScrollBump,\n.Footer-adsModule,\n#larry-active,\n.LiveVideoHomePageModuleContainer,\nli.stream-item[data-suggestion-json *=\"ActivityTweet\"],\nli[data-component-context=\"generic_activity\"],\nli.people .count,\n.Footer,\nli[data-tweet-hidden-parent='1'],\n.self-thread-head,\n.ProfileTweet-action--reply,\n.ProfileTweet-action--analytics,\nh1.Icon {\n    display: none !important;\n}\n\n/* Rounded rectangle profile pictures */\n.avatar,\n.avatar--circular,\n.DMAvatar,\n#user-dropdown-toggle,\n#user-dropdown-toggle .Avatar {\n    border-radius: 3px;\n    image-rendering: optimizeQuality;\n    image-rendering: -webkit-optimize-contrast;\n}\n\n.DashboardProfileCard-avatarImage,\n.ProfileCard-avatarImage {\n    border-radius: 5px;\n}\n\n.ProfileCard-avatarLink {\n    border-radius: 6px;\n}\n\n.DashboardProfileCard-avatarLink {\n    background-color: transparent;\n}\n\n.ProfileAvatar-image {\n    border-radius: 7px;\n}\n.ProfileAvatar {\n    border-radius: 12px;\n}\n\n/* Profile box is missing top border for some reason */\n.DashboardProfileCard-bg {\n    margin-top: 0px;\n}\n\n.content-main {\n    border-radius: 3px;\n}\n.DashboardProfileCard {\n    border-radius: 3px;\n}\n\n/* Show absolute timestamps */\n.tweet-timestamp::after {\n    content: attr(title) attr(data-original-title);\n}\n.tweet-timestamp ._timestamp {\n    display: none;\n}\n\n/* Hide reply, retweet, like, and direct message buttons below tweets that aren't mine */\n.tweet.js-stream-tweet:not(.my-tweet) .ProfileTweet-actionList {\n    display: none;\n}\n.stream-item .content {\n    min-height: 49px;\n}",
 				"domains": [
 					"twitter.com"
 				]
@@ -34,7 +34,7 @@
 		"url": null,
 		"originalMd5": null,
 		"id": 2,
-		"updateDate": 1553521372247
+		"updateDate": 1560085965336
 	},
 	{
 		"installDate": 1534329178590,
@@ -105,7 +105,7 @@
 		"enabled": true,
 		"sections": [
 			{
-				"code": "#below_tree {\n\tdisplay: none;\n}\n\n.article_sub_title .icon-service_globe-16x16,\n.article_sub_title .icon-coffee_empty {\n\tdisplay: none;\n}\n\n.article_footer_buttons.smallradius[title*='Send article to external services'],\n.article_footer_buttons.smallradius[title*='Share by email']{\n    display: none;\n}\n\n#sb_rp_section_options {\n    display: none;\n}\n\n#sb_rp_notifications {\n    display: none;\n}\n#sb_rp_tools {\n    right: 40px;\n}\n\n#sb_rp_prev_article,\n#sb_rp_next_article,\n.inno_toolbar_spacer {\n    display: none;\n}\n\n#sb_rp_gear {\n    right: 0;\n}\n\n.article_content {\n    max-width: unset;\n}\n\n.article_content video {\n    max-width: 100%;\n    height: auto;\n}\n\n.ar[data-tags *= '\"Play\"'] .column_view_thumbnail {\n    opacity: 0;\n}\n.ar[data-tags *= '\"Play\"']:hover .column_view_thumbnail {\n    opacity: 1;  \n}\n\n#sb_tp_search_overlay, #sb_tp_margin {\n    display: none;\n}\n\n/* Get rid of unclickable margins between articles in Column View */\n.reader_pane_view_style_2 .article_header_text {\n    padding-top: 10px;\n    padding-bottom: 7px;\n}\n.reader_pane_view_style_2 .article_header_pane_left {\n    padding-top: 10px;\n}\n.reader_pane_view_style_2 .article_header {\n    top: 0 !important;\n}\n.reader_pane_view_style_2 .ar {\n    padding-top: 0;\n    padding-bottom: 0;\n}",
+				"code": "#below_tree {\n\tdisplay: none;\n}\n\n.article_sub_title .icon-service_globe-16x16,\n.article_sub_title .icon-coffee_empty {\n\tdisplay: none;\n}\n\n.article_footer_buttons.smallradius[title*='Send article to external services'],\n.article_footer_buttons.smallradius[title*='Share by email']{\n    display: none;\n}\n\n#sb_rp_section_options {\n    display: none;\n}\n\n#sb_rp_notifications {\n    display: none;\n}\n#sb_rp_tools {\n    right: 40px;\n}\n\n#sb_rp_prev_article,\n#sb_rp_next_article,\n.inno_toolbar_spacer {\n    display: none;\n}\n\n#sb_rp_gear {\n    right: 0;\n}\n\n.article_content {\n    max-width: unset;\n}\n\n.article_content video {\n    max-width: 100%;\n    height: auto;\n}\n\n.ar[data-tags *= '\"Play comics\"'] .column_view_thumbnail,\n.ar[data-tags *= '\"Play people\"'] .column_view_thumbnail,\n.ar[data-tags *= '\"Play video\"'] .column_view_thumbnail\n{\n    opacity: 0;\n}\n.ar[data-tags *= '\"Play comics\"']:hover .column_view_thumbnail,\n.ar[data-tags *= '\"Play people\"']:hover .column_view_thumbnail,\n.ar[data-tags *= '\"Play video\"']:hover .column_view_thumbnail\n{\n    opacity: 1;  \n}\n\n#sb_tp_search_overlay, #sb_tp_margin {\n    display: none;\n}\n\n/* Get rid of unclickable margins between articles in Column View */\n.reader_pane_view_style_2 .article_header_text {\n    padding-top: 10px;\n    padding-bottom: 7px;\n}\n.reader_pane_view_style_2 .article_header_pane_left {\n    padding-top: 10px;\n}\n.reader_pane_view_style_2 .article_header {\n    top: 0 !important;\n}\n.reader_pane_view_style_2 .ar {\n    padding-top: 0;\n    padding-bottom: 0;\n}\n\n/* Initially hide the possibly long folder list in the context menu of a feed in the navigation tree */\n.inno_toolbar_button_menu_item_filter ~ .inno_toolbar_button_menu_item {\n    display: none;\n}\n\n/* Only show unread stripe when the article is actually unread, otherwise it's not visually differentiated enough to allow visual scanning */\n.article_stripe_read {\n    display: none;\n}\n\n/* Hide hamburger button in the top left that toggles the navigation tree visibility */\n#sb_menu_icon {\n    display: none;\n}\n#sb_tp_buttons {\n    float: none;\n}\n\n.article_header .arrow_div {\n    display: none;\n}",
 				"domains": [
 					"www.inoreader.com"
 				]
@@ -116,7 +116,7 @@
 		"url": null,
 		"originalMd5": null,
 		"id": 7,
-		"updateDate": 1554189019700
+		"updateDate": 1555400108672
 	},
 	{
 		"installDate": 1534329178599,
