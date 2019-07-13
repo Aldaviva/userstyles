@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@name           JSON Editor Online
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Fixed layout calculation when ads are blocked.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("jsoneditoronline.org") {
+    /* Make two-column layout scale to viewport width correctly */
+    #ad {
+        display: none;
+    }
+}

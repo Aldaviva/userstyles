@@ -1,0 +1,26 @@
+/* ==UserStyle==
+@name           YouTube
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Removed clutter.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document url-prefix("https://www.youtube.com/watch?") {
+    .watch-main-col,
+    #related,
+    #logo,
+    #search,
+    #end,
+    .ytp-endscreen-content,
+    #comments,
+    #info {
+        display: none !important;
+    }
+
+    ytd-video-secondary-info-renderer {
+        border-bottom: none;
+    }
+}

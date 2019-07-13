@@ -1,0 +1,120 @@
+/* ==UserStyle==
+@name           Inoreader
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("inoreader.com") {
+    #below_tree {
+        display: none;
+    }
+
+    .article_sub_title .icon-service_globe-16x16,
+    .article_sub_title .icon-coffee_empty {
+        display: none;
+    }
+
+    .article_footer_buttons.smallradius[title*='Send article to external services'],
+    .article_footer_buttons.smallradius[title*='Share by email'] {
+        display: none;
+    }
+
+    #sb_rp_section_options {
+        display: none;
+    }
+
+    #sb_rp_notifications {
+        display: none;
+    }
+
+    #sb_rp_tools {
+        right: 40px;
+    }
+
+    #sb_rp_prev_article,
+    #sb_rp_next_article,
+    .inno_toolbar_spacer {
+        display: none;
+    }
+
+    #sb_rp_gear {
+        right: 0;
+    }
+
+    .article_content {
+        max-width: unset;
+    }
+
+    .article_content video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .ar[data-tags *='"Play comics"'] .column_view_thumbnail,
+    .ar[data-tags *='"Play people"'] .column_view_thumbnail,
+    .ar[data-tags *='"Play video"'] .column_view_thumbnail {
+        opacity: 0;
+    }
+
+    .ar[data-tags *='"Play comics"']:hover .column_view_thumbnail,
+    .ar[data-tags *='"Play people"']:hover .column_view_thumbnail,
+    .ar[data-tags *='"Play video"']:hover .column_view_thumbnail {
+        opacity: 1;
+    }
+
+    #sb_tp_search_overlay,
+    #sb_tp_margin {
+        display: none;
+    }
+
+    /* Get rid of unclickable margins between articles in Column View */
+    .reader_pane_view_style_2 .article_header_text {
+        padding-top: 10px;
+        padding-bottom: 7px;
+    }
+
+    .reader_pane_view_style_2 .article_header_pane_left {
+        padding-top: 10px;
+    }
+
+    .reader_pane_view_style_2 .article_header {
+        top: 0 !important;
+    }
+
+    .reader_pane_view_style_2 .ar {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* Initially hide the possibly long folder list in the context menu of a feed in the navigation tree */
+    .inno_toolbar_button_menu_item_filter ~ .inno_toolbar_button_menu_item {
+        display: none;
+    }
+
+    /* Only show unread stripe when the article is actually unread, otherwise it's not visually differentiated enough to allow visual scanning */
+    .article_stripe_read {
+        display: none;
+    }
+
+    /* Hide hamburger button in the top left that toggles the navigation tree visibility */
+    #sb_menu_icon {
+        display: none;
+    }
+
+    #sb_tp_buttons {
+        float: none;
+    }
+
+    .article_header .arrow_div {
+        display: none;
+    }
+
+    /* FitGirl Repacks page sidebar relies on floating that does not exist in feed items, so remove broken height constraint */
+    .article_content > h3 + p[style="height:200px;"] {
+        height: auto !important;
+    }
+}

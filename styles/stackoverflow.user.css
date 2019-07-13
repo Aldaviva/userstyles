@@ -1,0 +1,63 @@
+/* ==UserStyle==
+@name           Stack Overflow
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Removed clutter on question pages.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("stackoverflow.com") {
+    body.question-page #sidebar,
+    body.question-page #footer,
+    body.question-page .bottom-notice,
+    body.question-page #header,
+    body.question-page header,
+    body.question-page .topbar,
+    body.question-page .question-status,
+    body.question-page .fw,
+    body.question-page .comments-link,
+    body.question-page #tabs,
+    body.question-page .post-taglist,
+    body.question-page .comment-date,
+    body.question-page .comment-user,
+    body.question-page .bounty-notification,
+    body.question-page #post-form,
+    body.question-page #feed-link,
+    body.question-page .aside-cta,
+    body.question-page .js-link-separator,
+    body.question-page #left-sidebar {
+        display: none !important;
+    }
+
+    body.question-page #mainbar {
+        float: none !important;
+        width: auto !important;
+    }
+
+    body.question-page #question-header {
+        width: auto !important;
+    }
+
+    body.question-page #content {
+        width: 728px !important;
+        padding-top: 17px !important;
+    }
+
+    body.question-page .comment-body {
+        visibility: collapse !important;
+    }
+
+    body.question-page .comment-copy {
+        visibility: visible !important;
+    }
+
+    body.question-page .so-header ~ .container {
+        padding-top: 0 !important;
+    }
+
+    body.question-page .top-bar ~ .container {
+        margin-top: 0 !important;
+    }
+}

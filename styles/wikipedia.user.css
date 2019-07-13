@@ -1,0 +1,36 @@
+/* ==UserStyle==
+@name           Wikipedia
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Removed clutter.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("wikipedia.org") {
+    .ambox,
+    #mw-head,
+    #mw-head-base,
+    #mw-page-base,
+    #mw-panel,
+    .articleFeedback,
+    #catlinks,
+    #footer,
+    #localNotice,
+    .stub,
+    #siteSub,
+    .editsection,
+    .articleFeedbackv5-bottomrighttab {
+        display: none !important;
+    }
+
+    #content {
+        margin-left: 0 !important;
+    }
+
+    body,
+    #content {
+        background: white !important;
+    }
+}

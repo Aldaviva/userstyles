@@ -8,24 +8,21 @@ Good user interfaces should
 - not be annoying
 
 ## How to Use
-1. Download [`userstyles.json`](userstyles.json) from this repository.
 1. Install the [**Stylus**](https://add0n.com/stylus.html) browser extension.
-1. Go to the Stylus extension's **Details**.
-1. Click **Manage Styles**.
-1. Under **Import**, click **Import styles**.
-1. Choose `userstyles.json` that you just downloaded.
+1. Click the site name in the [table below](#targeted-websites).
+    - Alternately, you can open the user script file from this repository that you want, then click the Raw button.
+1. On the Stylus page that appears, click the **Install** button.
 
 ## Targeted websites
-On all sites, underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.
-
 |Site|Changes|
 |---|---|
-|Inoreader|Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.|
-|JSON Editor Online|Fixed layout calculation when ads are blocked.|
-|Pandora|Fixed layout calculation when ads are blocked.|
-|Slack|Enlarged emoticons.|
-|Stack Overflow|Removed clutter on question pages.|
-|Twitch|Enabled HTML5 video context menu, useful for Video Popout.|
-|Twitter|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.<br>You can block keywords with [Larry Filter for Twitter](https://chrome.google.com/webstore/detail/larry-filter-for-twitter/ifgdeokhnfkbgdocafpokgdnnfbnbbok?utm_source=chrome-app-launcher-info-dialog).|
-|Wikipedia|Removed clutter.|
-|YouTube|Removed clutter.|
+|[All](https://github.com/Aldaviva/userstyles/raw/master/styles/solidunderlines.user.css)|Underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.|
+|[Inoreader](https://github.com/Aldaviva/userstyles/raw/master/styles/inoreader.user.css)|Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.|
+|[JSON Editor Online](https://github.com/Aldaviva/userstyles/raw/master/styles/jsoneditoronline.user.css)|Fixed layout calculation when ads are blocked.|
+|[Pandora](https://github.com/Aldaviva/userstyles/raw/master/styles/pandora.user.css)|Fixed layout calculation when ads are blocked.|
+|[Slack](https://github.com/Aldaviva/userstyles/raw/master/styles/slack.user.css)|Enlarged emoticons.|
+|[Stack Overflow](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
+|[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Enabled HTML5 video context menu, useful for Video Popout.|
+|[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.<br>You can block keywords with [Larry Filter for Twitter](https://chrome.google.com/webstore/detail/larry-filter-for-twitter/ifgdeokhnfkbgdocafpokgdnnfbnbbok?utm_source=chrome-app-launcher-info-dialog).|
+|[Wikipedia](https://github.com/Aldaviva/userstyles/raw/master/styles/wikipedia.user.css)|Removed clutter.|
+|[YouTube](https://github.com/Aldaviva/userstyles/raw/master/styles/youtube.user.css)|Removed clutter.|

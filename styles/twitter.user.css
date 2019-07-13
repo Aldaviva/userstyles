@@ -1,0 +1,96 @@
+/* ==UserStyle==
+@name           Twitter
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. You can block keywords with Larry Filter for Twitter.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("twitter.com") {
+    /* Hide shit */
+    .Trends.module,
+    .wtf-module,
+    .DismissableModule,
+    .DismissibleModule,
+    li.moments,
+    .ScrollBump,
+    .Footer-adsModule,
+    #larry-active,
+    .LiveVideoHomePageModuleContainer,
+    li.stream-item[data-suggestion-json *= "ActivityTweet"],
+    li[data-component-context = "generic_activity"],
+    li.people .count,
+    .Footer,
+    li[data-tweet-hidden-parent = '1'],
+    .self-thread-head,
+    .ProfileTweet-action--reply,
+    .ProfileTweet-action--analytics,
+    h1.Icon {
+        display: none !important;
+    }
+
+    /* Rounded rectangle profile pictures */
+    .avatar,
+    .avatar--circular,
+    .DMAvatar,
+    #user-dropdown-toggle,
+    #user-dropdown-toggle .Avatar {
+        border-radius: 3px;
+        image-rendering: optimizeQuality;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    .DashboardProfileCard-avatarImage,
+    .ProfileCard-avatarImage {
+        border-radius: 5px;
+    }
+
+    .ProfileCard-avatarLink {
+        border-radius: 6px;
+    }
+
+    .DashboardProfileCard-avatarLink {
+        background-color: transparent;
+    }
+
+    .ProfileAvatar-image {
+        border-radius: 7px;
+    }
+
+    .ProfileAvatar {
+        border-radius: 12px;
+    }
+
+    /* Profile box is missing top border for some reason */
+    .DashboardProfileCard-bg {
+        margin-top: 0px;
+    }
+
+    .content-main {
+        border-radius: 3px;
+    }
+
+    .DashboardProfileCard {
+        border-radius: 3px;
+    }
+
+    /* Show absolute timestamps */
+    .tweet-timestamp::after {
+        content: attr(title) attr(data-original-title);
+    }
+
+    .tweet-timestamp ._timestamp {
+        display: none;
+    }
+
+    /* Hide reply, retweet, like, and direct message buttons below tweets that aren't mine */
+    .tweet.js-stream-tweet:not(.my-tweet) .ProfileTweet-actionList {
+        display: none;
+    }
+
+    .stream-item .content {
+        min-height: 49px;
+    }
+}

@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name           Solid underlines
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+
+a:-webkit-any-link {
+	text-decoration-skip-ink: none;
+}

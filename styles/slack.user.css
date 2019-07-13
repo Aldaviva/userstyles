@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           Slack
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Enlarged emoticons.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document regexp("https:\\/\\/.*\\.slack\\.com\\/messages.*") {
+    /* Make emoji (and their image replacements) four times as large */
+    .message_body .emoji-sizer {
+        font-size: 2.75rem !important;
+        line-height: 2.25rem !important;
+    }
+
+    .emoji-only.emoji-sizer {
+        font-size: 4rem !important;
+        line-height: 4rem !important;
+    }
+}

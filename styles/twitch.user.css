@@ -1,0 +1,18 @@
+/* ==UserStyle==
+@name           Twitch
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.1
+@description    Enabled HTML5 video context menu, useful for Video Popout.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("twitch.tv") {
+    /* Allow HTML5 video context menu, useful for Video Popout */
+    .ima-ads-container,
+    .player-overlay,
+    .extension-container {
+        display: none;
+    }
+}
