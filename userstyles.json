@@ -6,8 +6,8 @@
 		"sections": [
 			{
 				"code": ".watch-main-col,\n#related, /* Related videos sidebar */\n#logo, /* Site logo */\n#search, /* Search box */\n#end, /* Account buttons in the top right */\n.ytp-endscreen-content, /* Recommended videos after the main video ends */\n#comments, /* Comments section below the video */\n#info, /* View count, ratings, share, and save buttons */\n#subscribe-button /* Subscribe and notify buttons */\n/* #more */ /* Progressive disclosure button for description, which is always expanded */\n{\n\tdisplay: none !important;\n}\n\nytd-video-secondary-info-renderer {\n    border-bottom: none;\n}\n\nytd-expander[collapsed] > #content.ytd-expander {\n/*     overflow: visible; */\n}",
-				"regexps": [
-					"https?\\:\\/\\/www\\.youtube\\.com\\/watch\\?.*"
+				"urlPrefixes": [
+					"https://www.youtube.com/watch?"
 				]
 			}
 		],
@@ -15,7 +15,8 @@
 		"md5Url": null,
 		"url": null,
 		"originalMd5": null,
-		"id": 1
+		"id": 1,
+		"updateDate": 1561774616575
 	},
 	{
 		"installDate": 1534329178586,
@@ -105,9 +106,9 @@
 		"enabled": true,
 		"sections": [
 			{
-				"code": "#below_tree {\n\tdisplay: none;\n}\n\n.article_sub_title .icon-service_globe-16x16,\n.article_sub_title .icon-coffee_empty {\n\tdisplay: none;\n}\n\n.article_footer_buttons.smallradius[title*='Send article to external services'],\n.article_footer_buttons.smallradius[title*='Share by email']{\n    display: none;\n}\n\n#sb_rp_section_options {\n    display: none;\n}\n\n#sb_rp_notifications {\n    display: none;\n}\n#sb_rp_tools {\n    right: 40px;\n}\n\n#sb_rp_prev_article,\n#sb_rp_next_article,\n.inno_toolbar_spacer {\n    display: none;\n}\n\n#sb_rp_gear {\n    right: 0;\n}\n\n.article_content {\n    max-width: unset;\n}\n\n.article_content video {\n    max-width: 100%;\n    height: auto;\n}\n\n.ar[data-tags *= '\"Play comics\"'] .column_view_thumbnail,\n.ar[data-tags *= '\"Play people\"'] .column_view_thumbnail,\n.ar[data-tags *= '\"Play video\"'] .column_view_thumbnail\n{\n    opacity: 0;\n}\n.ar[data-tags *= '\"Play comics\"']:hover .column_view_thumbnail,\n.ar[data-tags *= '\"Play people\"']:hover .column_view_thumbnail,\n.ar[data-tags *= '\"Play video\"']:hover .column_view_thumbnail\n{\n    opacity: 1;  \n}\n\n#sb_tp_search_overlay, #sb_tp_margin {\n    display: none;\n}\n\n/* Get rid of unclickable margins between articles in Column View */\n.reader_pane_view_style_2 .article_header_text {\n    padding-top: 10px;\n    padding-bottom: 7px;\n}\n.reader_pane_view_style_2 .article_header_pane_left {\n    padding-top: 10px;\n}\n.reader_pane_view_style_2 .article_header {\n    top: 0 !important;\n}\n.reader_pane_view_style_2 .ar {\n    padding-top: 0;\n    padding-bottom: 0;\n}\n\n/* Initially hide the possibly long folder list in the context menu of a feed in the navigation tree */\n.inno_toolbar_button_menu_item_filter ~ .inno_toolbar_button_menu_item {\n    display: none;\n}\n\n/* Only show unread stripe when the article is actually unread, otherwise it's not visually differentiated enough to allow visual scanning */\n.article_stripe_read {\n    display: none;\n}\n\n/* Hide hamburger button in the top left that toggles the navigation tree visibility */\n#sb_menu_icon {\n    display: none;\n}\n#sb_tp_buttons {\n    float: none;\n}\n\n.article_header .arrow_div {\n    display: none;\n}",
+				"code": "#below_tree {\n\tdisplay: none;\n}\n\n.article_sub_title .icon-service_globe-16x16,\n.article_sub_title .icon-coffee_empty {\n\tdisplay: none;\n}\n\n.article_footer_buttons.smallradius[title*='Send article to external services'],\n.article_footer_buttons.smallradius[title*='Share by email']{\n    display: none;\n}\n\n#sb_rp_section_options {\n    display: none;\n}\n\n#sb_rp_notifications {\n    display: none;\n}\n#sb_rp_tools {\n    right: 40px;\n}\n\n#sb_rp_prev_article,\n#sb_rp_next_article,\n.inno_toolbar_spacer {\n    display: none;\n}\n\n#sb_rp_gear {\n    right: 0;\n}\n\n.article_content {\n    max-width: unset;\n}\n\n.article_content video {\n    max-width: 100%;\n    height: auto;\n}\n\n.ar[data-tags *= '\"Play comics\"'] .column_view_thumbnail,\n.ar[data-tags *= '\"Play people\"'] .column_view_thumbnail,\n.ar[data-tags *= '\"Play video\"'] .column_view_thumbnail\n{\n    opacity: 0;\n}\n.ar[data-tags *= '\"Play comics\"']:hover .column_view_thumbnail,\n.ar[data-tags *= '\"Play people\"']:hover .column_view_thumbnail,\n.ar[data-tags *= '\"Play video\"']:hover .column_view_thumbnail\n{\n    opacity: 1;  \n}\n\n#sb_tp_search_overlay, #sb_tp_margin {\n    display: none;\n}\n\n/* Get rid of unclickable margins between articles in Column View */\n.reader_pane_view_style_2 .article_header_text {\n    padding-top: 10px;\n    padding-bottom: 7px;\n}\n.reader_pane_view_style_2 .article_header_pane_left {\n    padding-top: 10px;\n}\n.reader_pane_view_style_2 .article_header {\n    top: 0 !important;\n}\n.reader_pane_view_style_2 .ar {\n    padding-top: 0;\n    padding-bottom: 0;\n}\n\n/* Initially hide the possibly long folder list in the context menu of a feed in the navigation tree */\n.inno_toolbar_button_menu_item_filter ~ .inno_toolbar_button_menu_item {\n    display: none;\n}\n\n/* Only show unread stripe when the article is actually unread, otherwise it's not visually differentiated enough to allow visual scanning */\n.article_stripe_read {\n    display: none;\n}\n\n/* Hide hamburger button in the top left that toggles the navigation tree visibility */\n#sb_menu_icon {\n    display: none;\n}\n#sb_tp_buttons {\n    float: none;\n}\n\n.article_header .arrow_div {\n    display: none;\n}\n\n/* FitGirl Repacks page sidebar relies on floating that does not exist in feed items, so remove broken height constraint */\n.article_content > h3 + p[style = \"height:200px;\"] {\n    height: auto !important;\n}",
 				"domains": [
-					"www.inoreader.com"
+					"inoreader.com"
 				]
 			}
 		],
@@ -116,7 +117,7 @@
 		"url": null,
 		"originalMd5": null,
 		"id": 7,
-		"updateDate": 1555400108672
+		"updateDate": 1561774571530
 	},
 	{
 		"installDate": 1534329178599,
@@ -172,5 +173,24 @@
 			}
 		],
 		"id": 10
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1561774396878,
+		"name": "Pandora",
+		"sections": [
+			{
+				"code": ".region-topBar,\n.region-main,\n.region-bottomBar {\n    width: 100% !important;\n}\n\n.DisplayAdController {\n    display: none;\n}",
+				"domains": [
+					"pandora.com"
+				]
+			}
+		],
+		"updateDate": 1561774507005,
+		"id": 11
 	}
 ]

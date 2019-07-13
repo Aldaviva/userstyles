@@ -22,6 +22,7 @@ On all sites, underlines will intersect with text, instead of leaving a gap arou
 |---|---|
 |Inoreader|Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.|
 |JSON Editor Online|Fixed layout calculation when ads are blocked.|
+|Pandora|Fixed layout calculation when ads are blocked.|
 |Slack|Enlarged emoticons.|
 |Stack Overflow|Removed clutter on question pages.|
 |Twitch|Enabled HTML5 video context menu, useful for Video Popout.|
