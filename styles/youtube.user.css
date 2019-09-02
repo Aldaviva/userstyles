@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.2
+@version        0.0.3
 @description    Removed clutter.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -9,11 +9,17 @@
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
 @-moz-document url-prefix("https://www.youtube.com/watch?") {
+    #search,
+    #end,
+    #subscribe-button {
+        display: none !important;
+    }
+}
+
+@-moz-document domain("www.youtube.com") {
     .watch-main-col,
     #related,
     #logo,
-    #search,
-    #end,
     .ytp-endscreen-content,
     #comments,
     #info,
@@ -23,7 +29,8 @@
     #more,
     .iv-branding,
     .ytp-miniplayer-button,
-    .ytp-size-button {
+    /*.ytp-size-button,*/
+    ytd-metadata-row-container-renderer.sticky {
         display: none !important;
     }
 
