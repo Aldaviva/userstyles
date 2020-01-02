@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.1
+@version        0.0.2
 @description    Enabled HTML5 video context menu, useful for Video Popout.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -9,10 +9,28 @@
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
 @-moz-document domain("twitch.tv") {
-    /* Allow HTML5 video context menu, useful for Video Popout */
-    .ima-ads-container,
-    .player-overlay,
-    .extension-container {
-        display: none;
+    /* Hide extension overlays on top of the video, unless it's in miniplayer mode */
+    .video-player__container--resize-calc .tw-c-text-overlay,
+    .video-player__container--resize-calc .extensions-dock__layout {
+        display: none !important;
+    }
+    
+    /*
+     * Enable browser-based Picture in Picture: allow clicks to the HTML5 video element,
+     * but still allow the toolbars to show, hide, and receive clicks.
+     */
+    .video-player__container--resize-calc .video-player__overlay {
+        /* Stop clicks from being stolen by this div, so they can hit the video element instead */
+        pointer-events: none;
+    }
+    .video-player__container:hover .tw-transition {
+        /* Show the toolbars when hovering over the container, instead of relying on the now-unused overlay event handlers */
+        opacity: 1;
+        transition-property: transform, opacity;
+        transition-timing-function: ease;
+    }
+    .tw-transition > div {
+        /* Allow buttons in toolbars to be clicked */
+        pointer-events: all !important;
     }
 }
