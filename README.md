@@ -23,6 +23,6 @@ Good user interfaces should
 |[Slack](https://github.com/Aldaviva/userstyles/raw/master/styles/slack.user.css)|Enlarged emoticons.|
 |[Stack Overflow](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
 |[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Enabled HTML5 video context menu, useful for Video Popout.|
-|[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.<br>You can block keywords with [Larry Filter for Twitter](https://chrome.google.com/webstore/detail/larry-filter-for-twitter/ifgdeokhnfkbgdocafpokgdnnfbnbbok?utm_source=chrome-app-launcher-info-dialog).|
+|[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.<br>You can block keywords with [Ben's Twitter Politics Filter](https://github.com/Aldaviva/content-blocking-filters).|
 |[Wikipedia](https://github.com/Aldaviva/userstyles/raw/master/styles/wikipedia.user.css)|Removed clutter.|
 |[YouTube](https://github.com/Aldaviva/userstyles/raw/master/styles/youtube.user.css)|Removed clutter.|
