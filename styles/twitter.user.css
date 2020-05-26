@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.3
+@version        0.0.4
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to add the following filters to uBlock Origin:
                 twitter.com##.stream-item:has(.conversation-tweet-has-context)
@@ -32,7 +32,9 @@
     .self-thread-head,
     .ProfileTweet-action--reply,
     .ProfileTweet-action--analytics,
-    h1.Icon {
+    h1.Icon,
+    #banners,
+    li.stream-item .tweet:not([data-retweeter]) .context {
         display: none !important;
     }
 
@@ -97,5 +99,9 @@
 
     .stream-item .content {
         min-height: 49px;
+    }
+    
+    .topbar-spacer {
+        padding-top: 47px !important;
     }
 }
