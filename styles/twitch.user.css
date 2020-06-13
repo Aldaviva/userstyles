@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.2
+@version        0.0.3
 @description    Enabled HTML5 video context menu, useful for Video Popout.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -10,7 +10,6 @@
 ==/UserStyle== */
 @-moz-document domain("twitch.tv") {
     /* Hide extension overlays on top of the video, unless it's in miniplayer mode */
-    .video-player__container--resize-calc .tw-c-text-overlay,
     .video-player__container--resize-calc .extensions-dock__layout {
         display: none !important;
     }
@@ -23,14 +22,31 @@
         /* Stop clicks from being stolen by this div, so they can hit the video element instead */
         pointer-events: none;
     }
+
+    .extensions-video-overlay-size-container {
+        /* Get rid of extension overlay that blocks clicks */
+        display: none !important;
+    }
+
     .video-player__container:hover .tw-transition {
         /* Show the toolbars when hovering over the container, instead of relying on the now-unused overlay event handlers */
         opacity: 1;
         transition-property: transform, opacity;
         transition-timing-function: ease;
     }
+
     .tw-transition > div {
         /* Allow buttons in toolbars to be clicked */
         pointer-events: all !important;
+    }
+    
+    .muted-segments-alert {
+        /* Hide the "audio for portions of this video has been muted" message */
+        display: none !important;
+    }
+    
+    .player-controls.tw-overflow-hidden {
+        /* Keep player toolbar menus (like the gear menu to select resolution) from disappearing when you move your mouse from the toolbar button to the menu */
+        overflow: visible !important;
     }
 }
