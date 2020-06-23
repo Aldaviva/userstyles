@@ -1,107 +1,45 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.4
+@version        1.0.0
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. You can block keywords with https://github.com/Aldaviva/content-blocking-filters
-                You may also want to add the following filters to uBlock Origin:
-                twitter.com##.stream-item:has(.conversation-tweet-has-context)
-                twitter.com##.stream-item:has(.ReplyingToContextBelowAuthor)
+                You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
+
 @-moz-document domain("twitter.com") {
-    /* Hide shit */
-    .Trends.module,
-    .wtf-module,
-    .DismissableModule,
-    .DismissibleModule,
-    li.moments,
-    .ScrollBump,
-    .Footer-adsModule,
-    #larry-active,
-    .LiveVideoHomePageModuleContainer,
-    li.stream-item[data-suggestion-json *= "ActivityTweet"],
-    li.stream-item[data-suggestion-json *= "ScTweet"],
-    li.stream-item[data-suggestion-json *= "PyleTweet"],
-    li[data-component-context = "generic_activity"],
-    li.people .count,
-    .Footer,
-    li[data-tweet-hidden-parent = '1'],
-    .self-thread-head,
-    .ProfileTweet-action--reply,
-    .ProfileTweet-action--analytics,
-    h1.Icon,
-    #banners,
-    li.stream-item .tweet:not([data-retweeter]) .context {
-        display: none !important;
-    }
-
-    /* Rounded rectangle profile pictures */
-    .avatar,
-    .avatar--circular,
-    .DMAvatar,
-    #user-dropdown-toggle,
-    #user-dropdown-toggle .Avatar {
-        border-radius: 3px;
-        image-rendering: optimizeQuality;
-        image-rendering: -webkit-optimize-contrast;
-    }
-
-    .DashboardProfileCard-avatarImage,
-    .ProfileCard-avatarImage {
-        border-radius: 5px;
-    }
-
-    .ProfileCard-avatarLink {
-        border-radius: 6px;
-    }
-
-    .DashboardProfileCard-avatarLink {
-        background-color: transparent;
-    }
-
-    .ProfileAvatar-image {
-        border-radius: 7px;
-    }
-
-    .ProfileAvatar {
-        border-radius: 12px;
-    }
-
-    /* Profile box is missing top border for some reason */
-    .DashboardProfileCard-bg {
-        margin-top: 0px;
-    }
-
-    .content-main {
-        border-radius: 3px;
-    }
-
-    .DashboardProfileCard {
-        border-radius: 3px;
-    }
-
-    /* Show absolute timestamps */
-    .tweet-timestamp::after {
-        content: attr(title) attr(data-original-title);
-    }
-
-    .tweet-timestamp ._timestamp {
+    /* Hide What's Happening right panel */
+    div[data-testid="sidebarColumn"] > div > div > div > div > div > div:nth-child(3),
+    /* Hide Who To Follow right panel */
+    div[data-testid="sidebarColumn"] > div > div > div > div > div > div:nth-child(4),
+    /* Hide Explore left navigation link */
+    nav a[data-testid="AppTabBar_Explore_Link"],
+    /* Hide Notifications left navigation link */
+    nav a[data-testid="AppTabBar_Notifications_Link"] {
         display: none;
-    }
-
-    /* Hide reply, retweet, like, and direct message buttons below tweets that aren't mine */
-    .tweet.js-stream-tweet:not(.my-tweet) .ProfileTweet-actionList {
-        display: none;
-    }
-
-    .stream-item .content {
-        min-height: 49px;
     }
     
-    .topbar-spacer {
-        padding-top: 47px !important;
+    /* Square avatars */
+    div[data-testid="tweet"] a[data-focusable="true"] {
+        border-radius: 3px;
+    }
+    div[data-testid="tweet"] a[data-focusable="true"] div[aria-label] {
+        border-radius: 0;
+    }
+    
+    /* Hide the Replies, Retweets, Likes, and Share buttons underneath each tweet on the home timeline */
+    div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[role=group] {
+        display: none;
+    }
+    
+    /* Show absolute timestamps */
+    div[data-testid="tweet"] a[dir=auto]::after {
+        content: attr(title) attr(data-original-title);
+    }
+    div[data-testid="tweet"] a[dir=auto] time {
+        display: none;
     }
 }
