@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.3
+@version        0.1.4
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -41,9 +41,11 @@
         max-width: unset;
     }
     
-    /* Don't arbitrarily limit the article modal width */
+    /* Don't arbitrarily limit the article modal width to a constant */
     #article_dialog_wrapper {
+        min-width: 640px;
         width: max-content !important;
+        max-width: calc(100% - 2 * 180px);
         /* Let this be the positioning parent for the fixed .article_footer_placeholder_top below, to give it the right width while keeping it from scrolling */
         transform: translate(0px,0px);
     }
