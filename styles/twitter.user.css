@@ -1,8 +1,9 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.0
-@description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. You can block keywords with https://github.com/Aldaviva/content-blocking-filters
+@version        1.0.2
+@description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
+                You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -18,7 +19,9 @@
     /* Hide Explore left navigation link */
     nav a[data-testid="AppTabBar_Explore_Link"],
     /* Hide Notifications left navigation link */
-    nav a[data-testid="AppTabBar_Notifications_Link"] {
+    nav a[data-testid="AppTabBar_Notifications_Link"],
+    /* Hide the More dropdown from the top-right corner of each tweet */
+    div[data-testid="tweet"] div[aria-label="More"]{
         display: none;
     }
     
@@ -34,6 +37,10 @@
     div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[role=group] {
         display: none;
     }
+    /* Once the above buttons are hidden from each tweet, the tweet box may be too short and the avatar may be too close to the bottom border, so give the box a minimum height to ensure the avatar bottom padding is at least as large as its top padding. */
+    div[data-testid="tweet"] {
+        min-height: 52px;
+    }
     
     /* Show absolute timestamps */
     div[data-testid="tweet"] a[dir=auto]::after {
@@ -42,4 +49,6 @@
     div[data-testid="tweet"] a[dir=auto] time {
         display: none;
     }
+    
+    
 }
