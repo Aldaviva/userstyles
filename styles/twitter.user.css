@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.4
+@version        1.0.5
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -23,25 +23,33 @@
     /* Hide the More dropdown from the top-right corner of each tweet */
     div[data-testid="tweet"] div[aria-label="More"],
     /* Hide the Direct Messages floating pane from the bottom-right corner of the page */
-    div[data-testid="DMDrawer"] {
+    div[data-testid="DMDrawer"],
+    /* Hide footer links and copyright */
+    nav[aria-label="Footer"]{
         display: none;
     }
     
     /* Square avatars */
     div[data-testid="tweet"] a[data-focusable="true"],
-    div[role=progressbar] + div a[role=link],
-    div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] {
-        border-radius: 3px;
+    div[role=progressbar] + div a[role="link"],
+    div[data-testid="SideNav_AccountSwitcher_Button"] div[role="presentation"],
+    a[href $= "/header_photo"] + div a[role="link"],
+    div[aria-modal="true"] div[role="presentation"] {
+        border-radius: 2px;
     }
     
     div[data-testid="tweet"] a[data-focusable="true"] div[aria-label],
-    div[role=progressbar] + div a[role=link] div[aria-label],
+    div[role="progressbar"] + div a[role="link"] div[aria-label],
     div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] div[aria-label] {
         border-radius: 0;
     }
+    a[href $= "/header_photo"] + div a[role="link"] div[aria-label],
+    div[aria-modal="true"] div[role="presentation"] div[aria-label] {
+        border-radius: 1px;
+    }
     
     /* Hide the Replies, Retweets, Likes, and Share buttons underneath each tweet on the home timeline */
-    div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[role=group] {
+    div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[role="group"] {
         display: none;
     }
     /* Once the above buttons are hidden from each tweet, the tweet box may be too short and the avatar may be too close to the bottom border, so give the box a minimum height to ensure the avatar bottom padding is at least as large as its top padding. */
@@ -50,11 +58,15 @@
     }
     
     /* Show absolute timestamps */
-    div[data-testid="tweet"] a[dir=auto]::after {
+    div[data-testid="tweet"] a[dir="auto"]::after {
         content: attr(title) attr(data-original-title);
     }
-    div[data-testid="tweet"] a[dir=auto] time {
+    div[data-testid="tweet"] a[dir="auto"] time {
         display: none;
     }
     
+    /* Hide the Top Tweets button, but don't mess with the layout so it can still be clicked with https://github.com/Aldaviva/userscripts/blob/master/twitter.user.js */
+    div[aria-label ^= "Top Tweets"] {
+        visibility: hidden;
+    }
 }
