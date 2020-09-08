@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.5
+@version        1.0.6
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -40,11 +40,13 @@
     
     div[data-testid="tweet"] a[data-focusable="true"] div[aria-label],
     div[role="progressbar"] + div a[role="link"] div[aria-label],
-    div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] div[aria-label] {
+    div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] div[aria-label],
+    article div[role="presentation"] div[aria-label] {
         border-radius: 0;
     }
     a[href $= "/header_photo"] + div a[role="link"] div[aria-label],
-    div[aria-modal="true"] div[role="presentation"] div[aria-label] {
+    div[aria-modal="true"] div[role="presentation"] div[aria-label],
+    article div[role="presentation"] {
         border-radius: 1px;
     }
     
