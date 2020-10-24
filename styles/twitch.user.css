@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.3
+@version        0.0.4
 @description    Enabled HTML5 video context menu, useful for Video Popout.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -48,5 +48,10 @@
     .player-controls.tw-overflow-hidden {
         /* Keep player toolbar menus (like the gear menu to select resolution) from disappearing when you move your mouse from the toolbar button to the menu */
         overflow: visible !important;
+    }
+    
+    /* Hide Prime Loot button */
+    .top-nav__prime {
+        display: none;
     }
 }
