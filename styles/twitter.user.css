@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.7
+@version        1.0.8
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -19,9 +19,7 @@
     /* Hide Explore left navigation link */
     nav a[data-testid="AppTabBar_Explore_Link"],
     /* Hide Notifications left navigation link */
-    nav a[data-testid="AppTabBar_Notifications_Link"],
-    /* Hide the More dropdown from the top-right corner of each tweet */
-    div[data-testid="tweet"] div[aria-label="More"],
+    /*nav a[data-testid="AppTabBar_Notifications_Link"],*/
     /* Hide the Direct Messages floating pane from the bottom-right corner of the page */
     div[data-testid="DMDrawer"],
     /* Hide footer links and copyright */
@@ -51,7 +49,9 @@
     }
     
     /* Hide the Replies, Retweets, Likes, and Share buttons underneath each tweet on the home timeline */
-    div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[role="group"] {
+    div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[role="group"],
+    /* Hide the More dropdown from the top-right corner of each tweet on the home timeline */
+    div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[aria-label="More"] {
         display: none;
     }
     /* Once the above buttons are hidden from each tweet, the tweet box may be too short and the avatar may be too close to the bottom border, so give the box a minimum height to ensure the avatar bottom padding is at least as large as its top padding. This assumes that your Twitter display settings have your font size set to 2 out of 5. */
