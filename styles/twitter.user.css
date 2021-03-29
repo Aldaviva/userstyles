@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.8
+@version        1.0.9
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -23,26 +23,29 @@
     /* Hide the Direct Messages floating pane from the bottom-right corner of the page */
     div[data-testid="DMDrawer"],
     /* Hide footer links and copyright */
-    nav[aria-label="Footer"]{
+    nav[aria-label="Footer"],
+    /* Hide Compose a Direct Message button in the bottom-right corner of the page */
+    aside[aria-label="Compose a Direct Message"]{
         display: none;
     }
     
     /* Square avatars */
-    div[data-testid="tweet"] a[data-focusable="true"],
-    div[role=progressbar] + div a[role="link"],
-    div[data-testid="SideNav_AccountSwitcher_Button"] div[role="presentation"],
-    a[href $= "/header_photo"] + div a[role="link"],
-    div[aria-modal="true"] div[role="presentation"] {
+    div[data-testid="tweet"] a[data-focusable="true"], /* Timeline avatars */
+    div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]), /* What's Happening self avatar */
+    div[data-testid="SideNav_AccountSwitcher_Button"] div[role="presentation"], /* Bottom-left account menu avatar */
+    a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]), /* Profile page big avatar */
+    div[aria-modal="true"] div[role="presentation"] /* Compose Tweet modal dialog self avatar */
+    {
         border-radius: 2px;
     }
     
     div[data-testid="tweet"] a[data-focusable="true"] div[aria-label],
-    div[role="progressbar"] + div a[role="link"] div[aria-label],
+    div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) div[aria-label],
     div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] div[aria-label],
     article div[role="presentation"] div[aria-label] {
         border-radius: 0;
     }
-    a[href $= "/header_photo"] + div a[role="link"] div[aria-label],
+    a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]) div[aria-label],
     div[aria-modal="true"] div[role="presentation"] div[aria-label],
     article div[role="presentation"] {
         border-radius: 1px;
@@ -56,11 +59,44 @@
     }
     /* Once the above buttons are hidden from each tweet, the tweet box may be too short and the avatar may be too close to the bottom border, so give the box a minimum height to ensure the avatar bottom padding is at least as large as its top padding. This assumes that your Twitter display settings have your font size set to 2 out of 5. */
     div[data-testid="tweet"] {
-        min-height: 55px;
+        min-height: 58px;
     }
     
     /* Hide the Top Tweets button, but don't mess with the layout so it can still be clicked with https://github.com/Aldaviva/userscripts/blob/master/twitter.user.js */
     div[aria-label ^= "Top Tweets"] {
         visibility: hidden;
+    }
+    
+    /* Don't auto-position cropped images. Besides just looking weird, it makes the custom ALT badge below misaligned. */
+    div[data-testid="tweetPhoto"] {
+        margin: 0px !important;
+    }
+    div[data-testid="tweetPhoto"] > div {
+        background-position: top left;
+    }
+    
+    div[data-testid="tweet"] a[data-focusable="true"] > div + div,
+    div[data-testid="tweet"] + div a[data-focusable="true"] > div + div {
+        /* I don't remember what else this was for. It seems to just hide the ALT badge on images. Maybe it was to hide something after the username, like a verified badge? */
+        display: none;
+    }
+    
+    /* Hover over images with alt text to actually see the alt text. */
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"])::before {
+        background-color: rgba(0, 0, 0, 0.77);
+        border-radius: 4px;
+        bottom: 11px;
+        color: white;
+        content: "ALT";
+        font: 700 12px/15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        left: 11px;
+        margin-right: 11px;
+        overflow-wrap: break-word;
+        padding: 2px 4px;
+        position: absolute;
+        white-space: pre-wrap;
+    }
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):hover::before {
+        content: attr(aria-label);
     }
 }
