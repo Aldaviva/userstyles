@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.9
+@version        1.0.10
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -82,7 +82,8 @@
     }
     
     /* Hover over images with alt text to actually see the alt text. */
-    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"])::before {
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"])::before,
+    div[aria-roledescription="carousel"] li div[aria-label]:not([aria-label="Image"])::before {
         background-color: rgba(0, 0, 0, 0.77);
         border-radius: 4px;
         bottom: 11px;
@@ -96,7 +97,8 @@
         position: absolute;
         white-space: pre-wrap;
     }
-    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):hover::before {
+    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):hover::before,
+    div[aria-roledescription="carousel"] li div[aria-label]:not([aria-label="Image"]):hover::before {
         content: attr(aria-label);
     }
 }
