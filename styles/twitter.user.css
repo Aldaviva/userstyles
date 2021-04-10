@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.12
+@version        1.0.13
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -75,8 +75,8 @@
         background-position: top left;
     }
     
-    div[data-testid="tweet"] a[data-focusable="true"] > div + div,
-    div[data-testid="tweet"] + div a[data-focusable="true"] > div + div {
+    div[data-testid="tweet"] a[role="link"] > div + div,
+    div[data-testid="tweet"] + div a[role="link"] > div + div {
         /* I don't remember what else this was for. It seems to just hide the ALT badge on images. Maybe it was to hide something after the username, like a verified badge? */
         display: none;
     }
