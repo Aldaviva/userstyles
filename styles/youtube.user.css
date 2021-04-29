@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.3
+@version        0.0.4
 @description    Removed clutter.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -29,6 +29,7 @@
     #more,
     .iv-branding,
     .ytp-miniplayer-button,
+    #voice-search-button,
     /*.ytp-size-button,*/
     ytd-metadata-row-container-renderer.sticky {
         display: none !important;
