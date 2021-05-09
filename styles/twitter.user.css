@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.13
+@version        1.0.14
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -84,7 +84,7 @@
     /* Hover over images with alt text to actually see the alt text. */
     div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"])::before,
     div[aria-roledescription="carousel"] li div[aria-label]:not([aria-label="Image"])::before,
-    div[role="dialog"] > div > div > div > div:first-child > div:first-child > div > div > div[aria-label]:not([aria-label="Image"])::before {
+    div[role="dialog"] > div > div > div > div:first-child > div:first-child > div > div > div[aria-label]:not([aria-label="Image"]):not([role="button"])::before {
         background-color: rgba(0, 0, 0, 0.77);
         border-radius: 4px;
         bottom: 11px;
@@ -93,14 +93,14 @@
         font: 700 12px/15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         left: 11px;
         margin-right: 11px;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
         padding: 2px 4px;
         position: absolute;
         white-space: pre-wrap;
     }
     div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"]):hover::before,
     div[aria-roledescription="carousel"] li div[aria-label]:not([aria-label="Image"]):hover::before,
-    div[role="dialog"] > div > div > div > div:first-child > div:first-child > div > div > div[aria-label]:not([aria-label="Image"]):hover::before {
+    div[role="dialog"] > div > div > div > div:first-child > div:first-child > div > div > div[aria-label]:not([aria-label="Image"]):not([role="button"]):hover::before {
         content: attr(aria-label);
     }
 }
