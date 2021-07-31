@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.16
+@version        1.0.17
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -33,23 +33,28 @@
     
     /* Square avatars */
     div[data-testid="tweet"] > div:first-child a[role=link], /* Timeline avatars */
-    div[data-testid="tweet"] > div:first-child a[role=link] > div > div > div, /* Timeline avatars */
     div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]), /* What's Happening self avatar */
     div[data-testid="SideNav_AccountSwitcher_Button"] div[role="presentation"], /* Bottom-left account menu avatar */
     a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]), /* Profile page big avatar */
-    div[aria-modal="true"] div[role="presentation"]{ /* Compose Tweet modal dialog self avatar */
+    div[aria-modal="true"] div[role="presentation"] { /* Compose Tweet modal dialog self avatar */
         border-radius: 2px;
     }
     
-    div[data-testid="tweet"] > div:first-child a[role=link] > div + div,
-    div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) div[aria-label],
-    div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] div[aria-label],
-    article div[role="presentation"] div[aria-label] {
+    div[data-testid="tweet"] > div:first-child a[role=link] > div, /* Timeline avatars */
+    div[data-testid="tweet"] > div:first-child a[role=link] > div > div > div, /* Timeline avatars */
+    div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) > div, /* What's Happening self avatar */
+    div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) div[aria-label], /* What's Happening self avatar */
+    div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] > div, /* Bottom-left account menu avatar */
+    div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] div[aria-label], /* Bottom-left account menu avatar */
+    a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]) > div, /* Profile page big avatar */
+    div[aria-modal="true"] div[role="presentation"] > div, /* Compose Tweet modal dialog self avatar */
+    article div[role="presentation"] div[aria-label], /* Show This Thread avatar */
+    article div[role="presentation"] > div { /* Show This Thread avatar */
         border-radius: 0;
     }
     a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]) div[aria-label],
     div[aria-modal="true"] div[role="presentation"] div[aria-label],
-    article div[role="presentation"] {
+    article div[role="presentation"] { /* Show This Thread */
         border-radius: 1px;
     }
     
