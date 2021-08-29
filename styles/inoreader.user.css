@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.5
+@version        0.1.6
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -83,6 +83,11 @@
     .ar:hover .column_view_thumbnail {
         opacity: 1;
     }
+    
+    /* force smooth background image resampling */
+    .column_view_thumbnail {
+        border-radius: 1px;
+    }
 
     /* Search and subscribe box in top left corner */
     #sb_tp_search_overlay {
@@ -123,6 +128,10 @@
     #sb_tp_buttons {
         float: none;
     }
+    
+    #sb_tp_buttons .inno_toolbar_button {
+        display: inline-block;
+    }
 
     /* Hide ellipsis button on each article row in Column View */
     .article_header .arrow_div {
@@ -158,7 +167,8 @@
         margin-left: 24px;
     }
     
-    .article_footer_main_buttons > div:nth-child(2)~div {
+    .article_footer_main_buttons > div:nth-child(2)~div,
+    .article_footer_main_buttons .icon-button-mobilize-empty {
         display: none;
     }
     
@@ -275,6 +285,16 @@
     
     /* Hide feed name from top-left corner */
     #sb_rp_ribbon .inno_toolbar_button_wrapper {
+        display: none;
+    }
+    
+    /* Hide the Create Note link below an article */
+    .article_create_annotation_link {
+        display: none;
+    }
+    
+    /* Hide folders with no child subscriptions in the tree */
+    #tree .plus_hidden + .linkdiv[data-folderid] {
         display: none;
     }
    
