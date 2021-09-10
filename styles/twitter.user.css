@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.19
+@version        1.0.20
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -34,7 +34,7 @@
     }
     
     /* Square avatars */
-    div[data-testid="tweet"] > div:first-child a[role=link], /* Timeline avatars */
+    [data-testid="tweet"] > div:first-child a[role=link], /* Timeline avatars */
     div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]), /* What's Happening self avatar */
     div[data-testid="SideNav_AccountSwitcher_Button"] div[role="presentation"], /* Bottom-left account menu avatar */
     a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]), /* Profile page big avatar */
@@ -42,8 +42,8 @@
         border-radius: 2px;
     }
     
-    div[data-testid="tweet"] > div:first-child a[role=link] > div, /* Timeline avatars */
-    div[data-testid="tweet"] > div:first-child a[role=link] > div > div > div, /* Timeline avatars */
+    [data-testid="tweet"] > div:first-child a[role=link] > div, /* Timeline avatars */
+    [data-testid="tweet"] > div:first-child a[role=link] > div > div > div, /* Timeline avatars */
     div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) > div, /* What's Happening self avatar */
     div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) div[aria-label], /* What's Happening self avatar */
     div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] > div, /* Bottom-left account menu avatar */
@@ -61,13 +61,13 @@
     }
     
     /* Hide the Replies, Retweets, Likes, and Share buttons underneath each tweet on the home timeline */
-    div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[role="group"],
+    div[aria-label='Timeline: Your Home Timeline'] [data-testid="tweet"] div[role="group"],
     /* Hide the More dropdown from the top-right corner of each tweet on the home timeline */
-    div[aria-label='Timeline: Your Home Timeline'] div[data-testid="tweet"] div[aria-label="More"] {
+    div[aria-label='Timeline: Your Home Timeline'] [data-testid="tweet"] div[aria-label="More"] {
         display: none;
     }
     /* Once the above buttons are hidden from each tweet, the tweet box may be too short and the avatar may be too close to the bottom border, so give the box a minimum height to ensure the avatar bottom padding is at least as large as its top padding. This assumes that your Twitter display settings have your font size set to 2 out of 5. */
-    div[data-testid="tweet"] {
+    [data-testid="tweet"] {
         min-height: 58px;
     }
     
@@ -84,8 +84,12 @@
         background-position: top left;
     }
     
-    div[data-testid="tweet"] a[role="link"] > div + div,
-    div[data-testid="tweet"] + div a[role="link"] > div + div {
+    /*
+     * Hide ALT badge on images on hover so that the alt text can be shown below
+     * As of 2021-09-10, Twitter also shows the alternative text in a popover when you hover over the ALT badge, so the following tweak is not strictly required to see the alternative text anymore.
+     */
+    [data-testid="tweet"] a[role="link"] > div + div,
+    [data-testid="tweet"] + div a[role="link"] > div + div {
         /* I don't remember what else this was for. It seems to just hide the ALT badge on images. Maybe it was to hide something after the username, like a verified badge? */
         display: none;
     }
