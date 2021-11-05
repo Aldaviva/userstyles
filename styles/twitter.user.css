@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.21
+@version        1.0.22
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -38,26 +38,24 @@
     div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]), /* What's Happening self avatar */
     div[data-testid="SideNav_AccountSwitcher_Button"] div[role="presentation"], /* Bottom-left account menu avatar */
     a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]), /* Profile page big avatar */
-    div[aria-modal="true"] div[role="presentation"] { /* Compose Tweet modal dialog self avatar */
+    div[aria-modal="true"] div[role="presentation"], /* Compose Tweet modal dialog self avatar */
+    a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]) div[aria-label], /* Profile page big avatar */
+    div[aria-modal="true"] div[role="presentation"] div[aria-label], /* Compose Tweet modal dialog self avatar */
+    article div[role="presentation"] { /* Show This Thread */
         border-radius: 2px;
     }
     
-    [data-testid="tweet"] > div:first-child a[role=link] > div, /* Timeline avatars */
-    [data-testid="tweet"] > div:first-child a[role=link] > div > div > div, /* Timeline avatars */
-    div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) > div, /* What's Happening self avatar */
+    [data-testid="tweet"] > div:first-child a[role=link] > div > div, /* Timeline avatars */
+    [data-testid="tweet"] > div:first-child a[role=link] > div > div > div > div:first-child, /* Timeline avatars */
+    div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) > div > div, /* What's Happening self avatar */
     div[role="progressbar"] + div a[role="link"]:not([data-testid="addButton"]) div[aria-label], /* What's Happening self avatar */
-    div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] > div, /* Bottom-left account menu avatar */
+    div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] > div > div, /* Bottom-left account menu avatar */
     div[data-testid="SideNav_AccountSwitcher_Button"] div[role=presentation] div[aria-label], /* Bottom-left account menu avatar */
-    a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]) > div, /* Profile page big avatar */
-    div[aria-modal="true"] div[role="presentation"] > div, /* Compose Tweet modal dialog self avatar */
+    a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]) > div > div, /* Profile page big avatar */
+    div[aria-modal="true"] div[role="presentation"] > div > div, /* Compose Tweet modal dialog self avatar */
     article div[role="presentation"] div[aria-label], /* Show This Thread avatar */
-    article div[role="presentation"] > div { /* Show This Thread avatar */
+    article div[role="presentation"] > div > div { /* Show This Thread avatar */
         border-radius: 0;
-    }
-    a[href $= "/header_photo"] + div a[role="link"]:not([href="/settings/profile"]) div[aria-label],
-    div[aria-modal="true"] div[role="presentation"] div[aria-label],
-    article div[role="presentation"] { /* Show This Thread */
-        border-radius: 1px;
     }
     
     /* Hide the Replies, Retweets, Likes, and Share buttons underneath each tweet on the home timeline */
@@ -88,14 +86,13 @@
      * Hide ALT badge on images on hover so that the alt text can be shown below
      * As of 2021-09-10, Twitter also shows the alternative text in a popover when you hover over the ALT badge, so the following tweak is not strictly required to see the alternative text anymore.
      */
-    [data-testid="tweet"] a[role="link"] > div + div,
+    /*[data-testid="tweet"] a[role="link"] > div + div,
     [data-testid="tweet"] + div a[role="link"] > div + div {
-        /* I don't remember what else this was for. It seems to just hide the ALT badge on images. Maybe it was to hide something after the username, like a verified badge? */
         display: none;
-    }
+    } */
     
     /* Hover over images with alt text to actually see the alt text. */
-    div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"])::before,
+    /*div[data-testid="tweetPhoto"][aria-label]:not([aria-label="Image"])::before,
     div[aria-roledescription="carousel"] li div[aria-label]:not([aria-label="Image"])::before,
     div[role="dialog"] > div > div > div > div:first-child > div:first-child > div > div > div[aria-label]:not([aria-label="Image"]):not([role="button"])::before {
         background-color: rgba(0, 0, 0, 0.77);
@@ -117,6 +114,6 @@
     div[aria-roledescription="carousel"] li div[aria-label]:not([aria-label="Image"]):hover::before,
     div[role="dialog"] > div > div > div > div:first-child > div:first-child > div > div > div[aria-label]:not([aria-label="Image"]):not([role="button"]):hover::before {
         content: attr(aria-label);
-    }
+    }*/
     
 }
