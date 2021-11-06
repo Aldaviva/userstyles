@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.7
+@version        0.1.8
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -311,6 +311,20 @@
     /* Hide the Library from the navigation pane */
     #parent_library {
         display: none;
+    }
+    
+    /* Revert moving All Articles navigation link into the Feeds tree, and put it back above Dashboard */
+    #parent_all_articles {
+        top: -142px;
+    }
+    
+    #subscriptions_nav {
+        margin-top: 14px;
+    }
+    
+    #tree {
+        position: relative;
+        top: -28px;
     }
    
 }
