@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.8
+@version        0.1.9
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -97,7 +97,7 @@
     /* Get rid of unclickable margins between articles in Column View */
     .reader_pane_view_style_2 .article_header_text {
         padding-top: 10px;
-        padding-bottom: 4px;
+        padding-bottom: 3px;
     }
 
     .reader_pane_view_style_2 .article_header_pane_left {
@@ -134,7 +134,7 @@
     }
 
     /* Hide ellipsis button on each article row in Column View */
-    .article_header .arrow_div {
+    .reader_pane_view_style_2 .article_header .arrow_div {
         display: none !important;
     }
 
@@ -272,7 +272,7 @@
     
     /* Make article list item background colors less weird in Column View */
     .reader_pane_view_style_2 .article_unreaded,
-    .article_subscribed {
+    .reader_pane_view_style_2 .article_subscribed {
         background-color: #1F1F1F;
     }
     
@@ -319,12 +319,49 @@
     }
     
     #subscriptions_nav {
-        margin-top: 14px;
+        margin-top: 29px;
     }
     
     #tree {
         position: relative;
         top: -28px;
     }
-   
+    
+    div.article_header_pane_right {
+        float: none !important;
+        margin-right: 0;
+    }
+    
+    .column_view_info {
+        display: flex;
+    }
+    
+    .column_view_info > div {
+        float: none;
+        width: auto;
+    }
+    
+    .column_view_control_strip {
+        float: none;
+        flex-shrink: 0;
+    }
+    
+    .column_view_control_strip .article_unread_dot, .column_view_control_strip .article_favicon {
+        display: inline-block;
+    }
+    
+    .article_feed_title {
+        flex-grow: 1;
+    }
+    
+    .arrow_div_lower {
+        position: static;
+        margin-right: 1px;
+        flex-shrink: 0;
+    }
+    
+    .reader_pane_view_style_2 .header_date {
+        text-align: right;
+        float: none;
+    }
 }
