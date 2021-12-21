@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.23
+@version        1.0.24
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -44,8 +44,8 @@
     div[style *= 'background-image: url("https://pbs.twimg.com/profile_images/'] {
         border-radius: 2px;
     }
-    div[style *= 'clip-path: url("#circle-hw-shapeclip-clipconfig")'] {
-        clip-path: none !important;
+    div[style *= 'height: calc(100% - '] {
+        border-radius: 0;
     }
     
     /* Hide the Replies, Retweets, Likes, and Share buttons underneath each tweet on the home timeline */
