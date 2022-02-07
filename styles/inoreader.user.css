@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.10
+@version        0.1.11
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -56,7 +56,7 @@
         right: 75px;
         width: unset;
         top: 0;
-        padding-top: 10px;
+        padding-top: 10px; 
     }
     
     /* Make the article top toolbar underline extend to the full, variable width */
@@ -74,6 +74,11 @@
         opacity: 1;
     }
 
+    /* In Column View, all thumbnails should be opaque by default to prevent the placeholder image from showing through */
+    .column_view_thumbnail {
+        opacity: 1;
+    }
+    
     /* In Column View, hide thumbnails for articles from specific folders */
     .ar[data-tags *='"Play '] .column_view_thumbnail {
         opacity: 0;
@@ -91,27 +96,36 @@
 
     /* Search and subscribe box in top left corner */
     #sb_tp_search_overlay {
-        display: none !important;
+        margin-left: 14px;
+    }
+    
+    #sb_reading_part {
+        width: auto !important;
+    }
+    
+    #sb_tree_part {
+        width: auto !important;
+    }
+    
+    #subscriptions_buttons {
+        justify-content: space-between;
     }
 
     /* Get rid of unclickable margins between articles in Column View */
     .reader_pane_view_style_2 .article_header_text {
-        padding-top: 10px;
-        padding-bottom: 3px;
-    }
-
-    .reader_pane_view_style_2 .article_header_pane_left {
-        padding-top: 10px;
+        padding-top: 7px;
+        padding-bottom: 4px;
+        padding-left: 7px;
     }
 
     .reader_pane_view_style_2 .article_header {
-        top: 0 !important;
+        padding-top: 0 !important;
     }
 
     .reader_pane_view_style_2 .ar {
         padding-top: 0;
         padding-bottom: 0;
-        padding-left: 10px;
+        padding-left: 7px;
     }
 
     /* Initially hide the possibly long folder list in the context menu of a feed in the navigation tree */
@@ -203,6 +217,12 @@
         /*top: -2px;*/
     }
     
+    /* Horizontally align unread and star icons */
+    .article_unread_dot_external,
+    .article_favicon .star_img {
+        margin: 0;
+    }
+    
     /* Make unread dot not animate and not change colors in Column View */
     .article_unread_dot_internal {
         background-color: transparent;
@@ -262,12 +282,16 @@
     
     /* Align left edge of thumbnail in Column View list */
     .article_header_pane_right {
-        padding-left: 9px !important;
+        padding-left: 0 !important;
     }
     
     /* Align right edge of date in Column View list */
-    .arrow_div_lower {
-        right: 1px;
+    .arrow_div_lower .header_date {
+        padding-right: 0px;
+    }
+    
+    .reader_pane_view_style_2 .column_view_title {
+        margin-right: 0px;
     }
     
     /* Make article list item background colors less weird in Column View */
@@ -329,5 +353,50 @@
 
     .article_feed_title {
         width: auto;
+        margin-right: 0 !important;
     }
+    
+    /* Stop changing column view article borders when marking as read */
+    .reader_pane_view_style_2 .article_unreaded {
+        border-bottom-color: rgb(46,46,46); /* same as .ar (read) */
+    }
+    
+    /* Fix column view info row (unread, starred, feed title, and date) flexbox madness */
+    .column_view_info {
+        align-items: stretch;
+        margin-left: 5px;
+    }
+
+    .column_view_info > .flex {
+        display: contents;
+        min-width: unset;
+    }
+
+    .column_view_control_strip {
+        display: contents;
+    }
+
+    .column_view_control_strip > div {
+        display: inline-block;
+    }
+    
+    .column_view_control_strip .article_unread_dot,
+    .column_view_control_strip .article_favicon {
+        margin-right: 8px !important;
+    }
+    
+    .column_view_info .article_feed_title {
+        flex: 1 1 100%;
+        display: block;
+    }
+
+    .column_view_info .arrow_div_lower {
+        display: block;
+    }
+
+    .column_view_info .header_date {
+        line-height: normal;
+        display: block;
+    }
+    
 }
