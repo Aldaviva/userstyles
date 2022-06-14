@@ -21,11 +21,6 @@
         display: none;
     }
 
-    /* Preferences menu gear button in the top right corner */
-    /*#sb_rp_gear {
-        right: 0;
-    }*/
-
     /* Card View: Don't arbitrarily limit article width to 650px */
     .article_content {
         max-width: unset;
@@ -103,20 +98,21 @@
 
     /* Get rid of unclickable margins between articles in Column View */
     /* still needed, but the old declarations result in no margins and need to be updated */
-    .reader_pane_view_style_2 .article_header_text {
-/*         padding-top: 7px;
-        padding-bottom: 4px;
-        padding-left: 7px; */
+    .reader_pane_view_style_2 .article_header > div {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 7px; 
     }
     
     .reader_pane_view_style_2 .article_header {
-/*         padding-top: 0 !important; */
+        padding-top: 0 !important;
     }
     
     .reader_pane_view_style_2 .ar {
-/*         padding-top: 0;
+        padding-top: 0;
         padding-bottom: 0;
-        padding-left: 7px; */
+        padding-left: 0px;
+        box-shadow: none;
     }
 
     /* Initially hide the possibly long folder list in the context menu of a feed in the navigation tree */
@@ -208,19 +204,6 @@
         display: none;
     }
     
-    /* Spacing for favorite star in Column View */
-    #reader_pane.reader_pane_view_style_2 .article_favicon {
-/*         margin-right: 12px; */
-/*         need to redo */
-    }
-    
-    /* Horizontally align unread and star icons */
-    .article_unread_dot_external,
-    .article_favicon .star_img {
-/*         margin: 0; */
-/*         need to redo */
-    }
-    
     /* Make unread dot not animate and not change colors in Column View */
     .article_unread_dot_internal {
         background-color: transparent;
@@ -255,12 +238,6 @@
         background-color: unset;
     }
     
-    /* Equalize spacing between three phrases in second column article byline (date, author, and feed) */
-    .article_author > span:nth-of-type(2) {
-/*         margin-right: 8px; */
-/*         need to redo */
-    }
-    
     /* Reduce leading between article title and byline */
     .article_title {
         margin-bottom: 6px;
@@ -268,23 +245,6 @@
     
     .article_sub_title {
         margin-top: 0;
-    }
-    
-    /* Align left edge of thumbnail in Column View list */
-    .article_header_pane_right {
-/*         padding-left: 0 !important; */
-/*         no effect */
-    }
-    
-    /* Align right edge of date in Column View list */
-    .arrow_div_lower .header_date {
-/*         padding-right: 0px; */
-/*         no effect */
-    }
-    
-    .reader_pane_view_style_2 .column_view_title {
-/*         margin-right: 0px; */
-/*         no effect */
     }
     
     /* Make article list item background colors less weird in Column View */
@@ -338,54 +298,100 @@
         position: relative;
         top: -28px;
     }
-
-    .article_feed_title {
-/*         width: auto;
-        margin-right: 0 !important; */
-/*         no effect */
-    }
     
     /* Stop changing column view article borders when marking as read */
     .reader_pane_view_style_2 .article_unreaded {
         border-bottom-color: rgb(46,46,46); /* same as .ar (read) */
     }
     
-    /* Fix column view info row (unread, starred, feed title, and date) flexbox madness */
-    /*.column_view_info {
-        align-items: stretch;
-        margin-left: 5px;
+    /* Don't special-case the date in column view to be a default pointer, even though it is clickable. It should have a hand like its parent element. */
+    .header_date {
+        cursor: unset;
     }
-
-    .column_view_info > .flex {
+    
+    /* Revert Column view left column title size */
+    .reader_pane_view_style_2 .article_header_title {
+        font-size: 14px;
+    }
+    
+    .article_header_text .flex, .article_header .article_favicon {
+        display: revert;
+        align-items: unset;
+    }
+    
+    /* Hide social sharing buttons in left column of Column View */
+    .article_header .article_share {
+        display: none;
+    }
+    
+    /* Fix Column View left column layout, again */
+    
+    .reader_pane_view_style_2 .article_unread_dot_external {
+        margin: 0;
+    }
+    
+    .article_header_text > div,
+    .reader_pane_view_style_2 .column_view_title + span,
+    .reader_pane_view_style_2 .column_view_info,
+    .reader_pane_view_style_2 .column_view_info > div + div,
+    .reader_pane_view_style_2 .column_view_control_strip {
         display: contents;
-        min-width: unset;
-    }
-
-    .column_view_control_strip {
-        display: contents;
-    }
-
-    .column_view_control_strip > div {
-        display: inline-block;
     }
     
-    .column_view_control_strip .article_unread_dot,
-    .column_view_control_strip .article_favicon {
-        margin-right: 8px !important;
+    .reader_pane_view_style_2 .article_unread_dot,
+    .reader_pane_view_style_2 .article_favicon,
+    .reader_pane_view_style_2 .header_date,
+    .reader_pane_view_style_2 .article_feed_title {
+        margin-right: 0 !important;
     }
     
-    .column_view_info .article_feed_title {
-        flex: 1 1 100%;
-        display: block;
+    .reader_pane_view_style_2 .ar .article_header {
+        align-items: flex-end;
+        align-content: flex-end;
     }
-
-    .column_view_info .arrow_div_lower {
-        display: block;
-    }
-
-    .column_view_info .header_date {
-        line-height: normal;
-        display: block;
-    }*/
     
+    .reader_pane_view_style_2 .article_header_text {
+        flex-flow: row nowrap;
+        gap: 10px;
+        height: 16px;
+    }
+    
+    .column_view_title {
+        position: absolute;
+        padding-top: 7px;
+        top: 0px;
+        bottom: 23px;
+        left: 89px;
+        right: 0;
+    }
+    
+    .reader_pane_view_style_2 .article_unread_dot {
+        order: 2;
+        flex: 0 0;
+        width: 12px;
+        height: 12px;
+        align-self: center;
+    }
+    
+    .reader_pane_view_style_2 .article_favicon {
+        order: 3;
+        flex: 0 0;
+    }
+    
+    .reader_pane_view_style_2 .article_feed_title {
+        order: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex: 1 1 auto;
+        line-height: 18px;
+    }
+    
+    .reader_pane_view_style_2 .header_date {
+        order: 5;
+        text-align: right;
+        flex: 1 0 auto;
+        line-height: 18px;
+    }
+
 }
