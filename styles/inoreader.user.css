@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.14
+@version        0.1.15
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -10,19 +10,9 @@
 ==/UserStyle== */
 @-moz-document domain("inoreader.com") {
 
-    /* Feed settings menu in the top right corner */
-    #sb_rp_section_options {
-        display: none;
-    }
-
     /* Notifications bell icon in the top right corner */
     #sb_rp_notifications {
         display: none;
-    }
-
-    /* The tools collection of menu items in the top right, including Mark All As Red, Unread Count, and Reading Options eyeball */
-    #sb_rp_tools {
-        right: 40px;
     }
 
     /* The up and down arrows in the top right corner */
@@ -32,16 +22,16 @@
     }
 
     /* Preferences menu gear button in the top right corner */
-    #sb_rp_gear {
+    /*#sb_rp_gear {
         right: 0;
-    }
+    }*/
 
-    /* Don't arbitrarily limit article width to 650px */
+    /* Card View: Don't arbitrarily limit article width to 650px */
     .article_content {
         max-width: unset;
     }
     
-    /* Don't arbitrarily limit the article modal width */
+    /* Card View: Don't arbitrarily limit the article modal width */
     #article_dialog_wrapper {
         min-width: 640px;
         width: max-content !important;
@@ -50,7 +40,7 @@
         transform: translate(0px,0px);
     }
     
-    /* Position the article top toolbar correctly with variable-width articles, and hide the 10px gap of content peeking through above it */
+    /* Card View: Position the article top toolbar correctly with variable-width articles, and hide the 10px gap of content peeking through above it */
     #article_dialog .article_footer_placeholder_top {
         left: 75px;
         right: 75px;
@@ -89,11 +79,6 @@
     .ar:hover .column_view_thumbnail {
         opacity: 1;
     }
-    
-    /* force smooth background image resampling */
-    .column_view_thumbnail {
-        border-radius: 1px;
-    }
 
     /* Search and subscribe box in top left corner */
     #sb_tp_search_overlay {
@@ -117,20 +102,21 @@
     }
 
     /* Get rid of unclickable margins between articles in Column View */
+    /* still needed, but the old declarations result in no margins and need to be updated */
     .reader_pane_view_style_2 .article_header_text {
-        padding-top: 7px;
+/*         padding-top: 7px;
         padding-bottom: 4px;
-        padding-left: 7px;
+        padding-left: 7px; */
     }
-
+    
     .reader_pane_view_style_2 .article_header {
-        padding-top: 0 !important;
+/*         padding-top: 0 !important; */
     }
-
+    
     .reader_pane_view_style_2 .ar {
-        padding-top: 0;
+/*         padding-top: 0;
         padding-bottom: 0;
-        padding-left: 7px;
+        padding-left: 7px; */
     }
 
     /* Initially hide the possibly long folder list in the context menu of a feed in the navigation tree */
@@ -141,11 +127,6 @@
     /* Hide hamburger button in the top left that toggles the navigation tree visibility */
     #sb_menu_icon {
         display: none;
-    }
-    
-    /* Left align elements in the top right corner, useful for adding Subscribe and Manage buttons using "Inoreader toolbar buttons" userscript */
-    #sb_tp_buttons {
-        float: none;
     }
     
     #sb_tp_buttons .inno_toolbar_button {
@@ -175,11 +156,6 @@
     /* Hide social sharing buttons in article view */
     .sd {
         display: none;
-    }
-    
-    /* Hide article toolbar left buttons to Load Full Content, Share Via Email, Text Preferences, and an ellipsis menu */
-    .article_footer_main_buttons {
-        justify-content: flex-start;
     }
     
     .article_footer_buttons.icon-article_topbar_mobilize_empty,
@@ -218,6 +194,10 @@
         opacity: 1;
     }
     
+    .article_tile_footer_right_buttons {
+        opacity: 1;
+    }
+    
     /* Make stars consistently all filled, not half of them being empty */
     .star_full.icon-button-star-empty:before {
         content: "\e91e";
@@ -230,14 +210,15 @@
     
     /* Spacing for favorite star in Column View */
     #reader_pane.reader_pane_view_style_2 .article_favicon {
-        margin-right: 12px;
-        /*top: -2px;*/
+/*         margin-right: 12px; */
+/*         need to redo */
     }
     
     /* Horizontally align unread and star icons */
     .article_unread_dot_external,
     .article_favicon .star_img {
-        margin: 0;
+/*         margin: 0; */
+/*         need to redo */
     }
     
     /* Make unread dot not animate and not change colors in Column View */
@@ -274,18 +255,10 @@
         background-color: unset;
     }
     
-    /* Equalize spacing between three phrases in article byline (date, author, and feed) */
+    /* Equalize spacing between three phrases in second column article byline (date, author, and feed) */
     .article_author > span:nth-of-type(2) {
-        margin-right: 8px;
-    }
-    
-    /* Normalize font vertical alignment and color of phrases in article byline */
-    .article_author {
-        line-height: 22px;
-    }
-    
-    .article_author, .article_author span.icon16 {
-        color: #888888;
+/*         margin-right: 8px; */
+/*         need to redo */
     }
     
     /* Reduce leading between article title and byline */
@@ -299,16 +272,19 @@
     
     /* Align left edge of thumbnail in Column View list */
     .article_header_pane_right {
-        padding-left: 0 !important;
+/*         padding-left: 0 !important; */
+/*         no effect */
     }
     
     /* Align right edge of date in Column View list */
     .arrow_div_lower .header_date {
-        padding-right: 0px;
+/*         padding-right: 0px; */
+/*         no effect */
     }
     
     .reader_pane_view_style_2 .column_view_title {
-        margin-right: 0px;
+/*         margin-right: 0px; */
+/*         no effect */
     }
     
     /* Make article list item background colors less weird in Column View */
@@ -326,11 +302,6 @@
     
     /* Hide feed name from top-left corner */
     #sb_rp_ribbon .inno_toolbar_button_wrapper {
-        display: none;
-    }
-    
-    /* Hide the Create Note link below an article */
-    .article_create_annotation_link {
         display: none;
     }
     
@@ -369,8 +340,9 @@
     }
 
     .article_feed_title {
-        width: auto;
-        margin-right: 0 !important;
+/*         width: auto;
+        margin-right: 0 !important; */
+/*         no effect */
     }
     
     /* Stop changing column view article borders when marking as read */
@@ -415,10 +387,5 @@
         line-height: normal;
         display: block;
     }*/
-    
-    /* Hide the distracting extra buttons (mark section as read and see all articles) under the "no more unread articles here" message */
-    #no_more_div button {
-        display: none;
-    }
     
 }
