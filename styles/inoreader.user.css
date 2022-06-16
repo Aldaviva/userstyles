@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.15
+@version        0.1.16
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -363,6 +363,7 @@
         bottom: 23px;
         left: 89px;
         right: 0;
+        max-height: 48px;
     }
     
     .reader_pane_view_style_2 .article_unread_dot {
@@ -392,6 +393,11 @@
         text-align: right;
         flex: 1 0 auto;
         line-height: 18px;
+    }
+    
+    /* Hide the Mark Section as Read and See All Articles buttons below the No More Unread Articles Here message */
+    #no_more_div .flex {
+        display: none;
     }
 
 }
