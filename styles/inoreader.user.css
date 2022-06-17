@@ -314,7 +314,7 @@
         font-size: 14px;
     }
     
-    .article_header_text .flex, .article_header .article_favicon {
+    .article_header_text .flex, .reader_pane_view_style_2 .article_header .article_favicon {
         display: revert;
         align-items: unset;
     }
@@ -363,7 +363,7 @@
         bottom: 23px;
         left: 89px;
         right: 0;
-        max-height: 48px;
+        max-height: 48px !important; /* max 3 lines */
     }
     
     .reader_pane_view_style_2 .article_unread_dot {
