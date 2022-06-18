@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.16
+@version        0.1.17
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -97,11 +97,14 @@
     }
 
     /* Get rid of unclickable margins between articles in Column View */
-    /* still needed, but the old declarations result in no margins and need to be updated */
     .reader_pane_view_style_2 .article_header > div {
         padding-top: 7px;
         padding-bottom: 7px;
         padding-left: 7px; 
+    }
+    
+    .reader_pane_view_style_2 .article_header .article_header_text {
+        padding-top: 11px;
     }
     
     .reader_pane_view_style_2 .article_header {
