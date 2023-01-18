@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.4
+@version        0.0.5
 @description    Removed clutter.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -11,8 +11,17 @@
 @-moz-document url-prefix("https://www.youtube.com/watch?") {
     #search,
     #end,
-    #subscribe-button {
+    #subscribe-button,
+    #masthead-container {
         display: none !important;
+    }
+    
+    #page-manager.ytd-app {
+        margin-top: 0;
+    }
+    
+    body {
+        overflow-y: auto;
     }
 }
 
@@ -22,6 +31,8 @@
     #logo,
     .ytp-endscreen-content,
     #comments,
+    #owner-and-teaser,
+    #actions,
     #info,
     .ytp-chrome-top-buttons,
     #sponsor-button,
@@ -30,8 +41,11 @@
     .iv-branding,
     .ytp-miniplayer-button,
     #voice-search-button,
-    /*.ytp-size-button,*/
-    ytd-metadata-row-container-renderer.sticky {
+    #snippet yt-formatted-string > span:first-child,
+    #snippet yt-formatted-string > span:nth-child(2),
+    ytd-metadata-row-container-renderer.sticky,
+    #comment-teaser,
+    ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style = "SHORTS"]) {
         display: none !important;
     }
 
@@ -43,4 +57,5 @@
         overflow: visible;
         max-height: none;
     }
+    
 }
