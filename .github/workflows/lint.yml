@@ -9,10 +9,11 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Clone
+        uses: actions/checkout@v3
 
       - name: Install dependencies
         run: npm install
 
       - name: Lint
-        run: ./node_modules/.bin/csslint --quiet ./styles/
+        run: ./node_modules/.bin/stylelint "styles/*.css"
