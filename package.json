@@ -1,6 +1,6 @@
 {
-  "devDependencies": {
-    "stylelint": "14.16.1",
-    "stylelint-config-recommended": "9.0.0"
-  }
+    "devDependencies": {
+        "stylelint": "14.16.1",
+        "stylelint-config-recommended": "9.0.0"
+    }
 }
