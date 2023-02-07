@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name           Mastodon
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Put navigation panel on the left of the timeline and composer panel on the right
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("social.vivaldi.net") {
+    .columns-area__panels__pane--navigational {
+        order: 1;
+    }
+
+    .columns-area__panels__main {
+        order: 2;
+    }
+
+    .columns-area__panels__pane--compositional {
+        order: 3;
+    }
+}
