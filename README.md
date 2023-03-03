@@ -25,6 +25,6 @@ Good user interfaces should
 |[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
 |[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Enabled HTML5 video context menu, useful for Video Popout.|
 |[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.<br>You can block keywords with [Ben's Twitter Politics Filter](https://github.com/Aldaviva/content-blocking-filters).|
-|[Vivaldi Open Image](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css)|Checkerboard transparency matting and dark gray background, to look like Photoshop.|
+|[Vivaldi Open Image](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css)|Checkerboard transparency matting and black background, to look like Photoshop.|
 |[Wikipedia](https://github.com/Aldaviva/userstyles/raw/master/styles/wikipedia.user.css)|Removed clutter.|
 |[YouTube](https://github.com/Aldaviva/userstyles/raw/master/styles/youtube.user.css)|Removed clutter.|

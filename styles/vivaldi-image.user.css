@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Vivaldi Open Image
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.2
+@version        0.0.3
 @description    Background style like Photoshop for the Open Image page in Vivaldi
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -9,13 +9,13 @@
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
 
-@-moz-document regexp("^.*\\b(?:png|webp|gif)\\b.*$") {
+@-moz-document regexp("^.*\\b(?:png|webp|gif|jpg|jpeg)\\b.*$") {
     html[style="height: 100%;"] body[style="margin: 0px; background: #0e0e0e; height: 100%"] {
-        background-color: #191919 !important;
+        background-color: black !important;
     }
     
     html[style="height: 100%;"] body[style="margin: 0px; background: #0e0e0e; height: 100%"] > img {
         transition: none !important;
-        background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACpJREFUeNpi/P//PwM2cPbMWaziTAwkglENxAAWXOFtbGI8Gkr00wAQYAD2tgiFy8qYogAAAABJRU5ErkJggg==") repeat !important;
+        background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEX////My8x3qzxEAAAAD0lEQVQI12Ng+I8V4RIGAH6/D/EIQoVRAAAAAElFTkSuQmCC") repeat !important;
     }
 }
