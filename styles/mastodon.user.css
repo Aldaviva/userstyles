@@ -1,23 +1,32 @@
 /* ==UserStyle==
 @name           Mastodon
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.0
-@description    Put navigation panel on the left of the timeline and composer panel on the right
+@version        0.1.0
+@description    Put navigation panel on the left of the timeline and composer panel on the right. Localize to en-US locale.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
 @-moz-document domain("social.vivaldi.net") {
+    /* Put navigation column on the left like a normal LTR UI */
     .columns-area__panels__pane--navigational {
         order: 1;
     }
-
     .columns-area__panels__main {
         order: 2;
     }
-
     .columns-area__panels__pane--compositional {
         order: 3;
+    }
+    
+    /* Localize favourites to favorites for en-US locale */
+    .navigation-panel .column-link .fa-star + span {
+        text-indent: 9999px;
+        visibility: hidden;
+    }
+    .navigation-panel .column-link .fa-star + span::before {
+        content: "Favorites";
+        visibility: visible;
     }
 }
