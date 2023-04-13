@@ -1,12 +1,13 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.21
+@version        0.1.22
 @description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
 @supportURL     https://github.com/Aldaviva/userstyles/issues
+@var            checkbox showPlayThumbnails "Show Play thumbnails even when not hovering over them" 0
 ==/UserStyle== */
 @-moz-document domain("inoreader.com") {
 
@@ -73,7 +74,7 @@
     
     /* In Column View, hide thumbnails for articles from specific folders */
     .ar[data-tags *='"Play '] .column_view_thumbnail {
-        opacity: 0;
+        opacity: var(--showPlayThumbnails);
     }
 
     /* In Column View, show thumbnails for articles when hovering over them */
@@ -165,8 +166,7 @@
     
     .article_footer_buttons.icon-article_topbar_mobilize_empty,
     .article_footer_buttons.icon-article_topbar_mobilize_full,
-    .article_footer_buttons.icon-article_topbar_text_to_speech,
-    .article_footer_buttons.icon-article_topbar_more_menu {
+    .article_footer_buttons.icon-article_topbar_text_to_speech {
         display: none;
     }
     
@@ -181,6 +181,10 @@
     
     .article_footer_buttons.tags_img {
         order: 3;
+    }
+    
+    .article_footer_buttons.icon-article_topbar_more_menu {
+        order: 4;
     }
     
     /* Hide the ellipsis menu in each article card in Card View */
