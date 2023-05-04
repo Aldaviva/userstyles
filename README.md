@@ -19,8 +19,9 @@ Good user interfaces should
 |[All](https://github.com/Aldaviva/userstyles/raw/master/styles/solidunderlines.user.css)|Underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.|
 |[Inoreader](https://github.com/Aldaviva/userstyles/raw/master/styles/inoreader.user.css)|Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.|
 |[JSON Editor Online](https://github.com/Aldaviva/userstyles/raw/master/styles/jsoneditoronline.user.css)|Fixed layout calculation when ads are blocked.|
-|[Mastodon](https://github.com/Aldaviva/userstyles/raw/master/styles/mastodon.user.css)|Move navigation panel to the left side of the timeline, and the composition panel to the right side.|
+|[Mastodon](https://github.com/Aldaviva/userstyles/raw/master/styles/mastodon.user.css)|Moved navigation panel to the left side of the timeline, and the composition panel to the right side.|
 |[Pandora](https://github.com/Aldaviva/userstyles/raw/master/styles/pandora.user.css)|Fixed layout calculation when ads are blocked.|
+|[Rooster Teeth](https://github.com/Aldaviva/userstyles/raw/master/styles/roosterteeth.user.css)|Allowed fullscreen video playback for anonymous users. Made video blackground black instead of green. Hid garbage.|
 |[Slack](https://github.com/Aldaviva/userstyles/raw/master/styles/slack.user.css)|Enlarged emoticons.|
 |[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
 |[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Enabled HTML5 video context menu, useful for Video Popout.|
