@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.33
+@version        1.0.34
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -12,12 +12,14 @@
 ==/UserStyle== */
 
 @-moz-document domain("twitter.com") {
-    /* Hide What's Happening/Trends right panel */
+    /* Hide Get Verified right panel */
     div[data-testid="sidebarColumn"] > div > div > div > div > div > div:nth-child(3),
-    /* Hide Who To Follow right panel */
+    /* Hide Listen Live In Spaces right panel */
     div[data-testid="sidebarColumn"] > div > div > div > div > div > div:nth-child(4),
-    /* Hide Topics to Follow right panel */
+    /* Hide What's Happening right panel */
     div[data-testid="sidebarColumn"] > div > div > div > div > div > div:nth-child(5),
+    /* Hide Who To Follow right panel */
+    div[data-testid="sidebarColumn"] > div > div > div > div > div > div:nth-child(6),
     /* Hide Explore left navigation link */
     nav a[data-testid="AppTabBar_Explore_Link"],
     /* Hide Twitter Blue left navigation link */
