@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.35
+@version        1.0.36
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -64,10 +64,6 @@
     div[aria-label='Timeline: Your Home Timeline'] [data-testid="tweet"] div[aria-label="More"] {
         display: none;
     }
-    /* Once the above buttons are hidden from each tweet, the tweet box may be too short and the avatar may be too close to the bottom border, so give the box a minimum height to ensure the avatar bottom padding is at least as large as its top padding. This assumes that your Twitter display settings have your font size set to 2 out of 5. */
-    [data-testid="tweet"] {
-        min-height: 72px;
-    }
     
     /* Hide the Top Tweets button, but don't mess with the layout so it can still be clicked with https://github.com/Aldaviva/userscripts/blob/master/twitter.user.js */
     div[aria-label ^= "Top Tweets"] {
@@ -89,17 +85,22 @@
     }
     
     /* Revert tweet composer textboxes' placeholder text */
+    /* This seems like the most correct way to replace text in pure CSS, not the visibility or parent element techniques below */
     .public-DraftEditorPlaceholder-inner {
-        visibility: hidden;
+        text-indent: -9999px;
+        display: block;
+        line-height: 0;
     }
-    .public-DraftEditorPlaceholder-inner::before {
+    .public-DraftEditorPlaceholder-inner::after {
         content: "What’s happening?";
-        visibility: visible;
+        text-indent: 0;
+        display: block;
+        line-height: initial;
     }
-    div[aria-label="Timeline: Conversation"] .public-DraftEditorPlaceholder-inner::before {
+    div[aria-label="Timeline: Conversation"] .public-DraftEditorPlaceholder-inner::after {
         content: "Tweet your reply";
     }
-    div[data-testid="twc-cc-mask"] + div > div + div .public-DraftEditorPlaceholder-inner::before {
+    div[data-testid="twc-cc-mask"] + div > div + div .public-DraftEditorPlaceholder-inner::after {
         content: "Add another Tweet";
     }
     
