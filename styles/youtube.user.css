@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.7
+@version        0.0.8
 @description    Removed clutter.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -46,7 +46,8 @@
     ytd-metadata-row-container-renderer.sticky,
     #comment-teaser,
     ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style = "SHORTS"]),
-    .ytp-pause-overlay-container {
+    .ytp-pause-overlay-container,
+    ytd-rich-section-renderer:has(ytd-rich-shelf-renderer) {
         display: none !important;
     }
 
