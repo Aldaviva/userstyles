@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.38
+@version        1.0.39
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
                 You may also want to keep the timeline in Latest Tweets mode: https://github.com/Aldaviva/userscripts/raw/master/twitter.user.js
@@ -106,11 +106,47 @@
     
     /* Likes are now once again Favorites */
     a[href $= "/likes"] > span > span {
-        visibility: hidden;
+        text-indent: -9999px;
+        display: inline-block;
+        line-height: 0;
     }
-    a[href $= "/likes"] > span > span::before {
+    a[href $= "/likes"] > span > span::after {
+        content: "Like(s)";
+        text-indent: 0;
+        display: block;
+        line-height: initial;
+    }
+    
+    nav[aria-label="Profile timelines"] div[role="presentation"]:nth-child(4) a[role="tab"] > div > div > span {
+        display: none;
+    }
+    nav[aria-label="Profile timelines"] div[role="presentation"] a[role="tab"][href$="/likes"] > div > div::before {
         content: "Favorites";
-        visibility: visible;
+    }
+    
+    /* Reposts are once again retweets */
+    a[href $= "/retweets"] > span > span {
+        text-indent: -9999px;
+        display: inline-block;
+        line-height: 0;
+    }
+    a[href $= "/retweets"] > span > span::after {
+        content: "Retweet(s)";
+        text-indent: 0;
+        display: block;
+        line-height: initial;
+    }
+    
+    a[href $= "/retweets/with_comments"] > span > span {
+        text-indent: -9999px;
+        display: inline-block;
+        line-height: 0;
+    }
+    a[href $= "/retweets/with_comments"] > span > span::after {
+        content: "Quote Tweet(s)";
+        text-indent: 0;
+        display: block;
+        line-height: initial;
     }
     
     /* Posts are now Tweets */
@@ -134,5 +170,6 @@
     nav[aria-label="Profile timelines"] div[role="presentation"]:nth-child(1) a[role="tab"] > div > div::before {
         content: "Tweets";
     }
+    
     
 }
