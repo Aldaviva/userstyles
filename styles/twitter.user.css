@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.47
+@version        1.0.48
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -104,6 +104,9 @@
     div[data-testid="twc-cc-mask"] + div > div + div .public-DraftEditorPlaceholder-inner::after {
         content: "Add another Tweet";
     }
+    div[data-testid="twc-cc-mask"] + div > div:has(article[data-testid="tweet"]) + div .public-DraftEditorPlaceholder-inner::after {
+        content: "Tweet your reply";
+    }
     
     /* Likes are now once again Favorites */
     a[href $= "/likes"] > span > span {
@@ -172,6 +175,8 @@
     }
     
     /* Posts are now Tweets */
+    
+    /* Left sidebar */
     a[data-testid="SideNav_NewTweet_Button"] div > div > span > span {
         display: none;
     }
@@ -179,16 +184,29 @@
         content: "Tweet";
     }
     
+    /* The inline composer at the top of your home timeline */
     div:is([data-testid="tweetButtonInline"], [data-testid="tweetButton"]) div > span > span {
         display: none;
     }
     div:is([data-testid="tweetButtonInline"], [data-testid="tweetButton"]) div > span::before {
         content: "Tweet";
     }
+    /* The inline composer at the bottom of a tweet page */
+    div[aria-label="Timeline: Conversation"] div[data-testid="tweetButtonInline"] div > span::before {
+        content: "Reply";
+    }
+    
+    /* The modal composer with multiple new tweets to be posted as a thread */
     div[data-viewportview="true"] > div > div:has(> div:nth-child(3)) [data-testid="tweetButton"] div > span::before {
         content: "Tweet all";
     }
     
+    /* The modal composer when writing a single tweet reply to an existing posted thread */
+    div[data-viewportview="true"] > div > div:has(> div:nth-child(3)):has(article[data-testid="tweet"]) [data-testid="tweetButton"] div > span::before {
+        content: "Reply";
+    }
+    
+    /* The tab on a user's timeline */
     nav[aria-label="Profile timelines"] div[role="presentation"]:nth-child(1) a[role="tab"] > div > div > span {
         display: none;
     }
@@ -196,6 +214,7 @@
         content: "Tweets";
     }
     
+    /* The back button when viewing a tweet page */
     div[aria-label="Home timeline"] div:has(div[aria-label="Back"]) + div h2 > span {
         text-indent: -9999px;
         display: block;
