@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.0
+@version        0.1.1
 @description    Put navigation panel on the left of the timeline and composer panel on the right. Localize to en-US locale.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -18,15 +18,5 @@
     }
     .columns-area__panels__pane--compositional {
         order: 3;
-    }
-    
-    /* Localize favourites to favorites for en-US locale */
-    .navigation-panel .column-link .fa-star + span {
-        text-indent: 9999px;
-        visibility: hidden;
-    }
-    .navigation-panel .column-link .fa-star + span::before {
-        content: "Favorites";
-        visibility: visible;
     }
 }
