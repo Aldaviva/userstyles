@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name           Bluesky
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Render quad image posts left to right instead of top to bottom, so they match the Bluesky Android app and Twitter.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+
+@-moz-document domain("bsky.app") {
+    div[role='link'][data-testid*='Item-by-'] div:has(> div:nth-child(2) > div:nth-child(2) > div > button[aria-label='Image']) {
+        flex-direction: row;
+    }
+    
+    div[role='link'][data-testid*='Item-by-'] div:has(> div:nth-child(2) > div:nth-child(2) > div > button[aria-label='Image']) > div {
+        flex-direction: column;
+        flex-grow: 0.5;
+    }
+}

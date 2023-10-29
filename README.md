@@ -17,6 +17,7 @@ Good user interfaces should
 |Site|Changes|
 |---|---|
 |[All](https://github.com/Aldaviva/userstyles/raw/master/styles/solidunderlines.user.css)|Underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.|
+|[Bluesky](https://github.com/Aldaviva/userstyles/raw/master/styles/bluesky.user.css)|Render quad image posts left to right instead of top to bottom, so they match the Bluesky Android app and Twitter.|
 |[Inoreader](https://github.com/Aldaviva/userstyles/raw/master/styles/inoreader.user.css)|Removed clutter, fixed many ugly styles. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.|
 |[JSON Editor Online](https://github.com/Aldaviva/userstyles/raw/master/styles/jsoneditoronline.user.css)|Fixed layout calculation when ads are blocked.|
 |[Mastodon](https://github.com/Aldaviva/userstyles/raw/master/styles/mastodon.user.css)|Moved navigation panel to the left side of the timeline, and the composition panel to the right side.|
