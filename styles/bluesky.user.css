@@ -10,11 +10,11 @@
 ==/UserStyle== */
 
 @-moz-document domain("bsky.app") {
-    div[role='link'][data-testid*='Item-by-'] div:has(> div:nth-child(2) > div:nth-child(2) > div > button[aria-label='Image']) {
+    div[role='link'][data-testid*='Item-by-'] div:has(> div:nth-child(1) > div:nth-child(1) > div > button > .expo-image-container):has(> div:nth-child(1) > div:nth-child(2) > div > button > .expo-image-container):has(> div:nth-child(2) > div:nth-child(1) > div > button > .expo-image-container):has(> div:nth-child(2) > div:nth-child(2) > div > button > .expo-image-container) {
         flex-direction: row;
     }
     
-    div[role='link'][data-testid*='Item-by-'] div:has(> div:nth-child(2) > div:nth-child(2) > div > button[aria-label='Image']) > div {
+    div[role='link'][data-testid*='Item-by-'] div:has(> div:nth-child(1) > div:nth-child(1) > div > button > .expo-image-container):has(> div:nth-child(1) > div:nth-child(2) > div > button > .expo-image-container):has(> div:nth-child(2) > div:nth-child(1) > div > button > .expo-image-container):has(> div:nth-child(2) > div:nth-child(2) > div > button > .expo-image-container) > div {
         flex-direction: column;
         flex-grow: 0.5;
     }
