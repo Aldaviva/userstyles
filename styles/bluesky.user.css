@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Bluesky
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.0
-@description    No Bluesky user styles are currently available
+@version        0.2.0
+@description    Make avatar masks into rounded rectangles with small radii, instead of circles
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
@@ -10,5 +10,7 @@
 ==/UserStyle== */
 
 @-moz-document domain("bsky.app") {
-    /* No rules because the previous ones are no longer needed */
+    [data-testid="userAvatarImage"] {
+        border-radius: 2px !important;
+    }
 }
