@@ -25,6 +25,7 @@ Good user interfaces should
 |[Rooster Teeth](https://github.com/Aldaviva/userstyles/raw/master/styles/roosterteeth.user.css)|Allowed fullscreen video playback for anonymous users. Made video blackground black instead of green. Hid garbage.|
 |[Slack](https://github.com/Aldaviva/userstyles/raw/master/styles/slack.user.css)|Enlarged emoticons.|
 |[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
+|[Splitwise](https://github.com/Aldaviva/userstyles/raw/master/styles/splitwise.user.css)|Hide clutter on itemized editor panel.|
 |[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Enabled HTML5 video context menu, useful for Video Popout.|
 |[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. Revert many stupid changes.<br>You can block keywords with [Ben's Twitter Politics Filter](https://github.com/Aldaviva/content-blocking-filters).|
 |[Vivaldi Open Image](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css)|Checkerboard transparency matting and black background, to look like Photoshop.|

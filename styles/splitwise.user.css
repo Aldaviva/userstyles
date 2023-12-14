@@ -1,0 +1,28 @@
+/* ==UserStyle==
+@name           Splitwise
+@namespace      https://aldaviva.com/userstyles/
+@version        0.1.0
+@description    Hide clutter on itemized editor panel
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+
+@-moz-document domain("splitwise.com") {
+    
+    /* Hide checkboxes next to each row because it requires twice as many Tab presses to advanced to the next row, and I never disable rows anyway. */
+    .itemized_item .row_selector {
+        display: none;
+    }
+    
+    /* Hide spinners on numeric inputs because they are useless ugly clutter */
+    input[type='number'] {
+        -moz-appearance:textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+}
