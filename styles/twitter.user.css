@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.51
+@version        1.0.52
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -71,20 +71,6 @@
     /* Hide the Top Tweets button, but don't mess with the layout so it can still be clicked with https://github.com/Aldaviva/userscripts/blob/master/twitter.user.js */
     div[aria-label ^= "Top Tweets"] {
         visibility: hidden;
-    }
-    
-    /* Don't crop images */
-    [data-testid="tweet"] a[href *= "/photo/"] div[style="padding-bottom: 50%;"] {
-        padding-bottom: 0 !important;
-    }
-    [data-testid="tweet"] a[href *= "/photo/"] div[style="padding-bottom: 50%;"] + div,
-    [data-testid="tweet"] a[href *= "/photo/"] div[style="padding-bottom: 50%;"] + div > div {
-        position: static;
-    }
-    [data-testid="tweet"] a[href *= "/photo/"] div[style="padding-bottom: 50%;"] + div > div img {
-        height: auto;
-        opacity: 1;
-        position: static;
     }
     
     /* Revert tweet composer textboxes' placeholder text */
