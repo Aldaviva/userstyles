@@ -16,4 +16,4 @@ jobs:
         run: npm install --no-fund
 
       - name: Lint
-        run: ./node_modules/.bin/stylelint "styles/*.css"
+        run: npm run lint
