@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bluesky
 @namespace      https://aldaviva.com/userstyles/
-@version        0.4.1
+@version        0.4.2
 @description    Make avatar masks into rounded rectangles with small radii, instead of circles. In dark mode, make background solid black for OLEDs.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -21,8 +21,10 @@
 
     /* Black background */
     .blackBackground() {
-        body {
-            background-color: black;
+        body,
+        /* Compose Post dialog */
+        div[aria-modal="true"] > div[style *= "background-color:"] {
+            background-color: black !important;
         }
 
         #root > div > div > div > div,
