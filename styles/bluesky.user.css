@@ -1,13 +1,12 @@
 /* ==UserStyle==
 @name           Bluesky
 @namespace      https://aldaviva.com/userstyles/
-@version        0.4.2
-@description    Make avatar masks into rounded rectangles with small radii, instead of circles. In dark mode, make background solid black for OLEDs.
+@version        0.4.3
+@description    Make avatar masks into rounded rectangles with small radii, instead of circles.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
 @supportURL     https://github.com/Aldaviva/userstyles/issues
-@preprocessor	less
 ==/UserStyle== */
 
 @-moz-document domain("bsky.app") {
@@ -15,33 +14,8 @@
     [data-testid="userAvatarImage"] {
         border-radius: 2px !important;
     }
-    [data-testid="profileHeaderAviButton"] {
+    [data-testid="profileHeaderAviButton"],
+    button[data-testid="changeBannerBtn"] + div {
         border-radius: 4px !important;
-    }
-
-    /* Black background */
-    .blackBackground() {
-        body,
-        /* Compose Post dialog */
-        div[aria-modal="true"] > div[style *= "background-color:"] {
-            background-color: black !important;
-        }
-
-        #root > div > div > div > div,
-        *[style *= "background-color: rgb(8, 10, 12);"],
-        div[style *= "background-color: rgb(1, 1, 1);"] {
-            background-color: transparent !important;
-        }
-    }
-
-    @media (prefers-color-scheme: dark){
-        html.colorMode--system {
-            /* Ignore the Stylus error, it can't parse LESS mixin invocations, but they do get compiled and rendered correctly in the web page. */
-            .blackBackground();
-        }
-    }
-
-    html.colorMode--dark {
-        .blackBackground();
     }
 }
