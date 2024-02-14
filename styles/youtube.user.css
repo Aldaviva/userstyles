@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.8
+@version        0.0.9
 @description    Removed clutter.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -12,7 +12,9 @@
     #search,
     #end,
     #subscribe-button,
-    #masthead-container {
+    #masthead-container,
+    button.ytp-fullerscreen-edu-button,
+    button[data-tooltip-target-id="ytp-autonav-toggle-button"] {
         display: none !important;
     }
     
@@ -22,6 +24,11 @@
     
     body {
         overflow-y: auto;
+    }
+    
+    body.no-scroll ytd-app[scrolling] {
+        max-height: 100%;
+        overflow-y: hidden;
     }
 }
 
