@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bluesky
 @namespace      https://aldaviva.com/userstyles/
-@version        0.4.3
+@version        0.5.0
 @description    Make avatar masks into rounded rectangles with small radii, instead of circles.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -17,5 +17,10 @@
     [data-testid="profileHeaderAviButton"],
     button[data-testid="changeBannerBtn"] + div {
         border-radius: 4px !important;
+    }
+    
+    /* Hide invitations because they are useless now that registration doesn't require them */
+    button[aria-label ^= "Invite codes: "] {
+        display: none;
     }
 }
