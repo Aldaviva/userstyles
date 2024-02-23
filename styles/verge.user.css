@@ -1,0 +1,30 @@
+/* ==UserStyle==
+@name           The Verge
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Dark mode
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+
+@-moz-document domain("theverge.com") {
+    @media (prefers-color-scheme: dark) {
+        html {
+            color-scheme: dark;
+        }
+        
+        .text-black {
+            color: rgb(255 255 255/var(--tw-text-opacity));
+        }
+        
+        .fill-black {
+            fill: #fff;
+        }
+        
+        .bg-white {
+            background-color: rgb(0 0 0/var(--tw-bg-opacity));
+        }
+    }
+}
