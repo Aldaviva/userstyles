@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name           Google Messages
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Fit more efficiently in narrow viewports, like Vivaldi panels
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document url-prefix("https://messages.google.com/web/conversations/") {
+    @media (max-width: 560px) {
+        mws-message-actions {
+            display: none !important;
+        }
+
+        .msg-row {
+            max-width: 100% !important;
+        }
+
+        mws-message-wrapper {
+            margin-left: 4px !important;
+            margin-right: 0 !important;
+        }
+
+        .compose-container {
+            width: 100% !important;
+            padding-left: 9px;
+            padding-right: 6px;
+        }
+    }
+}
