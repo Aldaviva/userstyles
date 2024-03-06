@@ -1,67 +1,38 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.5
-@description    Enabled HTML5 video context menu, useful for Video Popout.
+@version        0.1.0
+@description    Hide garbage
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
 @-moz-document domain("twitch.tv") {
-    /* Hide extension overlays on top of the video, unless it's in miniplayer mode */
-    .video-player__container--resize-calc .extensions-dock__layout {
-        display: none !important;
-    }
-    
-    /*
-     * Enable browser-based Picture in Picture: allow clicks to the HTML5 video element,
-     * but still allow the toolbars to show, hide, and receive clicks.
-     */
-    .video-player__container--resize-calc .video-player__overlay {
-        /* Stop clicks from being stolen by this div, so they can hit the video element instead */
-        pointer-events: none;
-    }
 
-    .extensions-video-overlay-size-container {
-        /* Get rid of extension overlay that blocks clicks */
-        display: none !important;
-    }
-
-    .video-player__container:hover .tw-transition {
-        /* Show the toolbars when hovering over the container, instead of relying on the now-unused overlay event handlers */
-        opacity: 1;
-        transition-property: transform, opacity;
-        transition-timing-function: ease;
-    }
-
-    .tw-transition > div {
-        /* Allow buttons in toolbars to be clicked */
-        pointer-events: all !important;
-    }
-    
+    /* Hide the "audio for portions of this video has been muted" message */
     .muted-segments-alert {
-        /* Hide the "audio for portions of this video has been muted" message */
         display: none !important;
     }
-    
-    .player-controls.tw-overflow-hidden {
-        /* Keep player toolbar menus (like the gear menu to select resolution) from disappearing when you move your mouse from the toolbar button to the menu */
-        overflow: visible !important;
-    }
-    
-    .top-nav__prime {
-        /* Hide Prime Loot button */
+
+    /* Hide Prime Loot, Get Bits, Go Ad-Free, and React buttons */
+    .top-nav__prime,
+    .top-nav__menu div:has(> div > div > div > div > button[aria-label="Get Bits"]),
+    .top-nav__menu > div:nth-child(3) > div:nth-child(6),
+    div[data-target="channel-header-right"] > div:nth-child(1) {
         display: none;
     }
-    
+
+    /* Hide the semitransparent black overlay that covers the video when paused */
     .player-overlay-background {
-        /* Hide the semitransparent black overlay that covers the video when paused */
         background: none;
     }
-    
-    .video-player__overlay > div > .tw-transition {
-        /* Hide the "thanks for supporting the stream by watching this ad" message, which remains forever when ads are blocked */
-        display: none;
+
+    /* Hide recommended and offline followed channels from left sidebar */
+    .side-nav-section .tw-transition:has(.side-nav-card__avatar--offline),
+    .side-nav-section[aria-label="Recommended Channels"],
+    .side-nav-section[aria-label$=" Viewers Also Watch"],
+    div:has(> .followed-side-nav-header) {
+        display: none !important;
     }
 }
