@@ -1,0 +1,77 @@
+/* ==UserStyle==
+@name           Bleeping Computer
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Dark mode
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("bleepingcomputer.com") {
+    @media (prefers-color-scheme: dark) {
+        html {
+            color-scheme: dark;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+        
+        .bc_wrapper {
+            background: none;
+        }
+
+        .cz-breadcrumb ul li.active,
+        .cz-breadcrumb ul li.active a {
+            color: hsl(0 0% 65% / 1);
+        }
+
+        .cz-main-left-section h1,
+        .article_section h3 {
+            color: hsl(0 0% 80% / 1) !important;
+        }
+
+        .bc_main_content ul,
+        .bc_main_content p {
+            color: hsl(0 0% 97% / 1);
+        }
+
+        a, a:visited {
+            color: hsl(206 97% 69% / 1);
+        }
+
+        .cz-breadcrumb ul li a {
+            color: hsl(217 41% 48% / 1);
+        }
+
+        .cz-news-tags-wrap ul li a {
+            color: hsl(0 0% 60% / 1);
+            background: hsl(0 0% 6% / 1);
+        }
+
+        .cz-line-heading {
+            color: hsl(218 41% 61% / 1);
+            background-image: none;
+            background-color: hsl(0 0% 8% / 1);
+            height: 5px;
+            margin: 12px 0 13px;
+        }
+
+        .cz-line-heading-inner {
+            background: black;
+            position: relative;
+            top: -12px;
+        }
+        
+        .bc_search_box input[type=search] {
+            background: black;
+            color: hsl(0 0% 58% / 1);
+        }
+        
+        .bc_search_box::before {
+            color: hsl(0 0% 31% / 1);
+        }
+    }
+}
