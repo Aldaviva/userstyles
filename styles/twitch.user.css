@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.0
-@description    Hide garbage
+@version        0.1.1
+@description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
@@ -15,12 +15,13 @@
         display: none !important;
     }
 
-    /* Hide Prime Loot, Get Bits, Go Ad-Free, and React buttons */
+    /* Hide Prime Loot, Get Bits, Go Ad-Free, React, and Subscribe buttons */
     .top-nav__prime,
     .top-nav__menu div:has(> div > div > div > div > button[aria-label="Get Bits"]),
     .top-nav__menu > div:nth-child(3) > div:nth-child(6),
-    div[data-target="channel-header-right"] > div:nth-child(1) {
-        display: none;
+    div[data-target="channel-header-right"] > div:nth-child(1),
+    div[data-target="channel-header-right"] > div:has(button:is([aria-label="Subscribe"], [aria-label="Resubscribe"])) {
+        display: none !important;
     }
 
     /* Hide the semitransparent black overlay that covers the video when paused */
@@ -32,7 +33,18 @@
     .side-nav-section .tw-transition:has(.side-nav-card__avatar--offline),
     .side-nav-section[aria-label="Recommended Channels"],
     .side-nav-section[aria-label$=" Viewers Also Watch"],
+    .side-nav-section[aria-label="Similar Channels"],
     div:has(> .followed-side-nav-header) {
+        display: none !important;
+    }
+
+    /* Hide the Intended for Certain Audiences label */
+    #channel-player-disclosures {
+        display: none;
+    }
+
+    /* Hide extensions that overlay the video */
+    .video-size.passthrough-events:has(.extensions-dock__layout) {
         display: none !important;
     }
 }
