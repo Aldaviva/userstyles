@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.1
+@version        0.1.2
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -20,7 +20,7 @@
     .top-nav__menu div:has(> div > div > div > div > button[aria-label="Get Bits"]),
     .top-nav__menu > div:nth-child(3) > div:nth-child(6),
     div[data-target="channel-header-right"] > div:nth-child(1),
-    div[data-target="channel-header-right"] > div:has(button:is([aria-label="Subscribe"], [aria-label="Resubscribe"])) {
+    div[data-target="channel-header-right"] > div:has(button:is([aria-label="Subscribe"], [aria-label="Resubscribe"], [aria-label="Continue Sub"])) {
         display: none !important;
     }
 
