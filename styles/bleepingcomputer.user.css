@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bleeping Computer
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.0
+@version        0.1.0
 @description    Dark mode
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -9,6 +9,14 @@
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
 @-moz-document domain("bleepingcomputer.com") {
+    .bc_downloads,
+    #comments,
+    #comment_form,
+    .cz-related-article-wrapp,
+    .cz-story-navigation {
+        display: none;
+    }
+    
     @media (prefers-color-scheme: dark) {
         html {
             color-scheme: dark;
