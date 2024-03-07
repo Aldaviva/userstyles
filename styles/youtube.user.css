@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.9
+@version        0.0.10
 @description    Removed clutter.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -40,7 +40,7 @@
     #comments,
     #owner-and-teaser,
     #actions,
-    #info,
+    #info > span:nth-child(-n+2),
     .ytp-chrome-top-buttons,
     #sponsor-button,
     #notification-preference-toggle-button,
