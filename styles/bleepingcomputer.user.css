@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bleeping Computer
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.0
+@version        0.1.1
 @description    Dark mode
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -24,7 +24,12 @@
 
         body {
             background-color: black;
-            color: white;
+        }
+        
+        body,
+        .bc_main_content ul,
+        .bc_main_content p {
+            color: hsl(0 0% 86%);
         }
         
         .bc_wrapper {
@@ -33,36 +38,31 @@
 
         .cz-breadcrumb ul li.active,
         .cz-breadcrumb ul li.active a {
-            color: hsl(0 0% 65% / 1);
+            color: hsl(0 0% 65%);
         }
 
         .cz-main-left-section h1,
         .article_section h3 {
-            color: hsl(0 0% 80% / 1) !important;
-        }
-
-        .bc_main_content ul,
-        .bc_main_content p {
-            color: hsl(0 0% 97% / 1);
+            color: hsl(0 0% 80%) !important;
         }
 
         a, a:visited {
-            color: hsl(206 97% 69% / 1);
+            color: hsl(206 97% 69%);
         }
 
         .cz-breadcrumb ul li a {
-            color: hsl(217 41% 48% / 1);
+            color: hsl(217 41% 48%);
         }
 
         .cz-news-tags-wrap ul li a {
-            color: hsl(0 0% 60% / 1);
-            background: hsl(0 0% 6% / 1);
+            color: hsl(0 0% 60%);
+            background: hsl(0 0% 6%);
         }
 
         .cz-line-heading {
-            color: hsl(218 41% 61% / 1);
+            color: hsl(218 41% 61%);
             background-image: none;
-            background-color: hsl(0 0% 8% / 1);
+            background-color: hsl(0 0% 8%);
             height: 5px;
             margin: 12px 0 13px;
         }
@@ -75,11 +75,19 @@
         
         .bc_search_box input[type=search] {
             background: black;
-            color: hsl(0 0% 58% / 1);
+            color: hsl(0 0% 58%);
         }
         
         .bc_search_box::before {
-            color: hsl(0 0% 31% / 1);
+            color: hsl(0 0% 31%);
+        }
+        
+        .cz-main-left-section h2 {
+            color: #ccc !important;
+        }
+        
+        .cat_quote, .bc_quote {
+            background-color: hsl(0 0% 6%);
         }
     }
 }
