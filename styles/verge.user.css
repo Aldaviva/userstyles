@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           The Verge
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.1
+@version        0.0.2
 @description    Dark mode
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -26,6 +26,23 @@
             color: rgb(236 236 236/var(--tw-text-opacity));
         }
         
+        .text-gray-33,
+        .\[\&_a\]\:text-gray-33 a {
+            color: rgb(204 204 204/var(--tw-text-opacity));
+        }
+        
+        .\[\&_a\]\:shadow-underline-gray-33 a {
+            --tw-shadow: inset 0 -1px 0 0 #ccc;
+        }
+        
+        .text-gray-4a {
+            color: hsl(0 0% 71% / 1);
+        }
+        
+        .text-gray-63 {
+            color: hsl(0 0% 61% / 1);
+        }
+        
         .fill-black {
             fill: #fff;
         }
@@ -44,6 +61,18 @@
         
         .\[\&_a\]\:shadow-underline-black a {
             --tw-shadow: inset 0 -1px 0 0 #fff;
+        }
+        
+        blockquote p {
+            color: hsl(0 0% 65% / 1) !important;
+        }
+        
+        blockquote:before {
+            border-color: hsl(0 0% 65% / 1) !important;
+        }
+        
+        .border-white {
+            border-color: black;
         }
     }
 }
