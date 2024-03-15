@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           The Verge
 @namespace      https://aldaviva.com/userstyles/
-@version        0.0.2
+@version        0.0.3
 @description    Dark mode
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -57,6 +57,14 @@
         
         .bg-gray-ef {
             background-color: rgb(16 16 16/var(--tw-bg-opacity));
+        }
+        
+        .bg-\[\#F8F5FF\] {
+            background-color: hsl(258 100% 13% / 1);
+        }
+        
+        .bg-franklin {
+            background-color: hsl(166 100% 38% / 1)
         }
         
         .\[\&_a\]\:shadow-underline-black a {
