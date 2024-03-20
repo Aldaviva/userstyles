@@ -1,0 +1,121 @@
+/* ==UserStyle==
+@name           The Verge
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.4
+@description    Dark mode
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+@preprocessor   less
+==/UserStyle== */
+
+@-moz-document domain("theverge.com") {
+    @media (prefers-color-scheme: dark) {
+        html {
+            color-scheme: dark;
+        }
+        
+        .duet--article--lede-split {
+            color: black;
+        }
+        
+        .text-gray-13,
+        .\[\&\>a\]\:text-gray-13>a,
+        .\[\&\>p\>span\:first-child\]\:text-gray-13 > p > span:first-child,
+        .\[\&_\.duet--article-byline-and\]\:text-gray-13 .duet--article-byline-and {
+            color: rgb(236 236 236/var(--tw-text-opacity));
+        }
+        
+        .duet--article--lede-split .text-gray-13 {
+            color: revert;
+        }
+        
+        .\[\&_a\]\:shadow-underline-black a {
+            --tw-shadow: inset 0 -1px 0 0 #fff;
+        }
+        .\[\&_a\]\:shadow-underline-gray-33 a {
+            --tw-shadow: inset 0 -1px 0 0 #ccc;
+        }
+        
+        blockquote {
+            p {
+                color: hsl(0 0% 65% / var(--tw-text-opacity)) !important;
+            }
+            
+            &:before {
+                border-color: hsl(0 0% 65% / 1) !important;
+            }
+        }
+        
+        .border-white {
+            border-color: black;
+        }
+        
+        .duet--app:has(> .duet--page-layout--feature-article) .duet--navigation--navigation,
+        .duet--page-layout--feature-article .duet--article--lede {
+            .fill-black {
+                fill: #000;
+            }
+            
+            .text-black {
+                color: rgb(0 0 0/var(--tw-text-opacity));
+            }
+        }
+        
+        .fill-black {
+            fill: #fff;
+        }
+
+        .text-black {
+            color: rgb(255 255 255 / var(--tw-text-opacity));
+        }
+        
+        .text-gray-31 {
+            color: hsl(0 0% 81% / var(--tw-text-opacity));
+        }
+        
+        .text-gray-33,
+        .\[\&_a\]\:text-gray-33 a {
+            color: rgb(204 204 204 / var(--tw-text-opacity));
+        }
+        
+        .text-gray-4a {
+            color: hsl(0 0% 71% / var(--tw-text-opacity));
+        }
+        
+        .text-gray-63 {
+            color: hsl(0 0% 61% / var(--tw-text-opacity));
+        }
+        
+        .text-gray-5a {
+            color: hsl(0 0% 65% / var(--tw-text-opacity));
+        }
+        
+        .bg-white {
+            background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+        }
+        
+        .bg-black {
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        }
+        
+        .bg-gray-ef {
+            background-color: rgb(16 16 16 / var(--tw-bg-opacity));
+        }
+        
+        .bg-\[\#F8F5FF\] {
+            background-color: hsl(258 100% 13% / var(--tw-bg-opacity));
+        }
+        
+        .bg-franklin {
+            background-color: hsl(166 100% 38% / var(--tw-bg-opacity))
+        }
+        
+        .selection\:bg-franklin-20{
+            &::selection, ::selection {
+                background-color: hsl(166 100% 8% / var(--tw-bg-opacity));
+            }
+        }
+    }
+}
