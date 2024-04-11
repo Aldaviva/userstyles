@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Stack Exchange
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.0
+@version        0.1.1
 @description    Removed clutter on question pages.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -17,7 +17,7 @@
     body.question-page .topbar,
     body.question-page .question-status,
     body.question-page .fw,
-    body.question-page .comments-link,
+    body.question-page .comments-link.js-add-link,
     body.question-page #tabs,
     body.question-page .post-taglist,
     body.question-page .comment-date,
