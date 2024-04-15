@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.54
+@version        1.0.55
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -87,7 +87,7 @@
         content: "What’s happening?";
         text-indent: 0;
         display: block;
-        line-height: initial;
+        line-height: 23px;
     }
     div[aria-label="Timeline: Conversation"] .public-DraftEditorPlaceholder-inner::after {
         content: "Tweet your reply";
