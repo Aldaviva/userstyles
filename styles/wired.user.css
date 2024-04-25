@@ -1,0 +1,90 @@
+/* ==UserStyle==
+@name           Wired
+@namespace      https://aldaviva.com/userstyles/
+@version        1.0.0
+@description    Dark mode for articles
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+
+@-moz-document domain("wired.com") {
+    @media (prefers-color-scheme: dark) {
+        html {
+            color-scheme: dark;
+        }
+        
+        .page,
+        header.site-navigation,
+        #bookmark {
+            background-color: black !important;
+        }
+        
+        h1,
+        h2,
+        div[data-testid="ContentHeaderRubricDateBlock"] :is(.rubric__link, time),
+        .caption__credit,
+        div[data-testid="SectionTitle"] header,
+        nav a:link,
+        .standard-navigation__section--utility-links-login a {
+            color: white !important;
+        }
+        
+        #main-content :is(li, p, a:not(.button):link, a:not(.button):visited),
+        .recirc-list__items .byline__name {
+            color: hsl(0 0% 90% / 1) !important;
+        }
+        
+        #main-content a:not(.button):hover,
+        nav a:hover {
+            color: hsl(201 95% 62% / 1) !important;
+        }
+        
+        .content-header__accreditation div,
+        .summary-item__content .summary-item__dek {
+            color: hsl(0 0% 80% / 1) !important;
+        }
+        
+        .contributors span,
+        div[data-testid="TagCloudWrapper"] > span {
+            color: hsl(0 0% 54% / 1);
+        }
+        
+        header.site-navigation {
+            border-bottom-color: hsl(0 0% 10% / 1);
+        }
+        
+        .standard-navigation__section--utility-links-login::after {
+            background-color: hsl(0 0% 10% / 1) !important;
+        }
+        
+        .standard-navigation__drawer-toggle svg path {
+            fill: white;
+        }
+        
+        header.site-navigation a[data-testid="Logo"] img {
+            filter: invert(100%);
+        }
+        
+        a[aria-label="Search"] svg path {
+            fill: hsl(0 0% 80% / 1);
+        }
+        
+        #bookmark {
+            border-color: hsl(0 0% 40% / 1);
+        }
+        
+        #bookmark .icon-bookmark-stroke {
+            stroke: white;
+        }
+        
+        header.article__content-header .byline__name {
+            background-color: white;
+        }
+        
+        header.article__content-header .byline__name a {
+            color: black;
+        }
+    }
+}

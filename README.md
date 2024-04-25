@@ -33,4 +33,5 @@ Good user interfaces should
 |[The Verge](https://github.com/Aldaviva/userstyles/raw/master/styles/verge.user.css)|Dark mode for articles.|
 |[Vivaldi Open Image](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css)|Checkerboard transparency matting and black background, to look like Photoshop.|
 |[Wikipedia](https://github.com/Aldaviva/userstyles/raw/master/styles/wikipedia.user.css)|Removed clutter.|
+|[Wired](https://github.com/Aldaviva/userstyles/raw/master/styles/wired.user.css)|Dark mode for articles.|
 |[YouTube](https://github.com/Aldaviva/userstyles/raw/master/styles/youtube.user.css)|Removed clutter.|
