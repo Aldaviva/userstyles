@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wired
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.0
+@version        1.0.1
 @description    Dark mode for articles
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -10,6 +10,11 @@
 ==/UserStyle== */
 
 @-moz-document domain("wired.com") {
+    
+    .coral-comments__container {
+        display: none;
+    }
+    
     @media (prefers-color-scheme: dark) {
         html {
             color-scheme: dark;
@@ -17,7 +22,8 @@
         
         .page,
         header.site-navigation,
-        #bookmark {
+        #bookmark,
+        #link-banner {
             background-color: black !important;
         }
         
@@ -59,12 +65,14 @@
             background-color: hsl(0 0% 10% / 1) !important;
         }
         
-        .standard-navigation__drawer-toggle svg path {
+        .standard-navigation__drawer-toggle svg path,
+        .social-icons__link .icon path{
             fill: white;
         }
         
-        header.site-navigation a[data-testid="Logo"] img {
-            filter: invert(100%);
+        header.site-navigation a[data-testid="Logo"] img,
+        #link-banner nav img {
+            filter: invert(100%) hue-rotate(180deg);
         }
         
         a[aria-label="Search"] svg path {
