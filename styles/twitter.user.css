@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.56
+@version        1.0.57
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -232,4 +232,10 @@
         filter: none;
     }
     
+    /* Make multi-image tweet icon actually visible on white backgrounds in media tab */
+    li[id ^= "verticalGridItem-"] > div > div > div > a > svg {
+        filter: drop-shadow(0 0 2px black) drop-shadow(0 0 1px rgb(0 0 0/70%));
+        width: 57px;
+        height: 57px;
+    }
 }
