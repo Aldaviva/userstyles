@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wired
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.3
+@version        1.0.4
 @description    Dark mode for articles
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -24,7 +24,8 @@
         header.site-navigation,
         #bookmark,
         #link-banner,
-        .article-white-background {
+        .article-white-background,
+        a.button {
             background-color: black !important;
         }
         
@@ -40,7 +41,10 @@
         
         #main-content :is(li, p, a:not(.button):link, a:not(.button):visited),
         .recirc-list__items .byline__name,
-        .heading-h5 {
+        .heading-h5,
+        div[data-testid="ReviewPageMainContent"] :is(span,div),
+        span[class*="GalleryEmbedControlsCounterIndex-"],
+        div[class*="GalleryEmbedCaptionSlideBody-"] {
             color: hsl(0 0% 90% / 1) !important;
         }
         
@@ -55,7 +59,9 @@
         }
         
         .contributors span,
-        div[data-testid="TagCloudWrapper"] > span {
+        div[data-testid="TagCloudWrapper"] > span,
+        span[class*="GalleryEmbedControlsCounterCount-"],
+        div[class*="GalleryEmbedCredit-"] {
             color: hsl(0 0% 54% / 1);
         }
         
@@ -68,7 +74,8 @@
         }
         
         .standard-navigation__drawer-toggle svg path,
-        .social-icons__link .icon path{
+        .social-icons__link .icon path,
+        button[class*="GalleryEmbedControlsButton-"] svg {
             fill: white;
         }
         
@@ -96,5 +103,22 @@
         header.article__content-header .byline__name a {
             color: black;
         }
+        
+        .gallery-embed > span[class*="GalleryEmbedSwipe-"] {
+            background-color: hsl(0 0% 5% / 1);
+        }
+        
+        .review-rating-data__info-button {
+            background-color: transparent !important;
+        }
+        
+        button[class*="GalleryEmbedControlsButton-"] {
+            border-color: white;
+        }
+        
+        button[class*="GalleryEmbedControlsButton-"][aria-disabled="true"] {
+            border-color: transparent;
+        }
+        
     }
 }
