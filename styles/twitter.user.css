@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.58
+@version        1.0.59
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -216,6 +216,24 @@
         text-indent: 0;
         display: block;
         line-height: initial;
+    }
+    
+    /* The "n posts" subheading on a user's timeline */
+    div[aria-label="Home timeline"] div:has(> h2 + div) {
+        display: block;
+    }
+    div[aria-label="Home timeline"] div > h2:has(+ div) {
+        display: block;
+    }
+    div[aria-label="Home timeline"] div > h2 + div {
+        margin-right: -2.714833em; /* -32.578px when font size = small (2/5) */
+        display: inline;
+        clip-path: margin-box;
+    }
+    div[aria-label="Home timeline"] div:has(> h2 + div)::after {
+        content: " tweets";
+        font: 400 12px/15px TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: rgb(113, 118, 123);
     }
     
     /* Remove image content warnings */
