@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wired
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.4
+@version        1.0.5
 @description    Dark mode for articles
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -102,6 +102,7 @@
         
         header.article__content-header .byline__name a {
             color: black;
+            background-color: white !important;
         }
         
         .gallery-embed > span[class*="GalleryEmbedSwipe-"] {
