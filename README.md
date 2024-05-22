@@ -24,7 +24,6 @@ Good user interfaces should
 |[JSON Editor Online](https://github.com/Aldaviva/userstyles/raw/master/styles/jsoneditoronline.user.css)|Fixed layout calculation when ads are blocked.|
 |[Mastodon](https://github.com/Aldaviva/userstyles/raw/master/styles/mastodon.user.css)|Moved navigation panel to the left side of the timeline, and the composition panel to the right side.|
 |[Pandora](https://github.com/Aldaviva/userstyles/raw/master/styles/pandora.user.css)|Fixed layout calculation when ads are blocked.|
-|[Rooster Teeth](https://github.com/Aldaviva/userstyles/raw/master/styles/roosterteeth.user.css)|Allowed fullscreen video playback for anonymous users. Made video blackground black instead of green. Hid garbage.|
 |[Slack](https://github.com/Aldaviva/userstyles/raw/master/styles/slack.user.css)|Enlarged emoticons.|
 |[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
 |[Splitwise](https://github.com/Aldaviva/userstyles/raw/master/styles/splitwise.user.css)|Hide clutter on itemized editor panel.|
