@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wired
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.6
+@version        1.0.7
 @description    Dark mode for articles
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -11,7 +11,8 @@
 
 @-moz-document domain("wired.com") {
     
-    .coral-comments__container {
+    .coral-comments__container,
+    div[class^='ActionBarWrapperContent'] {
         display: none;
     }
     
@@ -35,7 +36,8 @@
         .caption__credit,
         div[data-testid="SectionTitle"] header,
         nav a:link,
-        .standard-navigation__section--utility-links-login a {
+        .standard-navigation__section--utility-links-login a,
+        div[class*="ProductSummaryGridShowMoreLessWrapper-"] a {
             color: white !important;
         }
         
@@ -47,7 +49,9 @@
         .heading-h6,
         div[data-testid="ReviewPageMainContent"] :is(span,div),
         span[class*="GalleryEmbedControlsCounterIndex-"],
-        div[class*="GalleryEmbedCaptionSlideBody-"] {
+        div[class*="GalleryEmbedCaptionSlideBody-"],
+        header[class*="ProductSummaryGridTitle-"],
+        div[class*="ProductSummaryBrandAndName-"] {
             color: hsl(0 0% 90% / 1) !important;
         }
         
@@ -83,7 +87,8 @@
         }
         
         header.site-navigation a[data-testid="Logo"] img,
-        #link-banner nav img {
+        #link-banner nav img,
+        img[src$="/divider-guides.png"] {
             filter: invert(100%) hue-rotate(180deg);
         }
         
@@ -99,12 +104,12 @@
             stroke: white;
         }
         
-        header.article__content-header .byline__name {
+        header .byline__name {
             background-color: white;
         }
         
-        header.article__content-header .byline__name a {
-            color: black;
+        header .byline__name a {
+            color: black !important;
             background-color: white !important;
         }
         
