@@ -17,6 +17,7 @@ Good user interfaces should
 |Site|Changes|
 |---|---|
 |[All](https://github.com/Aldaviva/userstyles/raw/master/styles/solidunderlines.user.css)|Underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.|
+|[Bitbucket](https://github.com/Aldaviva/userstyles/raw/master/styles/bitbucket.user.css)|Expand text editor to full height of window, instead of being annoyingly short.|
 |[Bleeping Computer](https://github.com/Aldaviva/userstyles/raw/master/styles/bleepingcomputer.user.css)|Dark mode for articles.|
 |[Bluesky](https://github.com/Aldaviva/userstyles/raw/master/styles/bluesky.user.css)|Render quad image posts left to right instead of top to bottom, so they match the Bluesky Android app and Twitter.|
 |[Google Messages](https://github.com/Aldaviva/userstyles/raw/master/styles/google-messages.user.css)|Fit more efficiently in narrow viewports, like Vivaldi panels.|

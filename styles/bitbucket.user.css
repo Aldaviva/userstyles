@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@name           Bitbucket
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Text editor height
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+
+@-moz-document domain("bitbucket.org") {
+    .CodeMirror, .CodeMirror-scroll {
+        max-height: max(550px, calc(100vh - 416px));
+    }
+}
