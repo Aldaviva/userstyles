@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wired
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.8
+@version        1.0.9
 @description    Dark mode for articles
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -52,7 +52,8 @@
         div[class*="GalleryEmbedCaptionSlideBody-"],
         header[class*="ProductSummaryGridTitle-"],
         div[class*="ProductSummaryBrandAndName-"],
-        .caption__text {
+        .caption__text,
+        div[class*="PullQuoteEmbedCredit-"] {
             color: hsl(0 0% 90% / 1) !important;
         }
         
@@ -128,6 +129,10 @@
         
         button[class*="GalleryEmbedControlsButton-"][aria-disabled="true"] {
             border-color: transparent;
+        }
+        
+        div[class*="PullQuoteDecorativeBorder-"] {
+            border-color: hsl(0 0% 90% / 1);
         }
         
     }
