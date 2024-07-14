@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wired
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.9
+@version        1.0.10
 @description    Dark mode for articles
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -133,6 +133,10 @@
         
         div[class*="PullQuoteDecorativeBorder-"] {
             border-color: hsl(0 0% 90% / 1);
+        }
+        
+        h1[class *= "SplitScreenContentHeader"] {
+            color: black !important;
         }
         
     }
