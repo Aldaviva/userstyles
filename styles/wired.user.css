@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wired
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.10
+@version        1.0.11
 @description    Dark mode for articles
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -30,7 +30,6 @@
             background-color: black !important;
         }
         
-        h1,
         h2,
         div[data-testid="ContentHeaderRubricDateBlock"] :is(.rubric__link, time),
         .caption__credit,
@@ -135,8 +134,8 @@
             border-color: hsl(0 0% 90% / 1);
         }
         
-        h1[class *= "SplitScreenContentHeader"] {
-            color: black !important;
+        h1:not([class*="SplitScreenContentHeader"]) {
+            color: white !important;
         }
         
     }
