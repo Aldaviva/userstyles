@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Mastodon
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.1
-@description    Put navigation panel on the left of the timeline and composer panel on the right. Localize to en-US locale.
+@version        0.2.0
+@description    Put navigation panel on the left of the timeline and composer panel on the right. Make avatar shape a rounded square instead of a circle.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
@@ -18,5 +18,10 @@
     }
     .columns-area__panels__pane--compositional {
         order: 3;
+    }
+    
+    /* Make avatar shape a rounded square instead of a circle */
+    .account__avatar img, .account__header__bar .avatar .account__avatar {
+        border-radius: 0;
     }
 }
