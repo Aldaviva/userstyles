@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.5
+@version        0.1.6
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -49,6 +49,14 @@
 
     /* Hide footers like "TwitchCon Europe tickets on sale now!" */
     #twilight-sticky-footer-root {
+        display: none;
+    }
+}
+
+@-moz-document url("https://www.twitch.tv/prettylights") {
+    
+    /* Hide the annoying pinned message overlays (when the right sidebar is hidden) every 5 seconds from the idiotic moderators on Pretty Lights streams */
+    div[aria-label="Chat Happening Now Overlay"] {
         display: none;
     }
 }
