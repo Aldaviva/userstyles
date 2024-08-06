@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bleeping Computer
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.3
+@version        0.1.4
 @description    Dark mode
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -13,7 +13,8 @@
     #comments,
     #comment_form,
     .cz-related-article-wrapp,
-    .cz-story-navigation {
+    .cz-story-navigation,
+    .articleBody > p:first-child:has(> img) {
         display: none;
     }
     
