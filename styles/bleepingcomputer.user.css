@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bleeping Computer
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.4
+@version        0.1.5
 @description    Dark mode
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -29,7 +29,8 @@
         
         body,
         .bc_main_content ul,
-        .bc_main_content p {
+        .bc_main_content p,
+        .fan_quote {
             color: hsl(0 0% 86%);
         }
         
