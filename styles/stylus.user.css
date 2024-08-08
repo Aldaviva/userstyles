@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           Stylus
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Multiple columns are illegible, so only show one column like when the viewport is narrow.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+
+@-moz-document url("chrome-extension://clngdbkpkpeebahjckkjfobafhncgmne/manage.html"), url("moz-extension://013ef3fa-ebf2-4601-9024-aea0326a927a/manage.html") {
+    #installed {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    
+    .entry {
+        width: auto;
+    }
+}
+

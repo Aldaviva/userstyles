@@ -26,11 +26,12 @@ Good user interfaces should
 |[Mastodon](https://github.com/Aldaviva/userstyles/raw/master/styles/mastodon.user.css)|Moved navigation panel to the left side of the timeline, and the composition panel to the right side.|
 |[Pandora](https://github.com/Aldaviva/userstyles/raw/master/styles/pandora.user.css)|Fixed layout calculation when ads are blocked.|
 |[Slack](https://github.com/Aldaviva/userstyles/raw/master/styles/slack.user.css)|Enlarged emoticons.|
-|[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
 |[Splitwise](https://github.com/Aldaviva/userstyles/raw/master/styles/splitwise.user.css)|Hide clutter on itemized editor panel.|
+|[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
+|[Stylus](https://github.com/Aldaviva/userstyles/raw/master/styles/stylus.user.css)|Make extension configuration page single column even on wide viewports, because multiple columns are illegible.|
+|[The Verge](https://github.com/Aldaviva/userstyles/raw/master/styles/verge.user.css)|Dark mode for articles.|
 |[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Enabled HTML5 video context menu, useful for Video Popout.|
 |[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. Revert many stupid changes.<br>You can block keywords with [Ben's Twitter Politics Filter](https://github.com/Aldaviva/content-blocking-filters).|
-|[The Verge](https://github.com/Aldaviva/userstyles/raw/master/styles/verge.user.css)|Dark mode for articles.|
 |[Vivaldi Open Image](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css)|Checkerboard transparency matting and black background, to look like Photoshop.|
 |[Wikipedia](https://github.com/Aldaviva/userstyles/raw/master/styles/wikipedia.user.css)|Removed clutter.|
 |[Wired](https://github.com/Aldaviva/userstyles/raw/master/styles/wired.user.css)|Dark mode for articles.|
