@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.64
+@version        1.0.65
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -44,9 +44,9 @@
     /* Hide Compose a Direct Message button in the bottom-right corner of the page */
     aside[aria-label="Compose a Direct Message"],
     /* Hide Premium upsell when exceeding the length limit during tweet composition */
-    div[role="status"]:has(a[href="/i/premium_sign_up?referring_page=post-composer"])
-    /* Hide See What's Happening timeline boxes, like Tokyo 2020 Olympics. Disabled because this also hides inline videos */
-    /*div[data-testid="placementTracking"]*/ {
+    div[role="status"]:has(a[href="/i/premium_sign_up?referring_page=post-composer"]),
+    /* Hide Premium upsell on your profile page */
+    div:has(> div > a[href="/i/premium_sign_up"]) {
         display: none;
     }
     
