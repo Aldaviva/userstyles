@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.6
+@version        0.1.7
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -50,6 +50,11 @@
     /* Hide footers like "TwitchCon Europe tickets on sale now!" */
     #twilight-sticky-footer-root {
         display: none;
+    }
+    
+    /* Hide banner ads under video */
+    .video-player--stream-display-ad_lower-third {
+        height: 100% !important;
     }
 }
 
