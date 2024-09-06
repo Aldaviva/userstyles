@@ -51,10 +51,15 @@
     #twilight-sticky-footer-root {
         display: none;
     }
-    
+
     /* Hide banner ads under video */
     .video-player--stream-display-ad_lower-third {
         height: 100% !important;
+    }
+
+    /* Hide "Knock" button, which lets you request to join someone else's stream as a media source (the Raise Hand feature) */
+    a + div:has(button[aria-label="Knock"]) {
+        display: none !important;
     }
 }
 
