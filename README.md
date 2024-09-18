@@ -30,7 +30,7 @@ Good user interfaces should
 |[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
 |[Stylus](https://github.com/Aldaviva/userstyles/raw/master/styles/stylus.user.css)|Make extension configuration page single column even on wide viewports, because multiple columns are illegible.|
 |[The Verge](https://github.com/Aldaviva/userstyles/raw/master/styles/verge.user.css)|Dark mode for articles.|
-|[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Enabled HTML5 video context menu, useful for Video Popout.|
+|[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Removed clutter.|
 |[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. Revert many stupid changes.<br>You can block keywords with [Ben's Twitter Politics Filter](https://github.com/Aldaviva/content-blocking-filters).|
 |[Vivaldi Open Image](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css)|Checkerboard transparency matting and black background, to look like Photoshop.|
 |[Wikipedia](https://github.com/Aldaviva/userstyles/raw/master/styles/wikipedia.user.css)|Removed clutter.|
