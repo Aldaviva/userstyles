@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.11
+@version        0.1.12
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -58,7 +58,7 @@
     }
 
     /* Hide "Knock" button, which lets you request to join someone else's stream as a media source (the Raise Hand feature) */
-    a + div:has(button[aria-label="Knock"]) {
+    div:has(> div > div > :is(div, div > div) > button:is([aria-label="Knock"], [aria-label$=" is not available to collaborate. Try again later."])) {
         display: none !important;
     }
     
