@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Vivaldi Open Image
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.0
+@version        0.1.1
 @description    Background style like Photoshop for the Open Image page in Vivaldi
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -10,11 +10,11 @@
 ==/UserStyle== */
 
 
-html[style="height: 100%;"]:has(head > meta[name="viewport"][content="width=device-width, minimum-scale=0.1"]:first-child + title:last-child) body[style="margin: 0px; height: 100%; background-color: rgb(14, 14, 14);"]:has(> img[style*="cursor: zoom"]:only-child) {
+html[style="height: 100%;"]:has(head > meta[name="viewport"][content="width=device-width, minimum-scale=0.1"]:first-child + title:last-child) body[style="margin: 0px; height: 100%; background-color: rgb(14, 14, 14);"]:has(> img:only-child) {
     background-color: black !important;
 }
 
-html[style="height: 100%;"]:has(head > meta[name="viewport"][content="width=device-width, minimum-scale=0.1"]:first-child + title:last-child) body[style="margin: 0px; height: 100%; background-color: rgb(14, 14, 14);"] > img[style*="cursor: zoom"]:only-child {
+html[style="height: 100%;"]:has(head > meta[name="viewport"][content="width=device-width, minimum-scale=0.1"]:first-child + title:last-child) body[style="margin: 0px; height: 100%; background-color: rgb(14, 14, 14);"] > img:only-child {
     transition: none !important;
-    background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEX////My8x3qzxEAAAAD0lEQVQI12Ng+I8V4RIGAH6/D/EIQoVRAAAAAElFTkSuQmCC") repeat !important;
+    background: transparent repeat repeating-conic-gradient(#cccbcc 0% 25%, white 0% 50%) top left / 16px 16px !important;
 }
