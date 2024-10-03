@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.12
+@version        0.1.13
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -65,6 +65,11 @@
     /* Hide stories */
     .common-centered-column > div > div:has(div[aria-label="Channel Avatar Picture"]),
     #side-nav > div > div > div:has(div[aria-label="Open stories"]) {
+        display: none !important;
+    }
+    
+    /* Hide ad above chat while another ad is playing */
+    div:has(> div > button > div[style *= "turbo-ads-upsell-background.svg"]){
         display: none !important;
     }
 }
