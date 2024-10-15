@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.25
-@description    Removed clutter. Made videos muted, loop, and autoplay. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.
+@version        1.0.0
+@description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
@@ -11,429 +11,132 @@
 ==/UserStyle== */
 @-moz-document domain("inoreader.com") {
 
-    /* Notifications bell icon in the top right corner */
-    #sb_rp_notifications {
-        display: none;
-    }
-
-    /* The up and down arrows in the top right corner */
-    #sb_rp_prev_article,
-    #sb_rp_next_article {
+    /* Hide useless nav bar buttons */
+    nav #home_tab,
+    body:not(.active-tab-overlay-notifications) nav #notifications_tab,
+    nav #audio_player_tab,
+    nav #support_tab,
+    nav .tree-pane-dock-toggle {
         display: none;
     }
     
-    /* Search button in the top right corner. There's already a search box in the top left.
+    /*
+     * The following rules were all developed in Column View, and may need to be changed or augmented for other views like List or Card
      */
-    #sb_rp_search {
+    
+    /* Hide up and down buttons in the bottom-right corner of the screen */
+    li.move-articles-list {
         display: none;
     }
-
-    /* Card View: Don't arbitrarily limit article width to 650px */
-    .article_content {
-        max-width: unset;
+    
+    /* Properly wrap long single-word article titles in column view to max two lines with ellipses */
+    .column_view_title .article_header_title {
+        display: flex !important;
+    }
+    .column_view_title .article_header_title span.d-inline:not(.article-tile-comments-wrapper) {
+        overflow: hidden;
+        overflow-wrap: break-word;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
     
-    /* Card View: Don't arbitrarily limit the article modal width */
-    #article_dialog_wrapper {
-        min-width: 640px;
-        width: max-content !important;
-        max-width: calc(100% - 2 * 180px);
-        /* Let this be the positioning parent for the fixed .article_footer_placeholder_top below, to give it the right width while keeping it from scrolling */
-        transform: translate(0px,0px);
+    /* Hide Mark All As Read button because the possibility for data loss is scary */
+    ul.nav li:has(.inno_toolbar_button_mark_read) {
+        display: none;
     }
     
-    /* Card View: Position the article top toolbar correctly with variable-width articles, and hide the 10px gap of content peeking through above it */
-    #article_dialog .article_footer_placeholder_top {
-        left: 75px;
-        right: 75px;
-        width: unset;
-        top: 0;
-        padding-top: 10px; 
+    /* Don't have gigantic wasteful margins everywhere in an article in column view */
+    #three_way_contents .article_title,
+    #three_way_contents .article_psas,
+    #three_way_contents .article_content {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
     }
     
-    /* Make the article top toolbar underline extend to the full, variable width */
-    .article_footer {
-        max-width: none;
-        margin-right: 0 !important;
-    }
-
-    /* Videos might be too wide for article width, so limit them to 100% to avoid need to scroll to see full width of videos
-     * Don't make images in article bodies semi-transparent in dark mode 
-     */
-    .article_content video,
-    .article_content img {
-        max-width: 100% !important;
-        height: auto;
-        opacity: 1;
-        max-height: calc(100vh - 249px);
-    }
-
-    /* In Column View, all thumbnails should be opaque by default to prevent the placeholder image from showing through */
-    .column_view_thumbnail {
-        opacity: 1;
+    /* Reduce inter-paragraph margins to the golden ratio */
+    #three_way_contents .article_sub_title,
+    p {
+        margin-bottom: 0.618034em !important;
     }
     
-    /* In Column View, hide thumbnails for articles from specific folders */
+    /* Hide social media sharing buttons */
+    .article_footer .sd {
+        display: none;
+    }
+    
+    /* Hide TTS button */
+    .article_footer_main_buttons .icon-article_topbar_text_to_speech {
+        display: none;
+    }
+    
+    /* Reorder article control buttons to put the most useful ones first */
+    .article_footer_main_buttons .article_topbar_mark_as_read_full,
+    .article_footer_main_buttons .icon-article_topbar_mark_as_read_empty {
+        order: 1;
+    }
+    .article_footer_main_buttons .star_img {
+        order: 2;
+    }
+    .article_footer_main_buttons .tags_img {
+        order: 3;
+    }
+    .article_footer_main_buttons .icon-article_topbar_mobilize_empty,
+    .article_footer_main_buttons .icon-article_topbar_mobilize_full {
+        order: 4;
+    }
+    .article_footer_main_buttons .icon-article_topbar_more_menu {
+        order: 5;
+    }
+    
+    /* The entire article in the article list in Column View is clickable, so make the cursor reflect that. */
+    #reader_pane .ar {
+        cursor: pointer;
+    }
+    
+    /* In Column View, hide thumbnails for articles from specific folders, unless the cursor is hovering over them */
     .ar[data-tags *='"Play '] .column_view_thumbnail {
         opacity: var(--showPlayThumbnails);
     }
-
-    /* In Column View, show thumbnails for articles when hovering over them */
     .ar:hover .column_view_thumbnail {
         opacity: 1;
     }
-
-    /* Search and subscribe box in top left corner */
-    #sb_tp_search_overlay {
-        margin-left: 14px;
-        background: none;
-    }
     
-    #sb_reading_part {
-        width: auto !important;
-        box-shadow: none;
-    }
-    
-    #sb_tree_part {
-        width: auto !important;
-        background: none;
-    }
-    
-    #subscriptions_buttons {
-        justify-content: space-between;
-        box-shadow: inset 0 -1px 0 #333333; /* moved from #sb_reading_part so it extends full width */
-    }
-
-    /* Get rid of unclickable margins between articles in Column View */
-    .reader_pane_view_style_2 .article_header > div {
-        padding-top: 7px;
-        padding-bottom: 7px;
-        padding-left: 7px; 
-    }
-    
-    .reader_pane_view_style_2 .article_header .article_header_text {
-        padding-top: 11px;
-    }
-    
-    .reader_pane_view_style_2 .article_header {
-        padding-top: 0 !important;
-    }
-    
-    .reader_pane_view_style_2 .ar {
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 0px;
-        box-shadow: none;
-    }
-
-    /* Initially hide the possibly long folder list in the context menu of a feed in the navigation tree */
-    .inno_toolbar_button_menu_item_filter ~ .inno_toolbar_button_menu_item {
-        display: none;
-    }
-
-    /* Hide hamburger button in the top left that toggles the navigation tree visibility */
-    #sb_menu_icon {
-        display: none;
-    }
-    
-    #sb_tp_buttons .inno_toolbar_button {
-        display: inline-block;
-    }
-
-    /* Hide ellipsis button on each article row in Column View */
-    .reader_pane_view_style_2 .article_header .arrow_div {
-        display: none !important;
-    }
-
-    /* FitGirl Repacks page sidebar relies on floating that does not exist in feed items, so remove broken height constraint */
-    .article_content > h3 + p[style="height:200px;"] {
-        height: auto !important;
-    }
-    
-    /* Hide the eyeball button that shows even more irrelevant options in the left menu */
-    #subscription_options_peek {
-        display: none;
-    }
-    
-    /* Hide the Add New menu from the left panel */
-    #add_content_simulated_button {
-        display: none;
-    }
-    
-    /* Hide social sharing buttons in article view */
-    .sd {
-        display: none;
-    }
-    
-    .article_footer_buttons.icon-article_topbar_text_to_speech {
-        display: none;
-    }
-    
-    .article_footer_buttons.icon-article_topbar_mark_as_read_empty,
-    .article_footer_buttons.icon-article_topbar_mark_as_read_full {
-        order: 1;
-    }
-    
-    .article_footer_buttons.star_img {
-        order: 2;
-    }
-    
-    .article_footer_buttons.tags_img {
-        order: 3;
-    }
-    
-    .article_footer_buttons.icon-article_topbar_mobilize_empty,
-    .article_footer_buttons.icon-article_topbar_mobilize_full {
-        order: 4;
-    }
-    
-    .article_footer_buttons.icon-article_topbar_more_menu {
-        order: 5;
-    }
-    
-    /* Hide the ellipsis menu in each article card in Card View */
-    #reader_pane.reader_pane_view_style_3 .article_footer_buttons:last-child {
-        display: none;
-    }
-    
-    /* Filled stars should be yellow. I think this is just a selector precedence defect in Inoreader, not an intentional decision. */
-    .star_full {
-        color: #FFBF00 !important;
-    }
-    
-    /* Filled stars should always be opaque, even when not hovering over them */
-    #reader_pane.reader_pane_view_style_2 .article_favicon .star_full {
-        opacity: 1;
-    }
-    
-    .article_tile_footer_right_buttons {
-        opacity: 1;
-    }
-    
-    /* Make stars consistently all filled, not half of them being empty */
-    .star_full.icon-button-star-empty:before {
-        content: "\e91e";
-    }
-    
-    /* Hide microblog avatar image, since it never loads properly and always displays initials */
-    .article_sub_title img {
-        display: none;
-    }
-    
-    /* Make unread dot not animate and not change colors in Column View */
-    .article_unread_dot_internal {
-        background-color: transparent;
-    }
-    
-    .article_unread_dot_external {
-        border-color: #999999;
-    }
-    
-    .article_unreaded .article_unread_dot_internal {
-        background-color: #999999;
-    }
-    
-    .article_unread_dot {
-        opacity: 0.6;
-    }
-    
-    .article_unread_dot:hover {
-        opacity: 1;
-    }
-    
+    /* Make Unread dot in column view single color, outlined, and not zoom */
     .article_unread_dot:hover .article_unread_dot_internal {
         transform: none;
     }
-    
-    /* Hide drag handle between article list pane and article pane in Column View */
-    .ui-sidebar::after {
-        display: none;
+    .column_view_control_strip .article_unread_dot_internal {
+        outline: 1px solid #babdc2;
+        outline-offset: 3px;
+        width: 6px !important;
+        height: 6px !important;
+    }
+    .column_view_control_strip .btns_article_unread, .column_view_control_strip .btns_article_read {
+        position: relative;
+        top: 1px;
+        margin-right: 3px;
+    }
+    .theme_dark .article_unreaded .article_unread_dot .article_unread_dot_internal {
+        background-color: #babdc2;
+    }
+    .theme_dark .article_unread_dot .article_unread_dot_internal {
+        background-color: transparent;
     }
     
-    .ui-sidebar:hover {
-        background-color: unset;
+    /* Maximum image width */
+    body.article_alignment_2 #three_way_contents .article_full_contents .article_content img,
+    body.article_alignment_2 #three_way_contents .article_full_contents .article_content video,
+    body.article_alignment_2 #three_way_contents .article_full_contents .article_content iframe {
+        width: auto !important;
+        max-width: 100% !important;
+    }
+    .article_content img {
+        margin: 0.618034em 0;
     }
     
-    /* Reduce leading between article title and byline */
-    .article_title {
-        margin-bottom: 6px;
-    }
-    
-    .article_sub_title {
-        margin-top: 0;
-    }
-    
-    /* Make article list item background colors less weird in Column View */
-    .reader_pane_view_style_2 .article_unreaded,
-    .reader_pane_view_style_2 .article_subscribed {
-        background-color: #1F1F1F;
-    }
-    
-    #reader_pane.reader_pane_view_style_2 .ar.article_current,
-    #reader_pane.reader_pane_view_style_2 .ar.article_current:hover,
-    #reader_pane.reader_pane_view_style_2 .article:hover,
-    #reader_pane.reader_pane_view_style_2 .article_unreaded:hover{
-        background-color: hsl(0, 0%, 18%);
-    }
-    
-    /* Hide feed name from top-left corner */
-    #sb_rp_ribbon .inno_toolbar_button_wrapper {
-        display: none;
-    }
-    
-    /* Hide folders with no child subscriptions in the tree */
-    #tree .plus_hidden + .linkdiv[data-folderid] {
-        display: none;
-    }
-    
-    /* Revert renaming "Starred" to "Read Later" */
-    #link_starred {
-        visibility: hidden;
-    }
-    
-    #link_starred::before {
-        content: "Starred";
-        visibility: visible;
-    }
-    
-    /* Revert moving All Articles navigation link into the Feeds tree, and put it back above Dashboard */
-    #parent_all_articles {
-        top: 16px;
-        position: absolute;
-        width: inherit;
-    }
-    
-    #subscriptions_nav {
-        margin-top: 29px;
-    }
-    
-    #subscriptions_fieldset {
-        position: static;
-        width: inherit;
-    }
-    
-    /* Stop changing column view article borders when marking as read */
-    .reader_pane_view_style_2 .article_unreaded {
-        border-bottom-color: rgb(46,46,46); /* same as .ar (read) */
-    }
-    
-    /* Don't special-case the date in column view to be a default pointer, even though it is clickable. It should have a hand like its parent element. */
-    .header_date {
-        cursor: unset;
-    }
-    
-    /* Revert Column view left column title size */
-    .reader_pane_view_style_2 .article_header_title {
-        font-size: 14px;
-    }
-    
-    .article_header_text .flex, .reader_pane_view_style_2 .article_header .article_favicon {
-        display: revert;
-        align-items: unset;
-    }
-    
-    /* Hide social sharing buttons in left column of Column View */
-    .article_header .article_share {
-        display: none;
-    }
-    
-    /* Fix Column View left column layout, again */
-    
-    .reader_pane_view_style_2 .article_unread_dot_external {
-        margin: 0;
-    }
-    
-    .article_header_text > div,
-    .reader_pane_view_style_2 .column_view_title + span,
-    .reader_pane_view_style_2 .column_view_info,
-    .reader_pane_view_style_2 .column_view_info > div + div,
-    .reader_pane_view_style_2 .column_view_control_strip {
-        display: contents;
-    }
-    
-    .reader_pane_view_style_2 .article_unread_dot,
-    .reader_pane_view_style_2 .article_favicon,
-    .reader_pane_view_style_2 .header_date,
-    .reader_pane_view_style_2 .article_feed_title {
-        margin-right: 0 !important;
-    }
-    
-    .reader_pane_view_style_2 .ar .article_header {
-        align-items: flex-end;
-        align-content: flex-end;
-    }
-    
-    .reader_pane_view_style_2 .article_header_text {
-        flex-flow: row nowrap;
-        gap: 10px;
-        height: 16px;
-    }
-    
-    .column_view_title {
-        position: absolute;
-        padding-top: 7px;
-        top: 0px;
-        bottom: 23px;
-        left: 89px;
-        right: 0;
-        max-height: 48px !important; /* max 3 lines */
-    }
-    
-    .reader_pane_view_style_2 .article_unread_dot {
-        order: 2;
-        flex: 0 0;
-        width: 12px;
-        height: 12px;
-        align-self: center;
-    }
-    
-    .reader_pane_view_style_2 .article_favicon {
-        order: 3;
-        flex: 0 0;
-    }
-    
-    .reader_pane_view_style_2 .article_feed_title {
-        order: 4;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        flex: 1 1 auto;
-        line-height: 18px;
-    }
-    
-    .reader_pane_view_style_2 .header_date {
-        order: 5;
-        text-align: right;
-        flex: 1 0 auto;
-        line-height: 18px;
-    }
-    
-    /* Hide the Mark Section as Read and See All Articles buttons below the No More Unread Articles Here message */
-    #no_more_div .flex {
-        display: none;
-    }
-    
-    /* Toggle hiding feeds with no unread articles */
-    .toggle_hide_read_feeds {
-        margin-right: 6px;
-        padding: 0 2px;
-        opacity: 0.6;
-    }
-    
-    .toggle_hide_read_feeds:hover {
-        opacity: 1;
-    }
-    
-    .toggle_hide_read_feeds::before {
-        content: "\e9d3";
-    }
-    
-    .toggle_hide_read_feeds.hiding_read_feeds::before {
-        content: "\e9d2";
-    }
-
-    /* Hide the Filters and Rules children of the Automation sidebar section, because they are only available to Pro users */
-    #parent_rules, #parent_filters {
-        display: none;
+    /* Uniform selected article blue outline thickness */
+    .theme_dark.view_style_2 #reader_pane .ar.article_current_3way:first-child, .theme_dark.view_style_2 #reader_pane .ar.article_expanded:first-child {
+        box-shadow: inset 0px 1px 0 1px #4177c2,inset 0 0 0 1px #4177c2;
     }
 }
