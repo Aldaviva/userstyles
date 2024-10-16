@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.0
+@version        1.0.1
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -42,22 +42,31 @@
     }
     
     /* Hide Mark All As Read button because the possibility for data loss is scary */
-    ul.nav li:has(.inno_toolbar_button_mark_read) {
+    ul.nav li:has(.inno_toolbar_button_mark_read),
+    #no_more_core button:not(#load_older_articles_button) {
         display: none;
     }
     
     /* Don't have gigantic wasteful margins everywhere in an article in column view */
     #three_way_contents .article_title,
     #three_way_contents .article_psas,
-    #three_way_contents .article_content {
+    #three_way_contents .article_content,
+    .article_footer_placeholder_middle,
+    .article_psas {
         margin-top: 0px !important;
         margin-bottom: 0px !important;
     }
+    #three_way_contents .article_sub_title {
+        margin-bottom: 0.618034em !important;
+    }
+    .article_psas {
+        padding-top: 0;
+    }
     
     /* Reduce inter-paragraph margins to the golden ratio */
-    #three_way_contents .article_sub_title,
     p {
-        margin-bottom: 0.618034em !important;
+        margin-top: 0.618034em;
+        margin-bottom: 0.618034em;
     }
     
     /* Hide social media sharing buttons */
@@ -106,7 +115,8 @@
     .article_unread_dot:hover .article_unread_dot_internal {
         transform: none;
     }
-    .column_view_control_strip .article_unread_dot_internal {
+    .column_view_control_strip .article_unread_dot_internal,
+    body.view_style_0 .article_header .article_unread_dot_internal {
         outline: 1px solid #babdc2;
         outline-offset: 3px;
         width: 6px !important;
@@ -136,7 +146,22 @@
     }
     
     /* Uniform selected article blue outline thickness */
-    .theme_dark.view_style_2 #reader_pane .ar.article_current_3way:first-child, .theme_dark.view_style_2 #reader_pane .ar.article_expanded:first-child {
-        box-shadow: inset 0px 1px 0 1px #4177c2,inset 0 0 0 1px #4177c2;
+    .theme_dark.view_style_2 #reader_pane .ar.article_current_3way, .theme_dark.view_style_2 #reader_pane .ar.article_expanded {
+        box-shadow: inset 0px 0px 0 1px #4177c2;
+    }
+    
+    /* Make titles of feeds with unread articles in the column tree not bold, because there's nothing to differentiate them from when completely read feeds are hidden */
+    body.hide_unread_articles #feeds_nav .tree_node.tree_unread {
+        font-weight: normal;
+    }
+    
+    /* Hide the Aa button to change article font & layout when viewing an article in List view, because you can get to this palette from the … button too */
+    .ar .inno_circle_icon_button:has(>.icon-article_text_prefs) {
+        display: none;
+    }
+    
+    /* Hide article progress bar in modal view (Card layout), because I already have a scrollbar */
+    #article_dialog .article-progress-bar {
+        display: none;
     }
 }
