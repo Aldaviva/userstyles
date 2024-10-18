@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.1
+@version        1.0.2
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -146,8 +146,11 @@
     }
     
     /* Uniform selected article blue outline thickness */
-    .theme_dark.view_style_2 #reader_pane .ar.article_current_3way, .theme_dark.view_style_2 #reader_pane .ar.article_expanded {
-        box-shadow: inset 0px 0px 0 1px #4177c2;
+    .theme_dark.view_style_2 #reader_pane .ar.article_current {
+        box-shadow: inset 0px 0px 0 1px #4177c2 !important;
+    }
+    #reader_pane.reader_pane_view_style_2 > .ar:first-child {
+        margin-top: 0px;
     }
     
     /* Make titles of feeds with unread articles in the column tree not bold, because there's nothing to differentiate them from when completely read feeds are hidden */
