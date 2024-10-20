@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon
 @namespace      https://aldaviva.com/userstyles/
-@version        0.3.0
+@version        0.3.1
 @description    Put navigation panel on the left of the timeline and composer panel on the right. Make avatar shape a rounded square instead of a circle.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -25,9 +25,4 @@
         border-radius: 0;
     }
     
-    /* Fix Vivaldi supporter badge horizontal alignment on small 24px avatars (like when you're replying to your previous post) */
-    .badge-level1, .badge-level2, .badge-level3 {
-        left: unset;
-        right: -1px;
-    }
 }
