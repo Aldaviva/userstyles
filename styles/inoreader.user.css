@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.2
+@version        1.0.3
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -25,7 +25,7 @@
      */
     
     /* Hide up and down buttons in the bottom-right corner of the screen */
-    li.move-articles-list {
+    #move_article_list {
         display: none;
     }
     
