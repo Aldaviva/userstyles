@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.13
+@version        0.1.14
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -71,6 +71,11 @@
     /* Hide ad above chat while another ad is playing */
     div:has(> div > button > div[style *= "turbo-ads-upsell-background.svg"]){
         display: none !important;
+    }
+    
+    /* Remove ugly background from Clip button */
+    button[aria-label="Clip (alt+x)"] {
+        background-color: transparent;
     }
 }
 
