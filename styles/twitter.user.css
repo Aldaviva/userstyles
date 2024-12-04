@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.67
+@version        1.0.68
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -201,7 +201,7 @@
     
     /* The modal composer when writing a single tweet reply to an existing posted thread */
     div[data-viewportview="true"] > div > div:has(> div:nth-child(3)):has(article[data-testid="tweet"]) [data-testid="tweetButton"] div > span::before {
-        content: ""; /* Use built-in "Reply" text, removing the overridden "Tweet all" text above */
+        content: "Reply";
     }
     
     /* The tab on a user's timeline */
