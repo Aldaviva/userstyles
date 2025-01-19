@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.72
+@version        1.0.73
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -54,7 +54,11 @@
     /* Hide Premium upsell when exceeding the length limit during tweet composition */
     div[role="status"]:has(a[href="/i/premium_sign_up?referring_page=post-composer"]),
     /* Hide Premium upsell on your profile page */
-    div:has(> div > a[href="/i/premium_sign_up"]) {
+    div:has(> div > a[href="/i/premium_sign_up"]),
+    /* Hide floating Grok button in the bottom-right corner of the page */
+    #layers > div:has(div[data-testid="GrokDrawer"]),
+    /* Hide Grok button on user profiles */
+    button[aria-label="Profile Summary"] {
         display: none;
     }
     
@@ -274,10 +278,5 @@
     
     header div:has(> a[aria-label="Post"]){
         margin: 15px 0 !important;
-    }
-    
-    /* Hide AI suggested prompts under tweets */
-    div:has(> nav div[role="tablist"] button svg path[d="M2.205 7.423L11.745 21h4.241L6.446 7.423H2.204zm4.237 7.541L2.2 21h4.243l2.12-3.017-2.121-3.02zM16.957 0L9.624 10.435l2.122 3.02L21.2 0h-4.243zm.767 6.456V21H21.2V1.51l-3.476 4.946z"]) {
-        display: none;
     }
 }
