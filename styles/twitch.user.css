@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.14
+@version        0.1.15
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -31,6 +31,7 @@
     /* Hide recommended and offline followed channels from left sidebar */
     .side-nav-section .tw-transition:has(.side-nav-card__avatar--offline),
     .side-nav-section[aria-label="Recommended Channels"],
+    .side-nav-section[aria-label="Live Channels"],
     .side-nav-section[aria-label$=" Viewers Also Watch"],
     .side-nav-section[aria-label="Similar Channels"],
     .followed-side-nav-header:not(.followed-side-nav-header--expanded) {
