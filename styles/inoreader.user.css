@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.4
+@version        1.0.5
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -48,7 +48,6 @@
     }
     
     /* Don't have gigantic wasteful margins everywhere in an article in column view */
-    #three_way_contents .article_title,
     #three_way_contents .article_psas,
     #three_way_contents .article_content,
     .article_footer_placeholder_middle,
@@ -61,6 +60,11 @@
     }
     .article_psas {
         padding-top: 0;
+    }
+    #three_way_contents .article_title {
+        margin-top: 0.5em;
+        margin-bottom: 0 !important;
+        line-height: 1.3em;
     }
     
     /* Reduce inter-paragraph margins to the golden ratio */
@@ -166,5 +170,11 @@
     /* Hide article progress bar in modal view (Card layout), because I already have a scrollbar */
     #article_dialog .article-progress-bar {
         display: none;
+    }
+    
+    /* Hide AI buttons */
+    .article_summarize_button_wrapper,
+    .article_footer_main_buttons .icon-advanced-search-menu {
+        display: none !important;
     }
 }
