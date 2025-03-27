@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.17
+@version        0.1.18
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -77,6 +77,11 @@
     /* Remove ugly background from Clip button */
     button:is([aria-label ^= "Clip ("][aria-label $= "+x)"], [aria-label="Follow to clip"]):not(:hover) {
         background-color: transparent;
+    }
+    
+    /* Hide more on the right side of the video */
+    .stream-display-ad__wrapper {
+        display: none;
     }
 }
 
