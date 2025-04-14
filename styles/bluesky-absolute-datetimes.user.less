@@ -1,0 +1,41 @@
+/* ==UserStyle==
+@name           Bluesky absolute datetimes
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Show dates on posts as absolute and relative date and time, like "April 13, 2025 at 8:34 PM (55m ago)", instead of only relative time, like "55m"
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+@preprocessor   less
+==/UserStyle== */
+
+@-moz-document domain("bsky.app") {
+    
+    div:is([data-testid^="feedItem-by-"], [data-testid^="postThreadItem-by-"]) div:has(a[aria-label="View profile"]) ~ a[href^="/profile/"] {
+        
+        &::before, &::after {
+            border: unset;
+            position: unset;
+            transform: unset;
+            background: unset;
+            border-radius: unset;
+            color: unset;
+            padding: unset;
+            font-size: unset;
+            text-align: unset;
+            white-space: unset;
+            display: inline;
+        }
+        
+        &::before {
+            content: attr(data-tooltip) " (";
+        }
+
+        &::after {
+            content: ")";
+        }
+        
+    }
+    
+}
