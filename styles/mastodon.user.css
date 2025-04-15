@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Mastodon
 @namespace      https://aldaviva.com/userstyles/
-@version        0.4.0
+@version        0.4.1
 @description    Put navigation panel on the left of the timeline and composer panel on the right. Make avatar shape a rounded square instead of a circle.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -21,8 +21,11 @@
     }
     
     /* Make avatar shape a rounded square instead of a circle */
-    .account__avatar img, .account__header__bar .avatar .account__avatar {
-        border-radius: 0;
+    .account__avatar, .account__avatar img {
+        border-radius: 2px;
+    }
+    .account__header__bar .avatar .account__avatar, .account__header__bar .avatar .account__avatar img {
+        border-radius: 6px;
     }
     
     /* Hide persistent, undismissible, virtually useless warning about DMs not being E2E encrypted. I got it the first thousand times and I'm not sending credit card numbers. */
