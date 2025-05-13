@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Vivaldi Open Image
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.1
+@version        0.1.2
 @description    Background style like Photoshop for the Open Image page in Vivaldi
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -16,5 +16,5 @@ html[style="height: 100%;"]:has(head > meta[name="viewport"][content="width=devi
 
 html[style="height: 100%;"]:has(head > meta[name="viewport"][content="width=device-width, minimum-scale=0.1"]:first-child + title:last-child) body[style="margin: 0px; height: 100%; background-color: rgb(14, 14, 14);"] > img:only-child {
     transition: none !important;
-    background: transparent repeat repeating-conic-gradient(#cccbcc 0% 25%, white 0% 50%) top left / 16px 16px !important;
+    background: transparent repeat repeating-conic-gradient(#ccc 0% 25%, white 0% 50%) top left / 16px 16px !important;
 }
