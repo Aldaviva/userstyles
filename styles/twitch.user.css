@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.18
+@version        0.1.19
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -81,6 +81,11 @@
     
     /* Hide more on the right side of the video */
     .stream-display-ad__wrapper {
+        display: none;
+    }
+    
+    /* Hide Combos (ripoff TikTok heart) button */
+    #live-channel-stream-information div:has(> div > button[aria-label="Open Combos modal"]) {
         display: none;
     }
 }
