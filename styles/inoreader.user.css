@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.6
+@version        1.0.7
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -174,7 +174,7 @@
     
     /* Hide AI buttons */
     .article_summarize_button_wrapper,
-    .article_footer_main_buttons .icon-advanced-search-menu,
+    .article_footer_buttons_summarize,
     #article_tags_menu_tag_suggest_button {
         display: none !important;
     }
