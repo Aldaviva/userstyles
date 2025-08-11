@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.21
+@version        0.1.22
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -58,6 +58,9 @@
     .video-player--stream-display-ad_lower-third {
         height: 100% !important;
     }
+    div:has(> div > div > .stream-display-ad__iframe_pushdown) {
+        display: none;
+    }
 
     /* Hide "Knock" button, which lets you request to join someone else's stream as a media source (the Raise Hand feature) */
     div:has(> div > div > :is(div, div > div) > button:is([aria-label="Knock"], [aria-label$=" is not available to collaborate. Try again later."])) {
@@ -80,14 +83,23 @@
         background-color: transparent;
     }
     
-    /* Hide more on the right side of the video */
+    /* Hide more ads on the right side of the video */
     .stream-display-ad__wrapper {
         display: none;
+    }
+    .video-player--stream-display-ad_squeezeback {
+        width: 100% !important;
+        inset-inline-start: unset !important;
     }
     
     /* Hide Combos (ripoff TikTok heart) button */
     #live-channel-stream-information div:has(> div > button[aria-label="Open Combos modal"]),
     div:has(> #one-tap-store-id){
+        display: none !important;
+    }
+    
+    /* Hide anti-adblock dialog */
+    .player-overlay-background:has(a[aria-label="Allow Twitch Ads"]) {
         display: none !important;
     }
 }
