@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.23
+@version        0.1.24
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -73,8 +73,9 @@
         display: none !important;
     }
     
-    /* Hide ad above chat while another ad is playing */
-    div:has(> div > button > div[style *= "turbo-ads-upsell-background.svg"]){
+    /* Hide ad above chat */
+    div:has(> div > button strong[title='Subscribe for ad-free viewing, emotes, and more!']),
+    div:has(> .online-video-ad-container) {
         display: none !important;
     }
     
