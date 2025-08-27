@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bleeping Computer
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.6
+@version        0.1.7
 @description    Dark mode
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -88,8 +88,8 @@
             color: #ccc !important;
         }
         
-        .cat_quote, .bc_quote, .fan_quote {
-            background-color: hsl(0 0% 6%);
+        .cat_quote, .bc_quote, .fan_quote, span[style*="background-color:#dddddd"] {
+            background-color: hsl(0 0% 17%) !important;
         }
         
         .articleBody > div[style *= "background:#eeeeee"] {
