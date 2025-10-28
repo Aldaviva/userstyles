@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Bluesky
 @namespace      https://aldaviva.com/userstyles/
-@version        0.5.2
-@description    Make avatar masks into rounded rectangles with small radii, instead of circles.
+@version        0.6.0
+@description    Make avatar masks into rounded rectangles with small radii, instead of circles. Hide buttons under posts in timelines.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
@@ -20,5 +20,10 @@
     }
     [data-testid="userAvatarImage"] + div {
         border: none;
+    }
+    
+    /* Hide actions under posts, they're visual clutter and you can get them by clicking the post */
+    div[data-testid=contentHider-post] + div {
+        display: none;
     }
 }
