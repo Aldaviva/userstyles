@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.25
+@version        0.1.26
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -105,6 +105,14 @@
     /* Hide anti-adblock dialog */
     .player-overlay-background:has(a[aria-label="Allow Twitch Ads"]) {
         display: none !important;
+    }
+    
+    /* Hide Follow, Gift, and Subscribe buttons in the top-right corner of Theater Mode */
+    .theatre-social-panel {
+        display: none !important;
+    }
+    div:has(> .theatre-social-panel) {
+        min-height: 32px;
     }
 }
 
