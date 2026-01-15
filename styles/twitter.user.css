@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.78
+@version        1.0.79
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -41,6 +41,8 @@
     nav a[aria-label="Business"],
     /* Hide Jobs left navigation link */
     nav a[aria-label="Jobs"],
+    /* Hide Creator Studio left navigation link */
+    nav a[aria-label="Creator Studio"],
     /* Hide Notifications left navigation link */
     /*nav a[data-testid="AppTabBar_Notifications_Link"],*/
     /* Hide the Direct Messages floating pane from the bottom-right corner of the page */
