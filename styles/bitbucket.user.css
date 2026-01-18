@@ -11,6 +11,6 @@
 
 @-moz-document domain("bitbucket.org") {
     .CodeMirror, .CodeMirror-scroll {
-        max-height: max(550px, calc(100vh - 416px));
+        max-height: max(550px, calc(100vh - 388px));
     }
 }
