@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.80
+@version        1.0.81
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
@@ -35,6 +35,8 @@
     div:has(> button[aria-label='Enhance your post with Grok']),
     /* Hide Grok explain this tweet button on tweets */
     div:has(> button[aria-label='Grok actions']),
+    /* Grok edit image button */
+    div:has(> div > a[aria-label="Edit image"]),
     /* Hide Verified Orgs left navigation link */
     nav a[aria-label="Verified Orgs"],
     /* Hide Business left navigation link */
