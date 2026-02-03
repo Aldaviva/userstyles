@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.26
+@version        0.1.27
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -114,6 +114,12 @@
     div:has(> .theatre-social-panel) {
         min-height: 32px;
     }
+    
+    /* Hide Get Bits buttons above and below the video */
+    div:has(> div > div > div > div > button[data-a-target="top-nav-get-bits-button"]) {
+        display: none !important;
+    }
+    
 }
 
 @-moz-document url("https://www.twitch.tv/prettylights") {
