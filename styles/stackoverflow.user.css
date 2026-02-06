@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Stack Exchange
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.1
+@version        0.1.2
 @description    Removed clutter on question pages.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -9,6 +9,7 @@
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
 @-moz-document domain("stackoverflow.com"), domain("serverfault.com"), domain("superuser.com"), domain("stackexchange.com"), domain("askubuntu.com"), domain("stackapps.com"), domain("mathoverflow.net") {
+    
     body.question-page #sidebar,
     body.question-page #footer,
     body.question-page .bottom-notice,
@@ -27,7 +28,8 @@
     body.question-page #feed-link,
     body.question-page .aside-cta,
     body.question-page .js-link-separator,
-    body.question-page #left-sidebar {
+    body.question-page #left-sidebar,
+    body.question-page .js-bottom-notice {
         display: none !important;
     }
 
