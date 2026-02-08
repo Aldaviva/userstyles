@@ -1,0 +1,24 @@
+/* ==UserStyle==
+@name           CBC
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@description    Hide ominpresent buttons in fullscreen. Hide occluded animations that overload GPU while playing video fullscreen.
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document domain("gem.cbc.ca") {
+    
+    /* This useless Cast button is always visible, even when a video is fullscreen. I don't want to cast anywhere! It's already on a huge TV! */
+    button[aria-label="Enable Chromecast"] {
+        display: none;
+    }
+    
+    /* These Live button animated dots always play, even when there is a fullscreen video overlaying them, causing 100% GPU usage and leading to stuttering and buffer underruns, especially when seeking. */
+    #navigation-bar a[href="/live"] > div > div,
+    div[class *= "badge_live__"] svg {
+        display: none;
+    }
+    
+}
