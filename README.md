@@ -21,6 +21,7 @@ Good user interfaces should
 |[Bleeping Computer](https://github.com/Aldaviva/userstyles/raw/master/styles/bleepingcomputer.user.css)|Dark mode for articles.|
 |[Bluesky](https://github.com/Aldaviva/userstyles/raw/master/styles/bluesky.user.css)|Render quad image posts left to right instead of top to bottom, so they match the Bluesky Android app and Twitter.|
 |[Bluesky absolute datetimes](https://github.com/Aldaviva/userstyles/raw/refs/heads/master/styles/bluesky-absolute-datetimes.user.less)|Datetimes on posts appear as absolute *and* relative, like "April 13, 2025 at 3:55 PM (5h)" instead of just "5h".|
+|[CBC](https://github.com/Aldaviva/userstyles/raw/refs/heads/master/styles/cbc.user.css)|Clean up clutter in fullscreen video. Hide expensive animations that overload the GPU, causing video stutters and buffer underruns.|
 |[Google Messages](https://github.com/Aldaviva/userstyles/raw/master/styles/google-messages.user.css)|Fit more efficiently in narrow viewports, like Vivaldi panels.|
 |[Inoreader](https://github.com/Aldaviva/userstyles/raw/master/styles/inoreader.user.css)|Removed clutter, fixed many ugly styles. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.|
 |[JSON Editor Online](https://github.com/Aldaviva/userstyles/raw/master/styles/jsoneditoronline.user.css)|Fixed layout calculation when ads are blocked.|
