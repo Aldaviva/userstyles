@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.27
+@version        0.1.28
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -120,6 +120,10 @@
         display: none !important;
     }
     
+    /* Hide Roblox from the top-left primary navigation bar */
+    div:has(> div > a[data-a-target="roblox-link"]) {
+        display: none !important;
+    }
 }
 
 @-moz-document url("https://www.twitch.tv/prettylights") {
