@@ -1,13 +1,15 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.8
+@version        1.1.0
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
 @supportURL     https://github.com/Aldaviva/userstyles/issues
+@preprocessor   less
 @var            checkbox showPlayThumbnails "Show Play thumbnails even when not hovering over them" 0
+@var            checkbox showFavoriteArticlesOnly "Show favorite articles only" 0
 ==/UserStyle== */
 @-moz-document domain("inoreader.com") {
 
@@ -109,7 +111,7 @@
     
     /* In Column View, hide thumbnails for articles from specific folders, unless the cursor is hovering over them */
     .ar[data-tags *='"Play '] .column_view_thumbnail {
-        opacity: var(--showPlayThumbnails);
+        opacity: @showPlayThumbnails;
     }
     .ar:hover .column_view_thumbnail {
         opacity: 1;
@@ -181,6 +183,11 @@
     
     /* Hide useless YouTube features that also require Inoreader Pro */
     .article-tabs:has(.tabs-not-pro){
+        display: none;
+    }
+
+    /* Before 2026-02-19, you could set a feed's view filter to Unread, All, or Read Later, but now the Read Later filter is gone for some reason. */
+    .article[data-fav = "0"] when (@showFavoriteArticlesOnly = 1) {
         display: none;
     }
 }

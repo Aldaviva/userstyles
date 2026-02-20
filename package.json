@@ -3,13 +3,13 @@
     "version": "0.0.0",
     "private": true,
     "devDependencies": {
-        "stylelint": "16.26.0",
-        "stylelint-config-recommended-less": "3.0.1"
+        "stylelint": "17.3.0",
+        "stylelint-config-recommended-less": "4.0.1"
     },
     "scripts": {
         "lint": "npx stylelint --formatter verbose ./styles"
     },
     "engines": {
-        "node": ">= 18.12"
+        "node": ">= 20.19"
     }
 }
