@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bluesky
 @namespace      https://aldaviva.com/userstyles/
-@version        0.6.1
+@version        0.6.2
 @description    Make avatar masks into rounded rectangles with small radii, instead of circles. Hide buttons under posts in timelines.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -12,14 +12,20 @@
 @-moz-document domain("bsky.app") {
     /* Avatar border radius */
     [data-testid="userAvatarImage"],
-    [data-testid="userAvatarImage"] + div{
+    [data-testid="userAvatarImage"] + div {
         border-radius: 2px !important;
     }
+    
+    [data-testid="userAvatarImage"] + div[style*="border-width: 1px;"] {
+        border-width: 0 !important;
+    }
+    
     [data-testid="profileHeaderAviButton"],
     button[data-testid="changeBannerBtn"] + div {
         border-radius: 4px !important;
     }
-    [data-testid="profileHeaderAviButton"] > div[style*="border-radius: 999px;"]{
+    
+    [data-testid="profileHeaderAviButton"] > div[style*="border-radius: 999px;"] {
         border-radius: 5px !important;
     }
     
