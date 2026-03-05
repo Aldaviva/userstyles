@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "devDependencies": {
-        "stylelint": "17.3.0",
+        "stylelint": "17.4.0",
         "stylelint-config-recommended-less": "4.0.1"
     },
     "scripts": {
