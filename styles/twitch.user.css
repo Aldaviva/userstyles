@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.28
+@version        0.1.29
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -123,6 +123,12 @@
     /* Hide Roblox from the top-left primary navigation bar */
     div:has(> div > a[data-a-target="roblox-link"]) {
         display: none !important;
+    }
+    
+    /* Hide 2K label for 1440p, because 1080p is 2K (1920px) and 1440p is about 2.6K (2560px) */
+    div[data-a-target="player-settings-submenu-quality-option"] label div sup,
+    button[data-a-target="player-settings-menu-item-quality"] div sup {
+        display: none;
     }
 }
 
