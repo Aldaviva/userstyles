@@ -1,13 +1,15 @@
 /* ==UserStyle==
 @name           Twitter
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.81
+@version        1.0.82
 @description    Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles.
                 You can block keywords with https://github.com/Aldaviva/content-blocking-filters
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
 @supportURL     https://github.com/Aldaviva/userstyles/issues
+@preprocessor   less
+@var            checkbox hideButtonsUnderTimelineTweets "Hide buttons under timeline tweets" 1
 ==/UserStyle== */
 
 @-moz-document domain("twitter.com"), domain("x.com") {
@@ -85,10 +87,8 @@
         border-radius: 0 !important;
     }
     
-    /* Hide the Replies, Retweets, Likes, and Share buttons underneath each tweet on the home timeline */
-    div[aria-label='Timeline: Your Home Timeline'] [data-testid="tweet"] div[role="group"],
-    /* Hide the More dropdown from the top-right corner of each tweet on the home timeline */
-    div[aria-label='Timeline: Your Home Timeline'] [data-testid="tweet"] div[aria-label="More"] {
+    /* Optionally hide the Replies, Retweets, Likes, and Share buttons underneath each tweet on the home timeline */
+    div[aria-label='Timeline: Your Home Timeline'] [data-testid="tweet"] div[role="group"] when (@hideButtonsUnderTimelineTweets = 1) {
         display: none;
     }
     
