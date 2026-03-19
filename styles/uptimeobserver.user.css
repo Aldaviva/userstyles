@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name           UptimeObserver
+@namespace      https://aldaviva.com/userstyles/
+@version        0.0.0
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+
+@-moz-document domain("status.uptimeobserver.com") {
+    /* 
+     * Make status page day bars for 31–60 days ago visually distinct from those 0–30 days ago, since days after 30 can't count toward the longest badge uptime % duration, which maxes out at 30 days.
+     * This way, it's easy to tell which outages are affecting the longest uptime % badge, and when the uptime % will change, instead of having to guess if some red bar is to the left or right of the middle of the page.
+     */
+    #monitors svg > g > g > g:nth-of-type(30) ~ g {
+        /*transform: scaleY(0.8);
+        transform-origin: center 30%;*/
+        opacity: 0.6;
+    }
+}
