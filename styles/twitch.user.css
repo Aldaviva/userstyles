@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.29
+@version        0.1.30
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -129,6 +129,11 @@
     div[data-a-target="player-settings-submenu-quality-option"] label div sup,
     button[data-a-target="player-settings-menu-item-quality"] div sup {
         display: none;
+    }
+    
+    /* Hide the button that shows the chat panel when the page is in theater mode and the pointer isn't hovering over the page, to make the UI cleaner and allow hardware acceleration. */
+    #root:has(.video-player__inactive) .right-column--theatre.right-column--collapsed .right-column__toggle-visibility:not(:hover) {
+        display: none !important;
     }
 }
 
