@@ -3,8 +3,8 @@
     "version": "0.0.0",
     "private": true,
     "devDependencies": {
-        "stylelint": "17.5.0",
-        "stylelint-config-recommended-less": "4.0.1"
+        "stylelint": "17.6.0",
+        "stylelint-config-recommended-less": "4.2.0"
     },
     "scripts": {
         "lint": "npx stylelint --formatter verbose ./styles"
