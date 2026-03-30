@@ -1,20 +1,47 @@
 /* ==UserStyle==
 @name           Wikipedia
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.0
-@description    Variable page width.
+@version        1.0.0
+@description    Hide useless clutter and nags.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
 @homepageURL    https://github.com/Aldaviva/userstyles
 @supportURL     https://github.com/Aldaviva/userstyles/issues
 ==/UserStyle== */
 @-moz-document domain("wikipedia.org") {
-    #content {
-        display: block;
+    /* Hide nag boxes that complain about all manner of unimportant stuff no one cares about */
+    table.ambox {
+        display: none;
     }
     
-    .vector-feature-zebra-design-disabled .vector-header-container,
-    .vector-feature-zebra-design-disabled .mw-page-container {
-        max-width: unset;
+    /* Hide useless UI clutter like site logo that doesn't tell you anything or let you do anything useful, and just takes up space */
+    .vector-header-container,
+    .vector-page-toolbar,
+    .vector-body-before-content,
+    .mw-portlet-lang,
+    .mw-editsection,
+    sup.reference,
+    sup.Template-Fact,
+    .mw-footer-container {
+        display: none;
+    }
+    
+    /* Scrolled to top */
+    .vector-column-start { 
+        margin-top: 8px;
+    }
+    
+    /* Scrolled to middle */
+    .vector-sticky-pinned-container { 
+         top: 25px;
+    }
+    
+    .mw-page-container {
+        padding: 1rem;
+    }
+    
+    a.external {
+        background-image: none !important;
+        padding-right: unset !important;
     }
 }
