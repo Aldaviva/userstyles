@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wikipedia
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.0
+@version        1.0.1
 @description    Hide useless clutter and nags.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -20,10 +20,16 @@
     .vector-body-before-content,
     .mw-portlet-lang,
     .mw-editsection,
-    sup.reference,
-    sup.Template-Fact,
     .mw-footer-container {
         display: none;
+    }
+    
+    sup.reference,
+    sup.Template-Fact {
+        visibility: hidden;
+        display: inline-block;
+        width: 0;
+        margin-left: -0.2696428571428571em; /* negative width of a space character */
     }
     
     /* Scrolled to top */
