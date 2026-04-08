@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Bluesky
 @namespace      https://aldaviva.com/userstyles/
-@version        0.6.3
+@version        0.7.0
 @description    Make avatar masks into rounded rectangles with small radii, instead of circles. Hide buttons under posts in timelines.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -31,6 +31,11 @@
     
     /* Hide actions under posts, they're visual clutter and you can get them by clicking the post */
     div[data-testid=contentHider-post] + div {
+        display: none;
+    }
+    
+    /* Hide img alt attribute definition. I've known what that is since 1999, you don't need to re-explain it every single time I post an image. */
+    div[data-testid="selectedPhotosView"] + div {
         display: none;
     }
 }
