@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Stack Exchange
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.4
+@version        1.0.0
 @description    Removed clutter on question pages.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -31,7 +31,8 @@
     body.question-page #left-sidebar,
     body.question-page .js-bottom-notice,
     body.questions-page .js-ignored-tag-list,
-    #questions [itemprop="itemListElement"]:has(> .s-post-summary__ignored) {
+    #questions [itemprop="itemListElement"]:has(> .s-post-summary__ignored),
+    nav ol li:has(a.js-inbox-button) .js-unread-count {
         display: none !important;
     }
 
@@ -70,5 +71,5 @@
     body.review-task-page #content {
         max-width: unset !important;
     }
-    
+
 }
