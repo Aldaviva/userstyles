@@ -3,11 +3,11 @@
     "version": "0.0.0",
     "private": true,
     "devDependencies": {
-        "stylelint": "17.6.0",
-        "stylelint-config-recommended-less": "4.2.0"
+        "stylelint": "17.9.0",
+        "stylelint-config-recommended-less": "4.2.1"
     },
     "scripts": {
-        "lint": "npx stylelint --formatter verbose ./styles"
+        "lint": "npm exec -- stylelint --formatter verbose ./styles"
     },
     "engines": {
         "node": ">= 20.19"
