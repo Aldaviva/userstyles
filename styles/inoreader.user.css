@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.3.0
+@version        1.3.1
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -211,24 +211,17 @@
     }
     
     /* Stars are no longer Saved or Read Later */
-    .icon-save_empty::before {
-        font-family: "Inoreader-UI-Icons-Font";
-        content: "\e6c2";
-    }
-    
-    .icon-saved::before {
-        font-family: "Inoreader-UI-Icons-Font";
-        content: "\e6c3";
-    }
-    
-    .icon-article_topbar_read_later_full::before {
-        font-family: "Inoreader-UI-Icons-Font";
-        content: "\e9ec";
-    }
-    
+    .icon-save_empty::before,
     .icon-article_topbar_read_later_empty::before {
         font-family: "Inoreader-UI-Icons-Font";
         content: "\e9eb";
+    }
+    
+    .icon-saved::before,
+    .icon-save_empty-full::before,
+    .icon-article_topbar_read_later_full::before {
+        font-family: "Inoreader-UI-Icons-Font";
+        content: "\e9ec";
     }
     
 }
