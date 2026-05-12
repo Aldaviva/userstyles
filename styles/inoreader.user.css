@@ -214,16 +214,16 @@
     .icon-save_empty::before,
     .icon-article_topbar_read_later_empty::before {
         font-family: "Inoreader-UI-Icons-Font";
-        /*/content: "\e9eb";/*/
-        content: "\e6c2";/**/
+        /*content: "\e9eb";*/
+        content: "\e6c2";
     }
     
     .icon-saved::before,
     .icon-save_empty-full::before,
     .icon-article_topbar_read_later_full::before {
         font-family: "Inoreader-UI-Icons-Font";
-        /*/content: "\e9ec";/*/
-        content: "\e6c3";/**/
+        /*content: "\e9ec";*/
+        content: "\e6c3";
     }
     
     .theme_dark #reader_pane .ar .article_btns a .h4.icon-article_topbar_read_later_empty {
