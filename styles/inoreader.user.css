@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.3.1
+@version        1.3.2
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -42,7 +42,7 @@
     }
     
     /* Hide Mark All As Read button because the possibility for data loss is scary */
-    ul.nav li:has(.inno_toolbar_button_mark_read),
+    ul.nav li:has(.inno_toolbar_button_mark_read, > a[type="button"][title="Mark all as read"]),
     #no_more_core button:not(#load_older_articles_button) {
         display: none;
     }
@@ -214,14 +214,20 @@
     .icon-save_empty::before,
     .icon-article_topbar_read_later_empty::before {
         font-family: "Inoreader-UI-Icons-Font";
-        content: "\e9eb";
+        /*/content: "\e9eb";/*/
+        content: "\e6c2";/**/
     }
     
     .icon-saved::before,
     .icon-save_empty-full::before,
     .icon-article_topbar_read_later_full::before {
         font-family: "Inoreader-UI-Icons-Font";
-        content: "\e9ec";
+        /*/content: "\e9ec";/*/
+        content: "\e6c3";/**/
+    }
+    
+    .theme_dark #reader_pane .ar .article_btns a .h4.icon-article_topbar_read_later_empty {
+        color: #babdc2;
     }
     
 }
