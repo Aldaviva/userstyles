@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.30
+@version        0.1.31
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -15,10 +15,10 @@
         display: none !important;
     }
 
-    /* Hide Prime Loot, Get Bits, Get Ad-Free, React, and Subscribe buttons */
+    /* Hide Prime Loot, Get Bits, React, Subscribe, and Go Ad-Free for Free buttons */
     .top-nav__prime,
     .top-nav__menu div:has(> div > div > div > div > button[aria-label="Get Bits"]),
-    .top-nav__menu > div:nth-child(3) > div:nth-child(6), /* Get Ad-Free button in top-right page corner */
+    .top-nav__menu > div > div:has(> div > div > div > button svg path[d="M2 19V5h17v3h3v8h-3v3H2ZM17 7v3h3v4h-3v3H4V7h13Z"]),
     div[data-target="channel-header-right"] > div:has(button:is([data-test-selector="subscribe-button__dropdown"], [data-test-selector="manage-sub-button"])) {
         display: none !important;
     }
