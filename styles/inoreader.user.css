@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.3.2
+@version        1.3.3
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -179,8 +179,9 @@
         display: none !important;
     }
     
-    /* Hide useless YouTube features that also require Inoreader Pro */
-    .article-tabs:has(.tabs-not-pro){
+    /* Hide features that require Inoreader Pro */
+    .article-tabs:has(.tabs-not-pro),
+    .dropdown-item:has(.icon-shield) {
         display: none;
     }
     
@@ -230,4 +231,9 @@
         color: #babdc2;
     }
     
+    /* Fix alignment on feed/folder/tag title dropdown in article list column */
+    .heading-title > span.flex {
+        align-self: start;
+        margin-block-start: 1px;
+    }
 }
