@@ -32,7 +32,6 @@ Good user interfaces should
 |[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
 |[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Removed clutter.|
 |[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. Revert many stupid changes.<br>You can block keywords with [Ben's Twitter Politics Filter](https://github.com/Aldaviva/content-blocking-filters).|
-|[UptimeObserver](https://github.com/Aldaviva/userstyles/raw/master/styles/uptimeobserver.user.css)|Make day bars on status page which count toward the max 30 day uptime percentage visually distinct from older, irrelevant days, to easily tell which outages count toward the uptime.|
 |[Vivaldi Open Image](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css)|Checkerboard transparency matting and black background, to look like Photoshop.|
 |[Wikipedia](https://github.com/Aldaviva/userstyles/raw/master/styles/wikipedia.user.css)|Removed clutter.|
 |[Wired](https://github.com/Aldaviva/userstyles/raw/master/styles/wired.user.css)|Dark mode for articles.|
