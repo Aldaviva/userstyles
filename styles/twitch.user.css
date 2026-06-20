@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Twitch
 @namespace      https://aldaviva.com/userstyles/
-@version        0.1.31
+@version        0.1.32
 @description    Hide clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -134,6 +134,11 @@
     /* Hide the button that shows the chat panel when the page is in theater mode and the pointer isn't hovering over the page, to make the UI cleaner and allow hardware acceleration. */
     #root:has(.video-player__inactive) .right-column--theatre.right-column--collapsed .right-column__toggle-visibility:not(:hover) {
         display: none !important;
+    }
+    
+    /* Don't truncate stream descriptions in left sidebar popovers, I obviously hovered over them because I want to actually read them */
+    .online-side-nav-channel-tooltip__body p {
+        display: block;
     }
 }
 
