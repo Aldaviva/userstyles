@@ -1,0 +1,40 @@
+/* ==UserStyle==
+@name           PiXhost
+@namespace      https://aldaviva.com/userstyles/
+@version        1.0.0
+@description    Dark mode, removed clutter
+@author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
+@license        MIT
+@homepageURL    https://github.com/Aldaviva/userstyles
+@supportURL     https://github.com/Aldaviva/userstyles/issues
+==/UserStyle== */
+@-moz-document url-prefix("https://pixhost.to/show/"), url-prefix("https://pixhost.cc/show/"), url-prefix("https://pixho.st/show/") {
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: black;
+            color: white;
+        }
+    }
+            
+    #web > :not(#content-container),
+    #show > :not(.image) {
+        display: none;
+    }
+    
+    #web, #content {
+        padding: 0;
+    }
+    
+    .image {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+    }
+    
+    #image {
+        cursor: auto !important;
+        pointer-events: none;
+        vertical-align: top;
+    }
+    
+}
