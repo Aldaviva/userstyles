@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           PiXhost
 @namespace      https://aldaviva.com/userstyles/
-@version        1.0.0
+@version        1.1.0
 @description    Dark mode, removed clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -14,21 +14,31 @@
             background-color: black;
             color: white;
         }
+        
+        .image:has(#image[src *= '-hevc-x265-prt'])::before {
+            backdrop-filter: invert(1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: calc(100%/1953px*65px);
+            content: '';
+        }
     }
-            
+
     #web > :not(#content-container),
     #show > :not(.image) {
         display: none;
     }
     
-    #web, #content {
-        padding: 0;
+    #web, #content, .image {
+        padding: 0 !important;
     }
     
     .image {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        padding: 0 !important;
+        position: relative;
     }
     
     #image {
@@ -36,5 +46,5 @@
         pointer-events: none;
         vertical-align: top;
     }
-    
+
 }
