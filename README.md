@@ -16,11 +16,10 @@ Good user interfaces should
 ## Targeted websites
 |Site|Changes|
 |---|---|
-|[All](https://github.com/Aldaviva/userstyles/raw/master/styles/solidunderlines.user.css)|Underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.|
+|[All](https://github.com/Aldaviva/userstyles/raw/master/styles/solidunderlines.user.css)|<ul><li>Underlines will intersect with text, instead of leaving a gap around descenders, which is ugly and distracting.</li><li>When using Vivaldi, you can also [make the image viewer page have a black background and checkerboard matte behind the image, like Photoshop](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css).</li></ul>|
 |[Bitbucket](https://github.com/Aldaviva/userstyles/raw/master/styles/bitbucket.user.css)|Expand text editor to full height of window, instead of being annoyingly short.|
 |[Bleeping Computer](https://github.com/Aldaviva/userstyles/raw/master/styles/bleepingcomputer.user.css)|Dark mode for articles.|
-|[Bluesky](https://github.com/Aldaviva/userstyles/raw/master/styles/bluesky.user.css)|Render quad image posts left to right instead of top to bottom, so they match the Bluesky Android app and Twitter.|
-|[Bluesky absolute datetimes](https://github.com/Aldaviva/userstyles/raw/refs/heads/master/styles/bluesky-absolute-datetimes.user.less)|Datetimes on posts appear as absolute *and* relative, like "April 13, 2025 at 3:55 PM (5h)" instead of just "5h".|
+|[Bluesky](https://github.com/Aldaviva/userstyles/raw/master/styles/bluesky.user.css)|<ul><li>Render quad image posts left to right instead of top to bottom, so they match the Bluesky Android app and Twitter.</li><li>You can also [show absolute timestamps for every post](https://github.com/Aldaviva/userstyles/raw/refs/heads/master/styles/bluesky-absolute-datetimes.user.less).</li></ul>|
 |[CBC](https://github.com/Aldaviva/userstyles/raw/refs/heads/master/styles/cbc.user.css)|Clean up clutter in fullscreen video. Hide expensive animations that overload the GPU, causing video stutters and buffer underruns.|
 |[Google Messages](https://github.com/Aldaviva/userstyles/raw/master/styles/google-messages.user.css)|Fit more efficiently in narrow viewports, like Vivaldi panels.|
 |[Inoreader](https://github.com/Aldaviva/userstyles/raw/master/styles/inoreader.user.css)|Removed clutter, fixed many ugly styles. Made certain thumbnails appear only on hover. Removed dead zone between articles in Column View.|
@@ -32,7 +31,7 @@ Good user interfaces should
 |[Splitwise](https://github.com/Aldaviva/userstyles/raw/master/styles/splitwise.user.css)|Hide clutter on itemized editor panel.|
 |[Stack Exchange](https://github.com/Aldaviva/userstyles/raw/master/styles/stackoverflow.user.css)|Removed clutter on question pages.|
 |[Twitch](https://github.com/Aldaviva/userstyles/raw/master/styles/twitch.user.css)|Removed clutter.|
-|[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. Revert many stupid changes.<br>You can block keywords with [Ben's Twitter Politics Filter](https://github.com/Aldaviva/content-blocking-filters).|
+|[Twitter](https://github.com/Aldaviva/userstyles/raw/master/styles/twitter.user.css)|<ul><li>Removed clutter, ads, and unwanted tweets. Render avatars in rounded rectangles instead of circles. Revert many stupid changes.</li><li>You can block keywords with [Ben's Twitter Politics Filter](https://github.com/Aldaviva/content-blocking-filters).</li></ul>|
 |[Vivaldi Open Image](https://github.com/Aldaviva/userstyles/raw/master/styles/vivaldi-image.user.css)|Checkerboard transparency matting and black background, to look like Photoshop.|
 |[Wikipedia](https://github.com/Aldaviva/userstyles/raw/master/styles/wikipedia.user.css)|Removed clutter.|
 |[Wired](https://github.com/Aldaviva/userstyles/raw/master/styles/wired.user.css)|Dark mode for articles.|
