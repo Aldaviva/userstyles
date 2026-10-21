@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Inoreader
 @namespace      https://aldaviva.com/userstyles/
-@version        1.3.4
+@version        1.3.5
 @description    Removed clutter. Compatible with Inoreader 14 from 2024.
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -14,7 +14,6 @@
     /* Hide useless nav bar buttons */
     nav #home_tab,
     body:not(.active-tab-overlay-notifications) nav #notifications_tab,
-    nav #audio_player_tab,
     nav #support_tab,
     nav .tree-pane-dock-toggle {
         display: none;
