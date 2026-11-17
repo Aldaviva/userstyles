@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           PiXhost
 @namespace      https://aldaviva.com/userstyles/
-@version        1.1.6
+@version        1.1.7
 @description    Dark mode, removed clutter
 @author         Ben Hutchison <ben@aldaviva.com> (https://aldaviva.com)
 @license        MIT
@@ -35,6 +35,10 @@
     
     #web, #content, .image {
         padding: 0 !important;
+    }
+    
+    #web {
+        background-image: none !important;
     }
     
     #content {
